@@ -1,4 +1,25 @@
 services:
+  grafana:
+    extends:
+      file: .config/docker-compose-base.yaml
+      service: grafana
+    ports:
+      - 3000:3000/tcp
+
+  grafana-dev:
+    image: ghcr.io/volkovlabs/app:latest
+    ports:
+      - 3000:3000/tcp
+    environment:
+      - GF_DEFAULT_APP_MODE=development
+      - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/etc/grafana/provisioning/dashboards/panels.json
+      - GF_INSTALL_PLUGINS=marcusolsson-static-datasource,marcusolsson-json-datasource,volkovlabs-variable-panel, volkovlabs-image-panel
+    volumes:
+      - ./dist:/var/lib/grafana/plugins/volkovlabs-form-panel
+      - ./provisioning:/etc/grafana/provisioning
+    profiles:
+      - dev
+
   server:
     build:
       context: ./server-json
@@ -18,20 +39,6 @@ services:
       - dev
       - main
       - dependency
-
-  grafana:
-    image: ghcr.io/volkovlabs/app:latest
-    ports:
-      - 3000:3000/tcp
-    environment:
-      - GF_DEFAULT_APP_MODE=development
-      - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/etc/grafana/provisioning/dashboards/panels.json
-      - GF_INSTALL_PLUGINS=marcusolsson-static-datasource,marcusolsson-json-datasource,volkovlabs-variable-panel, volkovlabs-image-panel
-    volumes:
-      - ./dist:/var/lib/grafana/plugins/volkovlabs-form-panel
-      - ./provisioning:/etc/grafana/provisioning
-    profiles:
-      - dev
 
   postgres:
     image: postgres
@@ -92,15 +99,16 @@ services:
     profiles:
       - dependency
 
-  test:
+  playwright:
     build:
       context: .
       dockerfile: test/Dockerfile
     environment:
-      - GRAFANA_URL=http://127.0.0.1:3000
+      - GRAFANA_URL=http://grafana:3000
     volumes:
       - ./test:/app/test
       - ./playwright-report:/app/playwright-report
-    network_mode: host
+    depends_on:
+      - grafana
     profiles:
-      - e2e
+      - playwright
