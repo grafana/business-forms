@@ -53,6 +53,7 @@ services:
       - dev
       - main
       - dependency
+      - playwright
 
   server-pg:
     build:
@@ -111,4 +112,4 @@ services:
     depends_on:
       - grafana
     profiles:
-      - playwright
+      - e2e
