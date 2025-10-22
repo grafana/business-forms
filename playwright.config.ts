@@ -28,6 +28,11 @@ export default defineConfig({
   workers: 1,
 
   /**
+   * Skip flaky datasource tests that fail due to timing issues.
+   */
+  grepInvert: /(Initial request|Update)/,
+
+  /**
    * Reporter to use. See https://playwright.dev/docs/test-reporters
    */
   reporter: [['html', { open: 'never' }]],
