@@ -1,6 +1,7 @@
 // webpack.config.ts
 import type { Configuration } from 'webpack';
 import { merge } from 'webpack-merge';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import grafanaConfig from './.config/webpack/webpack.config';
 
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
@@ -18,6 +19,14 @@ const config = async (env): Promise<Configuration> => {
     resolve: {
       plugins: [new TsconfigPathsPlugin()],
     },
+    plugins: [
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: '../LICENSE-original', to: '.' },
+          { from: '../NOTICES', to: '.' },
+        ],
+      }),
+    ],
   });
 };
 
