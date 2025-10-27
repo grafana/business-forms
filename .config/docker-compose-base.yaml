@@ -1,7 +1,7 @@
 services:
   grafana:
     user: root
-    container_name: 'grafana-business-form-panel'
+    container_name: 'grafana-business-forms-panel'
     image: grafana/${GRAFANA_IMAGE:-grafana-enterprise}:${GRAFANA_VERSION:-latest}
     ports:
       - 3000:3000/tcp
