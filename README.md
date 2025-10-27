@@ -1,9 +1,9 @@
 # Business Forms for Grafana
-[![CI](https://github.com/grafana/business-charts/actions/workflows/push.yml/badge.svg)](https://github.com/grafana/business-charts/actions/workflows/push.yml)
-[![CD](https://github.com/grafana/business-charts/actions/workflows/publish.yml/badge.svg)](https://github.com/grafana/business-charts/actions/workflows/publish.yml)
-[![License](https://img.shields.io/github/license/grafana/business-charts)](https://github.com/grafana/business-forms/blob/main/LICENSE)
+[![CI](https://github.com/grafana/business-forms/actions/workflows/push.yml/badge.svg)](https://github.com/grafana/business-forms/actions/workflows/push.yml)
+[![CD](https://github.com/grafana/business-forms/actions/workflows/publish.yml/badge.svg)](https://github.com/grafana/business-forms/actions/workflows/publish.yml)
+[![License](https://img.shields.io/github/license/grafana/business-forms)](https://github.com/grafana/business-forms/blob/main/LICENSE)
 
->This project was originally contributed by [Volkov Labs](https://github.com/volkovlabs/business-charts) - thanks for all your great work!
+>This project was originally contributed by [Volkov Labs](https://github.com/volkovlabs/business-forms) - thanks for all your great work!
 >
 >We have republished under the same plugin ID, keeping the community signature. This means you can simply update your plugin version. A new ID would have required manual updates to your dashboards. For additional information on the changes, see the [Notices](https://github.com/grafana/business-forms/blob/main/NOTICES).
 
