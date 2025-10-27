@@ -23,7 +23,7 @@ const config = async (env): Promise<Configuration> => {
       new CopyWebpackPlugin({
         patterns: [
           { from: '../LICENSE-original', to: '.' },
-          { from: '../NOTICES', to: '.' },
+          { from: '../NOTICES.md', to: '.' },
         ],
       }),
     ],
