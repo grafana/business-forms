@@ -4,5 +4,6 @@
     "paths": {
       "@/*": ["*"]
     }
-  }
+  },
+  "include": ["src", ".config/types"]
 }

@@ -1,19 +1,15 @@
 # Business Forms for Grafana
+[![CI](https://github.com/grafana/business-forms/actions/workflows/push.yml/badge.svg)](https://github.com/grafana/business-forms/actions/workflows/push.yml)
+[![CD](https://github.com/grafana/business-forms/actions/workflows/publish.yml/badge.svg)](https://github.com/grafana/business-forms/actions/workflows/publish.yml)
+[![License](https://img.shields.io/github/license/grafana/business-forms)](https://github.com/grafana/business-forms/blob/main/LICENSE)
 
-![Forms](https://raw.githubusercontent.com/volkovlabs/business-forms/main/src/img/panel.png)
+>This project was originally contributed by [Volkov Labs](https://github.com/volkovlabs/business-forms) - thanks for all your great work!
+>
+>We have republished under the same plugin ID, keeping the community signature. This means you can simply update your plugin version. A new ID would have required manual updates to your dashboards. For additional information on the changes, see the [Notices](https://github.com/grafana/business-forms/blob/main/NOTICES.md).
 
-[![Grafana](https://img.shields.io/badge/Grafana-12.1-orange)](https://grafana.com/)
-[![YouTube](https://img.shields.io/badge/YouTube-Playlist-red)](https://www.youtube.com/playlist?list=PLPow72ygztmRXSNBxyw0sFnnvNRY_CsSA)
-[![CI](https://github.com/volkovlabs/business-forms/workflows/CI/badge.svg)](https://github.com/volkovlabs/business-forms/actions/workflows/ci.yml)
-[![E2E](https://github.com/volkovlabs/business-forms/workflows/E2E/badge.svg)](https://github.com/volkovlabs/business-forms/actions/workflows/e2e.yml)
-[![Codecov](https://codecov.io/gh/VolkovLabs/business-forms/branch/main/graph/badge.svg)](https://codecov.io/gh/VolkovLabs/business-forms)
-[![CodeQL](https://github.com/VolkovLabs/business-forms/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/VolkovLabs/business-forms/actions/workflows/codeql-analysis.yml)
-
-## 🚀 Introduction
+This project is currently maintained by Grafana Labs. We welcome pull requests and will review them on a best-effort basis. If you're interested in taking on this project long-term, contact [integrations@grafana.com](mailto:integrations@grafana.com). We're eager to work with new maintainers and eventually hand over the project.
 
 The **Business Forms panel** is a groundbreaking plugin for Grafana, designed to empower users by allowing direct interaction with application data and configurations within dashboards. Whether you're managing data or customizing settings, this plugin streamlines workflows with an intuitive interface.
-
-[![Use REST API, Data Source, and Queries to Manipulate Your Data](https://raw.githubusercontent.com/volkovlabs/business-forms/main/img/business-forms.png)](https://youtu.be/ulbe8U8-IFA)
 
 ## 📋 Requirements
 
@@ -34,8 +30,6 @@ Install the Business Forms panel easily via the [Grafana Plugins Catalog](https:
 ```bash
 grafana cli plugins install volkovlabs-form-panel
 ```
-
-[![Install Business Suite Plugins in Cloud, OSS, Enterprise](https://raw.githubusercontent.com/volkovlabs/.github/main/started.png)](https://youtu.be/1qYzHfPXJF8)
 
 ## ✨ Key Features
 
@@ -65,12 +59,6 @@ Explore detailed guides and resources to maximize the potential of Business Form
 | [Tutorials](https://volkovlabs.io/plugins/business-forms/tutorials/)         | Follow step-by-step guides.                                 |
 | [Release Notes](https://volkovlabs.io/plugins/business-forms/release/)       | Stay updated with the latest features and fixes.            |
 
-## 🌟 Business Suite for Grafana
-
-Business Forms is part of the **Business Suite**, a collection of open-source plugins by Volkov Labs. These plugins solve common business challenges with user-friendly interfaces, comprehensive documentation, and video tutorials.
-
-[![Business Suite for Grafana](https://raw.githubusercontent.com/VolkovLabs/.github/main/business.png)](https://volkovlabs.io/plugins/)
-
 ## 📜 License
 
-This project is licensed under the Apache License Version 2.0. See the [LICENSE](https://github.com/volkovlabs/business-forms/blob/main/LICENSE) file for details.
+This project is licensed under the Apache License Version 2.0. See the [LICENSE](https://github.com/grafana/business-forms/blob/main/LICENSE) file for details.
