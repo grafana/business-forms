@@ -1,7 +1,6 @@
 import { cx } from '@emotion/css';
 import { InterpolateFunction, PanelData } from '@grafana/data';
-import { FieldSet, useTheme2 } from '@grafana/ui';
-import { CollapsableSection } from '@volkovlabs/components';
+import { CollapsableSection, FieldSet, useTheme2 } from '@grafana/ui';
 import React from 'react';
 
 import { LayoutOrientation, SectionVariant, TEST_IDS } from '../../constants';
