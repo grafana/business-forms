@@ -123,6 +123,7 @@ export const ElementSections: React.FC<Props> = ({
                     {replaceVariables(section.name)} [{section.id}]
                   </>
                 }
+                unmountContentWhenClosed
               >
                 {children}
               </CollapsableSection>
