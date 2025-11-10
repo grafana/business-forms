@@ -1,9 +1,9 @@
 import { AppEvents, EventBusSrv, FieldType, LoadingState, toDataFrame } from '@grafana/data';
 import { getAppEvents, RefreshEvent } from '@grafana/runtime';
-import { sceneGraph } from '@grafana/scenes';
+import { sceneGraph, SceneObject } from '@grafana/scenes';
 import { PanelContextProvider } from '@grafana/ui';
 import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
-import { useDashboardRefresh, useDatasourceRequest } from '@volkovlabs/components';
+import { useDatasourceRequest } from '@volkovlabs/components';
 import React, { ReactElement } from 'react';
 
 import {
@@ -38,6 +38,12 @@ import {
 
 import { FormElements } from '../FormElements';
 import { FormPanel } from './FormPanel';
+import { useDashboardRefresh } from '../../hooks';
+
+jest.mock('../../hooks', () => ({
+  ...jest.requireActual('../../hooks'),
+  useDashboardRefresh: jest.fn(),
+}));
 
 /**
  * Mock Form Elements
@@ -2974,11 +2980,7 @@ describe('Panel', () => {
 
       jest.mocked(useDashboardRefresh).mockReturnValue(() => onRefresh());
 
-      window.__grafanaSceneContext = {
-        body: {
-          text: 'hello',
-        },
-      };
+      window.__grafanaSceneContext = {} as SceneObject;
 
       jest.mocked(sceneGraph.getTimeRange).mockReturnValue({
         onRefresh: jest.fn(),
@@ -3983,11 +3985,7 @@ describe('Panel', () => {
 
       jest.mocked(useDashboardRefresh).mockReturnValue(() => onRefresh());
 
-      window.__grafanaSceneContext = {
-        body: {
-          text: 'hello',
-        },
-      };
+      window.__grafanaSceneContext = {} as SceneObject;
 
       jest.mocked(sceneGraph.getTimeRange).mockReturnValue({
         onRefresh: jest.fn(),
