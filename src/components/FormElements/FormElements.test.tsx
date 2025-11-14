@@ -14,11 +14,6 @@ import { FormElements } from './FormElements';
 jest.useFakeTimers();
 
 /**
- * Mock @volkovlabs/components
- */
-jest.mock('@volkovlabs/components');
-
-/**
  * Replace variables
  */
 const replaceVariablesMock = (code: string) => code;

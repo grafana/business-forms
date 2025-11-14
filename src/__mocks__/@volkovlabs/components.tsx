@@ -83,7 +83,6 @@ const NumberInputMock: React.FC<Props> = ({ value, onChange, min, max, step, ...
 const NumberInput = jest.fn(NumberInputMock);
 
 const useDatasourceRequest = jest.fn();
-const useDashboardRefresh = jest.fn();
 
 /**
  * Mock DatasourcePayloadEditor
@@ -120,5 +119,4 @@ module.exports = {
   NumberInput,
   DatasourcePayloadEditor,
   useDatasourceRequest,
-  useDashboardRefresh,
 };
