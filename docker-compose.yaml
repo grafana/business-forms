@@ -7,7 +7,7 @@ services:
       - 3000:3000/tcp
 
   grafana-dev:
-    image: ghcr.io/volkovlabs/app:latest
+    image: ghcr.io/volkovlabs/app:latest@sha256:7255f71881b7aa94198da4760a3c74fbbc5f6d16b592ec55f69c40c4e479b7be
     ports:
       - 3000:3000/tcp
     environment:
@@ -41,7 +41,7 @@ services:
       - dependency
 
   postgres:
-    image: postgres
+    image: postgres@sha256:41bfa2e5b168fff0847a5286694a86cff102bdc4d59719869f6b117bb30b3a24
     restart: always
     environment:
       POSTGRES_PASSWORD: postgres
@@ -73,7 +73,7 @@ services:
       - dependency
 
   grafana-main:
-    image: grafana/grafana:main
+    image: grafana/grafana:main@sha256:db147b79a7ca6517e2c69ad14c41851b2468c1889a8cb1ac62d1d00b248727cb
     ports:
       - 3000:3000/tcp
     environment:
@@ -87,7 +87,7 @@ services:
       - main
 
   grafana-dep:
-    image: grafana/grafana:11.0.0
+    image: grafana/grafana:11.0.0@sha256:0dc5a246ab16bb2c38a349fb588174e832b4c6c2db0981d0c3e6cd774ba66a54
     ports:
       - 3000:3000/tcp
     environment:
