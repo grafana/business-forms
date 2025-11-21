@@ -11,11 +11,11 @@ labels:
 ---
 # Code Editor Toolbar
 
-:::info Version
+{{< admonition type="note" >}}
 
 The Business Forms panel supports the Code Editor toolbar starting from version 4.4.0. Additional buttons were added in 4.5.0.
 
-:::
+{{< /admonition >}}
 
 ## Expand the editor
 

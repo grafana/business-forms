@@ -11,11 +11,11 @@ labels:
 ---
 # Link
 
-:::info Version
+{{< admonition type="note" >}}
 
 Below is supported starting from version 3.2.1 and Grafana 10.1.0.
 
-:::
+{{< /admonition >}}
 
 This element type allows you to add links to your Business form. The link text is customizable using the **Link Text** option. If not specified, the link address will be displayed.
 

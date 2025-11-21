@@ -11,11 +11,11 @@ labels:
 ---
 # Date
 
-:::info Version
+{{< admonition type="note" >}}
 
 The **Date** type is available starting from version 4.9.0.
 
-:::
+{{< /admonition >}}
 
 If time is irrelevant to your scenario, instead of **Date and time**, you can select **Date** type.
 

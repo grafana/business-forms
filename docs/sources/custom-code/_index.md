@@ -155,11 +155,11 @@ context.panel.onOptionsChange({
 });
 ```
 
-:::info Refresh panel
+{{< admonition type="note" >}}
 
 The `context.panel.onOptionsChange()` handler calls refresh panel.
 
-:::
+{{< /admonition >}}
 
 The `context.panel.onOptionsChange()` handler is required to update the panel.
 

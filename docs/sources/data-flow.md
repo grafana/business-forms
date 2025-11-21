@@ -12,11 +12,11 @@ weight: 20
 ---
 # Data Flow
 
-:::info Version
+{{< admonition type="note" >}}
 
 Relevant starting from version 3.2.0.
 
-:::
+{{< /admonition >}}
 
 The Data Manipulation plugin offers to convert any Grafana dashboard into a fully functional web application. No wonder getting lost in all option parameters and their interconnections is easy.
 
@@ -37,11 +37,11 @@ The query is short for the native Grafana query. Any initial request carries dat
 
 This method was created to allow leveraging the existing Grafana data extraction mechanism. To make it work, map every Data Manipulation form element to the appropriate data frame field.
 
-:::info Version
+{{< admonition type="note" >}}
 
 Since version 4.2.0. the `Query Field` and `Field Name` fields have been relocated from the `Elements` category to the `Initial Fields` options category.
 
-:::
+{{< /admonition >}}
 
 <Image
   title="Configure the Initial Request for Query. "
@@ -162,10 +162,10 @@ Another possible approach is to update the variables in the data source, which w
 
 ### Query editor and Frontend Data Source
 
-:::info Breaking change
+{{< admonition type="note" >}}
 
 Query editor and Frontend Data Sources are available starting from version 4.0.0.
-:::
+{{< /admonition >}}
 
 This feature is related to the:
 

@@ -23,11 +23,11 @@ The **Custom button** allows add custom button to panel.
   src="/img/plugins/business-forms/button-element.png"
 />
 
-:::info Version
+{{< admonition type="note" >}}
 
 Custom buttons are supported starting from the version 4.4.0.
 
-:::
+{{< /admonition >}}
 
 In addition to all other types, in release 4.4.0 we added a custom button type.
 

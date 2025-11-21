@@ -13,11 +13,11 @@ labels:
 
 The Confirmation window, if enabled, is shown after a user clicks the submit button to highlight changes made in the Business Form.
 
-:::info Version
+{{< admonition type="note" >}}
 
 Custom confirmation window labels have been supported starting from version 3.3.0.
 
-:::
+{{< /admonition >}}
 
 You can customize all labels using the **Update Confirmation Window** category.
 
@@ -28,11 +28,11 @@ You can customize all labels using the **Update Confirmation Window** category.
 
 ## Display Values parameter
 
-:::info Version
+{{< admonition type="note" >}}
 
 The **Display Values** parameter has been supported starting from version 4.0.0.
 
-:::
+{{< /admonition >}}
 
 The **Display Values** parameter has two options to choose from:
 

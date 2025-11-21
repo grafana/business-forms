@@ -121,14 +121,14 @@ const options = context.panel.options;
 
 Modifies a handler to refresh the panel. The context.panel.onOptionsChange() handler is required to update the panel.
 
-:::info Refresh panel
+{{< admonition type="note" >}}
 
 The `context.panel.onOptionsChange(options)` handler calls the refresh panel.
 
 If you use it in the initial request, don't forget to disable the Synchronize option.
 Enabling the Synchronize option and using it together with `context.panel.onOptionsChange(options)` in the Initial Request will cause the panel to reload constantly.
 
-:::
+{{< /admonition >}}
 
 #### Usage
 
@@ -499,14 +499,14 @@ Add a new Section.
 
 _Added in: v4.9.0_
 
-:::info Refresh panel
+{{< admonition type="note" >}}
 
 The `context.panel.sectionsUtils.add(section)` handler calls the refresh panel.
 
 If you use it in the initial request, don't forget to disable the Synchronize option.
 Enabling the Synchronize option and using it together with `context.panel.sectionsUtils.add(section)` in the Initial Request will cause the panel to reload constantly.
 
-:::
+{{< /admonition >}}
 
 #### Usage
 
@@ -552,14 +552,14 @@ Change Sections.
 
 _Added in: v4.9.0_
 
-:::info Refresh panel
+{{< admonition type="note" >}}
 
 The `context.panel.sectionsUtils.update(sections)` handler calls the refresh panel.
 
 If you use it in the initial request, don't forget to disable the Synchronize option.
 Enabling the Synchronize option and using it together with `context.panel.sectionsUtils.update(sections)` in the Initial Request will cause the panel to reload constantly.
 
-:::
+{{< /admonition >}}
 
 #### Usage
 
@@ -585,14 +585,14 @@ Remove Section.
 
 _Added in: v4.9.0_
 
-:::info Refresh panel
+{{< admonition type="note" >}}
 
 The `context.panel.sectionsUtils.remove(id)` handler calls the refresh panel.
 
 If you use it in the initial request, don't forget to disable the Synchronize option.
 Enabling the Synchronize option and using it together with `context.panel.sectionsUtils.remove(id)` in the Initial Request will cause the panel to reload constantly.
 
-:::
+{{< /admonition >}}
 
 #### Usage
 
@@ -616,14 +616,14 @@ Assign elements to Section.
 
 _Added in: v4.9.0_
 
-:::info Refresh panel
+{{< admonition type="note" >}}
 
 The `context.panel.sectionsUtils.assign(id,elements)` handler calls the refresh panel.
 
 If you use it in the initial request, don't forget to disable the Synchronize option.
 Enabling the Synchronize option and using it together with `context.panel.sectionsUtils.assign(id,elements)` in the Initial Request will cause the panel to reload constantly.
 
-:::
+{{< /admonition >}}
 
 #### Usage
 
@@ -648,14 +648,14 @@ Unassign elements from Section.
 
 _Added in: v4.9.0_
 
-:::info Refresh panel
+{{< admonition type="note" >}}
 
 The `context.panel.sectionsUtils.unassign(elements)` handler calls the refresh panel.
 
 If you use it in the initial request, don't forget to disable the Synchronize option.
 Enabling the Synchronize option and using it together with `context.panel.sectionsUtils.unassign(elements)` in the Initial Request will cause the panel to reload constantly.
 
-:::
+{{< /admonition >}}
 
 #### Usage
 

@@ -14,11 +14,11 @@ weight: 10
 ---
 # InfluxDB API
 
-:::info InfluxDB v2 API
+{{< admonition type="note" >}}
 
 Check the [InfluxDB v2 API reference](https://docs.influxdata.com/influxdb/cloud/reference/api/) for details about API endpoints.
 
-:::
+{{< /admonition >}}
 
 InfluxDB API can be used to retrieve and update data via Data Manipulation panel.
 

@@ -14,10 +14,10 @@ weight: 30
 
 The Business Forms plugin is equipped with a wide variety of element types to cover almost any imaginable web application requirements.
 
-:::info
+{{< admonition type="note" >}}
 All form elements (starting from version 4.9.0, including [sections](/plugins/business-forms/form-elements/#sections)) can be created dynamically.
 For more info, please refer to the [Dynamic Forms](/plugins/business-forms/dynamic/) page of the Business Forms panel documentation.
-:::
+{{< /admonition >}}
 
 ## Layout
 
@@ -44,11 +44,11 @@ With the **Sections** layout, you can create as many sections as needed and plac
 
 As shown in the picture above, when the layout **Sections** is chosen, the controls to create sections appear. For every section you can specify an ID, to use for referencing later, and a name which will be a displayed as a section label.
 
-:::info Version
+{{< admonition type="note" >}}
 
 The **Collapsable** parameter has been supported starting from version 4.0.0.
 
-:::
+{{< /admonition >}}
 
 Sections can be collapsible. This functionality is available only for the sections in the **Vertical** orientation. You can make any section **Expanded** for the form opening/refresh.
 
@@ -64,9 +64,9 @@ context.panel.expandSection(id);
 context.panel.collapseSection(id);
 ```
 
-:::info Parameters
+{{< admonition type="note" >}}
 The full list of the Business Form panel parameters can be found in the [Custom Code](/plugins/business-forms/code/#parameters) section of the panel's documentation.
-:::
+{{< /admonition >}}
 
 ### Buttons Only
 
@@ -85,11 +85,11 @@ Element types have specific options. For instance, the **Text area** type has **
 
 ## Move a form element
 
-:::info Version
+{{< admonition type="note" >}}
 
 Supported starting from the version 3.0.0.
 
-:::
+{{< /admonition >}}
 
 You can drag-and-drop form elements in the edit mode to change their order on the form.
 
@@ -148,11 +148,11 @@ All three have some options in common.
 
 ### Custom color/background color for elements
 
-:::info Version
+{{< admonition type="note" >}}
 
 Colors for elements supported starting from version 4.0.0.
 
-:::
+{{< /admonition >}}
 
 You can play with **Form Elements** colors. Configurable are:
 
@@ -167,11 +167,11 @@ You can play with **Form Elements** colors. Configurable are:
 
 ### Select Options from Query
 
-:::info Version
+{{< admonition type="note" >}}
 
 Below is supported starting from the version 3.2.1.
 
-:::
+{{< /admonition >}}
 
 Reference a query from any configured data source to populate form elements dynamically.
 You can specify the **Label** and **Value** fields.
@@ -183,11 +183,11 @@ You can specify the **Label** and **Value** fields.
 
 ### Select Options from Get Options Code
 
-:::info Version
+{{< admonition type="note" >}}
 
 Below is supported starting from the version 3.5.0.
 
-:::
+{{< /admonition >}}
 
 **Get Options Code** allows to hard code options using the code editor. The code must:
 
@@ -270,11 +270,11 @@ if (element?.options) {
 
 ### Custom Values
 
-:::info Version
+{{< admonition type="note" >}}
 
 Available starting from version 4.9.0.
 
-:::
+{{< /admonition >}}
 
 If allowed, users can enter custom values into the **Select** and **Multi select** form element types
 
@@ -307,11 +307,11 @@ if (select) {
 }
 ```
 
-:::info Version
+{{< admonition type="note" >}}
 
 Below is supported starting from the version 3.2.1.
 
-:::
+{{< /admonition >}}
 
 You can use the dashboard and global variables within your JavaScript code.
 
@@ -329,11 +329,11 @@ return test === "test";
 
 ## Field Mapping
 
-:::info Version
+{{< admonition type="note" >}}
 
 Below is supported starting from 4.4.0
 
-:::
+{{< /admonition >}}
 
 To map the Initial Form Elements values, use the **Initial Fields** options category.
 
@@ -351,11 +351,11 @@ To map the Initial Form Elements values, use the **Initial Fields** options cate
   src="/img/blog/2024-08-29-form-panel-4.4.0/field-name-query-440.png"
 />
 
-:::info Version
+{{< admonition type="note" >}}
 
 Below is supported starting from version 3.2.1 to version 4.0.0
 
-:::
+{{< /admonition >}}
 
 Using the **Field name** parameter for **Data Source** and the **Query Field** for **Query**, you can specify field-to-form mapping.
 

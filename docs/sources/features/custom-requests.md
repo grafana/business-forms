@@ -17,14 +17,14 @@ The Business Forms panel allows you to create your own initial and update reques
 
 Select `Code` to choose an initial request, and then define the custom code:
 
-:::info Refresh panel
+{{< admonition type="note" >}}
 
 The `context.panel.onOptionsChange()` handler calls the refresh panel.
 
 If you use it in the initial request, don't forget to disable the Synchronize option.
 Enabling the Synchronize option and using it together with `context.panel.onOptionsChange()` in the Initial Request will cause the panel to reload constantly.
 
-:::
+{{< /admonition >}}
 
 <Image
   title="Disable Synchronize with data to avoid endless reloading of the panel if onOptionsChange() is used in the initial request."

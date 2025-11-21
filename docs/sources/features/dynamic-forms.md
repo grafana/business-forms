@@ -48,14 +48,14 @@ context.panel.onOptionsChange(options);
 
 ## Update elements from data sources
 
-:::info Refresh panel
+{{< admonition type="note" >}}
 
 The `context.panel.onOptionsChange()` handler calls the refresh panel.
 
 If you use it in the initial request, don't forget to disable the Synchronize option.
 Enabling the Synchronize option and using it together with `context.panel.onOptionsChange()` in the Initial Request will cause the panel to reload constantly.
 
-:::
+{{< /admonition >}}
 
 <Image
   title="Disable Synchronize with data to avoid endless reloading of the panel if onOptionsChange() is used in the initial request."
@@ -124,11 +124,11 @@ You can find more details in the blog post below.
 
 ## Sections
 
-:::info Version
+{{< admonition type="note" >}}
 
 Starting from version 4.9.0, **Sections** can be created dynamically as well.
 
-:::
+{{< /admonition >}}
 
 In addition to simple forms, you can create [sections](/plugins/business-forms/form-elements/#sections) dynamically.
 

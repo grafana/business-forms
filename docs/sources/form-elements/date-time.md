@@ -28,11 +28,11 @@ Specific for this element are the following options:
   src="/img/plugins/business-forms/min-max.png"
 />
 
-:::info Version
+{{< admonition type="note" >}}
 
 The **Time Zone** option is available starting from version 4.0.0.
 
-:::
+{{< /admonition >}}
 
 - **UTC**. The date-time value is saved in the UTC zone,
 - **Local**. The date-time value is saved following the browser's time zone.
