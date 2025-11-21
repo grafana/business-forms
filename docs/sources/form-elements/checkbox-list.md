@@ -104,6 +104,8 @@ context.panel.onChangeElements(elementsForUI);
 
 <BaseChangeElements />
 
+<!-- {{< docs/shared lookup="base-change-elements-example.md" source="business-forms" version="<PLUGINS_VERSION>" >}} -->
+
 ## Element Parameters
 
 - ### `value`
