@@ -1,12 +1,7 @@
 ---
-description: ':::info Use this model to set element(s) if you use [`context.panel.onChangeElements([])`](/plugins/business-forms/code/panel/#panelonchangeelementsoptions) method.'
-weight: 4
-title: '_info use change elements'
-labels:
-  products:
-    - enterprise
-    - oss
+title: info use change elements
 ---
+
 :::info
 Use this model to set element(s) if you use [`context.panel.onChangeElements([])`](/plugins/business-forms/code/panel/#panelonchangeelementsoptions) method.
 

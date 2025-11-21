@@ -1,12 +1,7 @@
 ---
-description: 'import Image from "@theme/Image";'
-weight: 1
-title: '_base change elements example'
-labels:
-  products:
-    - enterprise
-    - oss
+title: base change elements example
 ---
+
 import Image from "@theme/Image";
 
 ### Code Example with Query action for Initial Request

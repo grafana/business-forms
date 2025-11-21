@@ -1,12 +1,7 @@
 ---
-description: 'import Image from "@theme/Image";'
-weight: 3
-title: '_base parameters'
-labels:
-  products:
-    - enterprise
-    - oss
+title: base parameters
 ---
+
 import Image from "@theme/Image";
 
 - ### `uid`

@@ -1,12 +1,7 @@
 ---
-description: 'import Image from "@theme/Image";'
-weight: 5
-title: '_info use options change'
-labels:
-  products:
-    - enterprise
-    - oss
+title: info use options change
 ---
+
 import Image from "@theme/Image";
 
 :::info
