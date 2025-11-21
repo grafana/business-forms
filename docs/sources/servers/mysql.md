@@ -4,11 +4,13 @@ tags:
   - API Server
 image: /img/plugins/business-forms/panel.png
 title: 'API Server for MySQL'
+menuTitle: MySQL
 description: 'Learn about API Server for MySQL in Grafana'
 labels:
   products:
     - enterprise
     - oss
+weight: 30
 ---
 import Code from "@theme/Code";
 import Image from "@theme/Image";

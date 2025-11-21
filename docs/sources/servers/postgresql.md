@@ -4,11 +4,13 @@ tags:
   - API Server
 image: /img/plugins/business-forms/panel.png
 title: 'API Server for PostgreSQL'
+menuTitle: PostgresSQL
 description: 'Learn about API Server for PostgreSQL in Grafana'
 labels:
   products:
     - enterprise
     - oss
+weight: 50
 ---
 import Code from "@theme/Code";
 import Image from "@theme/Image";

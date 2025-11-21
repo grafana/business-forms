@@ -4,11 +4,13 @@ tags:
   - API Server
 image: /img/plugins/business-forms/panel.png
 title: 'InfluxDB API'
+menuTitle: InfluxDB
 description: 'Learn about InfluxDB API in Grafana'
 labels:
   products:
     - enterprise
     - oss
+weight: 10
 ---
 import Image from "@theme/Image";
 

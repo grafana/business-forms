@@ -4,11 +4,13 @@ tags:
   - API Server
 image: /img/plugins/business-forms/panel.png
 title: 'JSON API Server'
+menuTitle: JSON
 description: 'Learn about JSON API Server in Grafana'
 labels:
   products:
     - enterprise
     - oss
+weight: 20
 ---
 import Code from "@theme/Code";
 import Image from "@theme/Image";
