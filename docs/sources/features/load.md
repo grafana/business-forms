@@ -17,19 +17,13 @@ If the data loading takes time, the Data Manipulation form will indicate that as
 
 The end user will see a running blue line at the top of the form.
 
-<Image
-  title="A moving blue line indicates an initial request being in progress."
-  src="/img/blog/2023-10-10-form-panel-3.2.1/status-initial.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/status-initial.png" class="border" alt="A moving blue line indicates an initial request being in progress." >}}
 
 ## Update Request
 
 All buttons are disabled and moving circled dots are placed instead of the Submit button icon.
 
-<Image
-  title="Dots moving in a circle indicate an update request being in progress."
-  src="/img/blog/2023-10-10-form-panel-3.2.1/status-update.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/status-update.png" class="border" alt="Dots moving in a circle indicate an update request being in progress." >}}
 
 ## Custom Code
 

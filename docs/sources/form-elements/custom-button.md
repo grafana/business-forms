@@ -18,10 +18,7 @@ The **Custom button** allows add custom button to panel.
 - Customization
 - Place in form or in main buttons after form
 
-<Image
-  title="Custom Button element"
-  src="/img/plugins/business-forms/button-element.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/button-element.png" class="border" alt="Custom Button element" >}}
 
 {{< admonition type="note" >}}
 
@@ -35,17 +32,11 @@ With the **Button** Form Elements type, you can have more functionality on your 
 
 A user has some options to style a custom button. Colors, size, and position are up to configuration.
 
-<Image
-  title="New Form Elements type - Custom Button."
-  src="/img/blog/2024-08-29-form-panel-4.4.0/buttons-dash.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/buttons-dash.png" class="border" alt="New Form Elements type - Custom Button." >}}
 
 With the **Button place** option, the custom button element can be placed among other Form Elements or in the form footer, next to the standard buttons.
 
-<Image
-  title="Available options for the Button Form Elements type."
-  src="/img/blog/2024-08-29-form-panel-4.4.0/buttons-options.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/buttons-options.png" class="border" alt="Available options for the Button Form Elements type." >}}
 
 ## Change Elements Model
 

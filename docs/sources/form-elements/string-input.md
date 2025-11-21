@@ -17,10 +17,7 @@ Specific for this element are the following options:
 
 - A visual control, a button, to make the element hidden.
 
-<Image
-  title="String input element"
-  src="/img/plugins/business-forms/elements/string-input/element.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/element.png" class="border" alt="String input element" >}}
 
 ## Change Elements Model
 

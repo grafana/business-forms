@@ -10,7 +10,4 @@ If you use it in the initial request, don't forget to disable the Synchronize op
 Enabling the Synchronize option and using it together with `context.panel.onOptionsChange()` in the Initial Request will cause the panel to reload constantly.
 {{< /admonition >}}
 
-<Image
-  title="Disable Synchronize with data to avoid endless reloading of the panel if onOptionsChange() is used in the initial request."
-  src="/img/plugins/business-forms/infinity-reload.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/infinity-reload.png" class="border" alt="Disable Synchronize with data to avoid endless reloading of the panel if onOptionsChange() is used in the initial request." >}}

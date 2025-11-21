@@ -19,10 +19,7 @@ The **Time** type is available starting from version 3.8.0.
 
 If time is irrelevant to your scenario, instead of **Time**, you can select **Date** or **Date and Time** type.
 
-<Image
-  title="Time element"
-  src="/img/plugins/business-forms/time-element.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/time-element.png" class="border" alt="Time element" >}}
 
 ## Change Elements Model
 

@@ -16,10 +16,7 @@ title: base options parameters
   _string_. Required.  
    Title/Label of element. Equivalent to the 'Label' in the UI editor.
 
-  <Image
-    title="Label field"
-    src="/img/plugins/business-forms/elements/base-options/label-field.png"
-  />
+  {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/label-field.png" class="border" alt="Label field" >}}
 
 - ### `labelWidth`
 
@@ -46,10 +43,7 @@ title: base options parameters
   _string_. Required.  
    Units of measurement. Located to the right of the element. Leave empty string ('') if has no unit.
 
-  <Image
-    title="Unit of measurement"
-    src="/img/plugins/business-forms/elements/base-options/unit.png"
-  />
+  {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/unit.png" class="border" alt="Unit of measurement" >}}
 
 - ### `background`
 

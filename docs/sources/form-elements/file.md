@@ -21,10 +21,7 @@ Specific for this element are the following options:
  .png,.gif
 ```
 
-<Image
-  title="Options specific to the File type."
-  src="/img/blog/2023-10-10-form-panel-3.2.1/accepted.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/accepted.png" class="border" alt="Options specific to the File type." >}}
 
 #### Example of the File type in a project
 

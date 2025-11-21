@@ -24,10 +24,7 @@ Specific for this element are the following options:
 - **Link text**
 - **Open in**. The link can be opened in the same or a new tab.
 
-<Image
-  title="The Link element type."
-  src="/img/plugins/business-forms/link.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/link.png" class="border" alt="The Link element type." >}}
 
 ## Change Elements Model
 

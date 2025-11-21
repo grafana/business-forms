@@ -22,10 +22,7 @@ Dashboard and global variables are replaced automatically in the following eleme
 - Form elements labels (starting from version 4.9.0)
 - Button texts (starting from version 4.9.0)
 
-<Image
-  title="Use dashboard variables in the sections, labels, and button texts."
-  src="/img/blog/2024-11-30-form-panel-4.9.0/var-sections-labels-buttons.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/var-sections-labels-buttons.png" class="border" alt="Use dashboard variables in the sections, labels, and button texts." >}}
 
 Three types of variables are thoroughly explained in our [Grafana Crash Course](/grafana/variables).
 

@@ -13,10 +13,7 @@ labels:
 
 The Business Forms panel plugin enables the creation of control panels with multiple sections and the same identifier.
 
-<Image
-  title="Control panel created with the Business Forms panel."
-  src="/img/plugins/business-forms/control.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/control.png" class="border" alt="Control panel created with the Business Forms panel." >}}
 
 ## Additional features
 

@@ -54,10 +54,7 @@ Enabling the Synchronize option and using it together with `context.panel.onOpti
 
 {{< /admonition >}}
 
-<Image
-  title="Disable Synchronize with data to avoid endless reloading of the panel if onOptionsChange() is used in the initial request."
-  src="/img/plugins/business-forms/infinity-reload.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/infinity-reload.png" class="border" alt="Disable Synchronize with data to avoid endless reloading of the panel if onOptionsChange() is used in the initial request." >}}
 
 ```js
 const feedback = context.panel.data.series.find(
@@ -133,10 +130,7 @@ Next, the **Sections** and **Form Elements** categories are shown as not configu
 
 In the **Initial Request** category, the **Initial Action** is set to **Code**.
 
-<Image
-  title="Create sections dynamically. Example."
-  src="/img/blog/2024-11-30-form-panel-4.9.0/dyn-sec-how.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/dyn-sec-how.png" class="border" alt="Create sections dynamically. Example." >}}
 
 The JavaScript from the example above:
 

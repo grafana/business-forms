@@ -15,10 +15,7 @@ The **Color Picker** allows to check color from palette.
 
 - Color format. HEX or RGB
 
-<Image
-  title="Color Picker element."
-  src="/img/plugins/business-forms/color-picker.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/color-picker.png" class="border" alt="Color Picker element." >}}
 
 ## Change Elements Model
 

@@ -47,10 +47,7 @@ grafana cli plugins install volkovlabs-form-panel
 - Allows displaying success and error notifications through custom code.
 - Supports suggestions for available parameters when writing program code in the code editor.
 
-<Image
-  title="Business Forms panel for Grafana."
-  src="/img/plugins/business-forms/panel.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/panel.png" class="border" alt="Business Forms panel for Grafana." >}}
 
 ## Tutorial
 

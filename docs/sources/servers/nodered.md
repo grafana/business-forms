@@ -25,7 +25,4 @@ Node-RED usage scenarios involving the Data Manipulation panel plugin:
 - API Gateway to relax CORS restrictions, because Node-RED's default response includes the `Access-Control-Allow-Origin: *` header.
 - Manage authentication across all destination databases and APIs to preserve a single authentication type for all services.
 
-<Image
-  title="Node-RED flow to implement GET and POST endpoints for multiple databases."
-  src="/img/plugins/business-forms/node-red.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/node-red.png" class="border" alt="Node-RED flow to implement GET and POST endpoints for multiple databases." >}}

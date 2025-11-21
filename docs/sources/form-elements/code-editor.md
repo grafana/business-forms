@@ -16,10 +16,7 @@ The **Code editor** highlights keywords and formats the entered text. Specific f
 - Language. You have a wide range of languages to select from (C, C++, C#, GO, HTML, Java, JavaScript, JSON, Markdown, MySQL, PHP, PostgreSQL, Python, Ruby, SQL, TypeScript).
 - Height. How high the entering window should be.
 
-<Image
-  title="Options specific to the Code Editor type."
-  src="/img/plugins/business-forms/code-editor.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/code-editor.png" class="border" alt="Options specific to the Code Editor type." >}}
 
 ## Change Elements Model
 

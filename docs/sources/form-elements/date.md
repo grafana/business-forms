@@ -19,10 +19,7 @@ The **Date** type is available starting from version 4.9.0.
 
 If time is irrelevant to your scenario, instead of **Date and time**, you can select **Date** type.
 
-<Image
-  title="Date and Date and time types."
-  src="/img/blog/2024-11-30-form-panel-4.9.0/date-type.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/date-type.png" class="border" alt="Date and Date and time types." >}}
 
 ## Change Elements Model
 

@@ -14,20 +14,13 @@ weight: 40
 
 The Business Forms panel can request data (`GET` request) and update data (`DELETE`, `PATCH`, `POST`, or `PUT` request) or configuration through REST API.
 
-<Image
-  title="Business Forms panel uses GET or POST/PUT request to interact with API server."
-  src="/img/plugins/business-forms/form-api.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/form-api.png" class="border" alt="Business Forms panel uses GET or POST/PUT request to interact with API server." >}}
 
 ## JSON Payload
 
 Form elements defined in the panel options are used to parse data within the initial request and send data within the update request.
 
-<Image
-  title="Form elements defined in Data Manipulation panel."
-  src="/img/plugins/business-forms/elements.png"
-  width="80%"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/elements.png" class="border" alt="Form elements defined in Data Manipulation panel." >}}
 
 The JSON response of the initial request includes the form elements' identifiers and values. The response is parsed and initial values on the form are updated.
 
@@ -41,19 +34,13 @@ Once values have been updated, all the form elements will create a similar paylo
 
 We recommend that you run Grafana behind an NGINX reverse proxy for an additional security layer. The reverse proxy also allows you to expose additional API endpoints and static files within the scope of the same domain, which makes it CORS-ready.
 
-<Image
-  title="Grafana and Server API behind an NGINX reverse proxy."
-  src="/img/plugins/business-forms/form-nginx-api.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/form-nginx-api.png" class="border" alt="Grafana and Server API behind an NGINX reverse proxy." >}}
 
 ## CORS
 
 Operation of the Business Forms panel plugin may be blocked by a CORS policy when accessing an API server. You can find a rejection error in the browser's console.
 
-<Image
-  title="Rejection error in the browser's console."
-  src="/img/plugins/business-forms/cors.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/cors.png" class="border" alt="Rejection error in the browser's console." >}}
 
 Please consider that Grafana will not explicitly indicate a CORS error.
 

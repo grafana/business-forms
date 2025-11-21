@@ -22,10 +22,7 @@ The Data Manipulation plugin offers to convert any Grafana dashboard into a full
 
 The schema below is created to illustrate the major parts and their roles.
 
-<Image
-  title="Data flow diagram for the Data Manipulation panel."
-  src="/img/plugins/business-forms/data-manipulation-flow.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/data-manipulation-flow.png" class="border" alt="Data flow diagram for the Data Manipulation panel." >}}
 
 ## Initial Request
 
@@ -43,15 +40,9 @@ Since version 4.2.0. the `Query Field` and `Field Name` fields have been relocat
 
 {{< /admonition >}}
 
-<Image
-  title="Configure the Initial Request for Query. "
-  src="/img/plugins/business-forms/query.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/query.png" class="border" alt="Configure the Initial Request for Query. " >}}
 
-<Image
-  title="New location of `Query Field` fields."
-  src="/img/plugins/business-forms/query-new.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/query-new.png" class="border" alt="New location of `Query Field` fields." >}}
 
 ### Data source
 
@@ -61,24 +52,15 @@ The **Data source** type is more flexible than the **Query** type. However, it m
 
 The **Initial Payload Request** is a mandatory piece of code that needs to contain the database request at the bare minimum. More complex data parsing functionality could be added if required.
 
-<Image
-  title="Steps to configure the Initial Request for Data Source."
-  src="/img/plugins/business-forms/ds-all.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/ds-all.png" class="border" alt="Steps to configure the Initial Request for Data Source." >}}
 
-<Image
-  title="Steps to configure the Initial Request for Data Source. New location of `Field Name` fields."
-  src="/img/plugins/business-forms/ds-all-new.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/ds-all-new.png" class="border" alt="Steps to configure the Initial Request for Data Source. New location of `Field Name` fields." >}}
 
 ### REST API
 
 The **REST API** type works with an external API server. When specifying the API URL, you can use global and dashboard variables. Header parameters are available as separate options.
 
-<Image
-  title="Steps to configure the Initial Request for REST API."
-  src="/img/plugins/business-forms/rest-get.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/rest-get.png" class="border" alt="Steps to configure the Initial Request for REST API." >}}
 
 You can find ready-to-use API servers for Deno, InfluxDB, JSON API, MySQL, Node-Red, and PostgreSQL in [servers section](../servers).
 
@@ -88,10 +70,7 @@ Find more information, tips and tricks in our [documentation](../architecture).
 
 To create post-processing logic, you can access panel options, API responses, form elements, Grafana services, dashboard, and global variables. Find the [code snippet here](../code).
 
-<Image
-  title="Initial Request Custom Code exists for every Initial Request type."
-  src="/img/plugins/business-forms/init-custom.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/init-custom.png" class="border" alt="Initial Request Custom Code exists for every Initial Request type." >}}
 
 ## Ball is on the user's side
 
@@ -103,10 +82,7 @@ You can enable the Highlight Changes feature, which displays all modifications m
 
 For the Data Source type, you must use the `SetInitial()` function in the Initial Request Custom Code. See the illustration for the Initial Request, Data Source type above (on the picture). Also, find [code examples here](../request).
 
-<Image
-  title="Enable Highlight Changes to see the new values on the form."
-  src="/img/plugins/business-forms/highlight.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/highlight.png" class="border" alt="Enable Highlight Changes to see the new values on the form." >}}
 
 ## Reset button
 
@@ -121,10 +97,7 @@ With the **Data Source** reset action you can specify a data source for the Rese
 
 In the **Custom code**, you can have any custom logic required. For instance, set all form elements to their defaults.
 
-<Image
-  title="Reset button can call the Initial Request or execute any custom code."
-  src="/img/plugins/business-forms/reset.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/reset.png" class="border" alt="Reset button can call the Initial Request or execute any custom code." >}}
 
 ## Update request
 
@@ -134,19 +107,13 @@ The Update Request carries data from the Grafana dashboard to your data source. 
 
 For the Data Source type, start with the Data Source parameter. Then go to the Update Request Payload, select Custom code and create a payload script there. Use JavaScript and the language of your data source to create a code that will update your data source data.
 
-<Image
-  title="Steps to configure the Update Request for Data Source."
-  src="/img/plugins/business-forms/update-request-ds.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/update-request-ds.png" class="border" alt="Steps to configure the Update Request for Data Source." >}}
 
 ### Use Initial Request after Update Request
 
 You can trigger the `Initial Request` immediately after updating the data using Custom Code. In Initial Request mode, various types can be used — but there's one important point to consider if you're using `QUERY` as the initial request type.
 
-<Image
-  title="Code and logic after update request"
-  src="/img/plugins/business-forms/update-custom-code.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/update-custom-code.png" class="border" alt="Code and logic after update request" >}}
 
 If the type is `QUERY`, it accepts and sets values from data.
 
@@ -155,10 +122,7 @@ Since this may take some time, it's recommended to use it with `setTimeout` to e
 
 Another possible approach is to update the variables in the data source, which will trigger a second query and retrieve the new data.
 
-<Image
-  title="Custom code: setTimeout combine with context.grafana.refresh()"
-  src="/img/plugins/business-forms/code-after-update-with-timeout.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/code-after-update-with-timeout.png" class="border" alt="Custom code: setTimeout combine with context.grafana.refresh()" >}}
 
 ### Query editor and Frontend Data Source
 
@@ -172,32 +136,20 @@ This feature is related to the:
 - **Initial Request** -> **Initial Action** -> **Data Source**,
 - **Update Request** -> **Update Action** -> **Data Source**.
 
-<Image
-  title="The payload area relates to the Data Source (Initial and Update requests)."
-  src="/img/blog/2024-07-02-form-panel-4.0.0/init-update.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/init-update.png" class="border" alt="The payload area relates to the Data Source (Initial and Update requests)." >}}
 
 We simplified work with the payload creation. The Business Forms panel has a designated area to enter the payload request.
 
-<Image
-  title="Payload for the Initial Request example."
-  src="/img/blog/2024-07-02-form-panel-4.0.0/ini-payload.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/ini-payload.png" class="border" alt="Payload for the Initial Request example." >}}
 
-<Image
-  title="Payload for the Update Request example."
-  src="/img/blog/2024-07-02-form-panel-4.0.0/update-payload.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/update-payload.png" class="border" alt="Payload for the Update Request example." >}}
 
 Sometimes, when migrating to a new version, you may need to convert a large number of panels. This involves creating payloads and updating queries using the new payload format.
 
 To ensure a smoother transition, you can use a more seamless approach.
 For example, you can keep the old payload generation logic and simply return a static string in the query editor instead of relying on the new payload.
 
-<Image
-  title="Seamless Query Update Example"
-  src="/img/plugins/business-forms/seamless-update.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/seamless-update.png" class="border" alt="Seamless Query Update Example" >}}
 
 ### Use nested objects in payload
 
@@ -303,17 +255,11 @@ return payload;
 
 Text Area element allows you to create text with multiple lines:
 
-<Image
-  title="Text Area element with multiple lines."
-  src="/img/plugins/business-forms/text-area-multiline.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/text-area-multiline.png" class="border" alt="Text Area element with multiple lines." >}}
 
 After entering the data and submitting the form, you may see a data source error. The issue is caused by not properly processing and converting multiple lines in the payload.
 
-<Image
-  title="Data source update error with multiple lines."
-  src="/img/plugins/business-forms/datasource-error-update.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/datasource-error-update.png" class="border" alt="Data source update error with multiple lines." >}}
 
 To avoid this behavior, please add following steps in the Create Payload code editor:
 
@@ -352,10 +298,7 @@ console.log("update payload:", payload);
 return payload;
 ```
 
-<Image
-  title="Create payload code editor with custom payload to update multiple lines."
-  src="/img/plugins/business-forms/datasource-create-payload-code-editor.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/datasource-create-payload-code-editor.png" class="border" alt="Create payload code editor with custom payload to update multiple lines." >}}
 
 ### REST API
 
@@ -367,10 +310,7 @@ You can enable the Confirmation step if needed. This step looks like a popup win
 
 For the Data Source type, you must use the `SetInitial()` function in the Initial Request Custom Code. See the illustration for the Initial Request, Data Source type above (on the picture).
 
-<Image
-  title="Confirmation step looks like a table with old and new values."
-  src="/img/plugins/business-forms/confirm.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/confirm.png" class="border" alt="Confirmation step looks like a table with old and new values." >}}
 
 Following Confirmation, the Submit button initiates the Update Request.
 
@@ -384,25 +324,16 @@ For example, during the post-processing, you can output a status message, transi
 
 In addition to the Submit and Reset button, there is a third one - Save Default. It saves the current form values in the dashboard. You can choose an icon and text instead of the pre-set ones.
 
-<Image
-  title="Save Default Button configuration."
-  src="/img/plugins/business-forms/default-button.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/default-button.png" class="border" alt="Save Default Button configuration." >}}
 
 ## Initial Request vs Update Request
 
 Below is the comparative table showing the similarities and differences between the initial and update requests.
 
-<Image
-  title="Similarities and differences between the initial and update requests."
-  src="/img/plugins/business-forms/init-update.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/init-update.png" class="border" alt="Similarities and differences between the initial and update requests." >}}
 
 ## Buttons
 
 The below schema summarises the information about buttons available in the Data Manipulation form.
 
-<Image
-  title="Three buttons are available in the Data Manipulation form."
-  src="/img/plugins/business-forms/buttons.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/buttons.png" class="border" alt="Three buttons are available in the Data Manipulation form." >}}

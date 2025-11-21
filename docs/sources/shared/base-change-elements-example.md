@@ -3,10 +3,7 @@ title: base change elements example
 ---
 ### Code Example with Query action for Initial Request
 
-<Image
-  title="Initial Request"
-  src="/img/plugins/business-forms/elements/query-action.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/query-action.png" class="border" alt="Initial Request" >}}
 
 ```js
 /**

@@ -356,10 +356,7 @@ context.panel.setError(message);
 context.panel.setError("Message");
 ```
 
-<Image
-  title="Displays an error on panel."
-  src="/img/plugins/business-forms/parameters/set-error.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/set-error.png" class="border" alt="Displays an error on panel." >}}
 
 #### Arguments
 
@@ -854,10 +851,7 @@ context.grafana.notifyError([
 context.grafana.notifyError(["Error Title", `Show error message`]);
 ```
 
-<Image
-  title="Displays an error."
-  src="/img/plugins/business-forms/parameters/notify-error.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/notify-error.png" class="border" alt="Displays an error." >}}
 
 #### Arguments
 

@@ -23,16 +23,9 @@ For more info, please refer to the [Dynamic Forms](/plugins/business-forms/dynam
 
 You have a choice of three layouts - **Basic**, standard **Buttons Only**, and **Sections**. To switch between them open the Layout category.
 
-<Image
-  title="Layout can be Basic, Buttons Only, and Sections."
-  src="/img/plugins/business-forms/sections.png"
-  width="80%"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/sections.png" class="border" alt="Layout can be Basic, Buttons Only, and Sections." >}}
 
-<Image
-  title="Form elements layout types."
-  src="/img/plugins/business-forms/layouts.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/layouts.png" class="border" alt="Form elements layout types." >}}
 
 ### Basic
 
@@ -78,10 +71,7 @@ Go to the **Form Elements** category to add a form element. Start by specifying 
 
 Element types have specific options. For instance, the **Text area** type has **Rows** to regulate the element size on the dashboard.
 
-<Image
-  title="Form element in Edit mode."
-  src="/img/plugins/business-forms/add-form-element.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/add-form-element.png" class="border" alt="Form element in Edit mode." >}}
 
 ## Move a form element
 
@@ -93,20 +83,13 @@ Supported starting from the version 3.0.0.
 
 You can drag-and-drop form elements in the edit mode to change their order on the form.
 
-<Image
-  title="Drag-and-drop form elements in Edit mode."
-  src="/img/plugins/business-forms/drag.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/drag.png" class="border" alt="Drag-and-drop form elements in Edit mode." >}}
 
 ## Form element types
 
 The picture below illustrates all available element types prior to the version 4.4.0
 
-<Image
-  title="Form elements on UI."
-  src="/img/plugins/business-forms/elements-demo.png"
-  width="60%"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/elements-demo.png" class="border" alt="Form elements on UI." >}}
 
 - [`Custom button`](/plugins/business-forms/elements/button/)
 - [`Checkbox List with custom options`](/plugins/business-forms/elements/button/)
@@ -141,10 +124,7 @@ All three have some options in common.
 
 #### Icon
 
-<Image
-  title="Optionally select an icon for this element."
-  src="/img/plugins/business-forms/icons.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/icons.png" class="border" alt="Optionally select an icon for this element." >}}
 
 ### Custom color/background color for elements
 
@@ -160,10 +140,7 @@ You can play with **Form Elements** colors. Configurable are:
 - Label background,
 - Label color.
 
-<Image
-  title="Color options"
-  src="/img/blog/2024-07-02-form-panel-4.0.0/colors.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/colors.png" class="border" alt="Color options" >}}
 
 ### Select Options from Query
 
@@ -176,10 +153,7 @@ Below is supported starting from the version 3.2.1.
 Reference a query from any configured data source to populate form elements dynamically.
 You can specify the **Label** and **Value** fields.
 
-<Image
-  title="Use values from the query for your types with select options."
-  src="/img/blog/2023-12-03-form-panel-3.3.0/options-from-query.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/options-from-query.png" class="border" alt="Use values from the query for your types with select options." >}}
 
 ### Select Options from Get Options Code
 
@@ -194,10 +168,7 @@ Below is supported starting from the version 3.5.0.
 - return array with `{label,value}` objects,
 - be synchronous.
 
-<Image
-  title="Use hard-coded values from the Get Options Code for your types with select options."
-  src="/img/blog/2023-12-03-form-panel-3.3.0/options-from-code.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/options-from-code.png" class="border" alt="Use hard-coded values from the Get Options Code for your types with select options." >}}
 
 ### Set Options received asynchronously
 
@@ -207,10 +178,7 @@ It could be done in two steps:
 
 #### Step 1. **Initial Request**.
 
-<Image
-  title="Initial request to work with options received asynchronously."
-  src="/img/blog/2023-12-03-form-panel-3.3.0/initial-req-for-options.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/initial-req-for-options.png" class="border" alt="Initial request to work with options received asynchronously." >}}
 
 In the example below, we find a necessary element and update its options. Once the data has been received, we update the element using `context.panel.onChangeElements()`.
 
@@ -253,10 +221,7 @@ return fetchData();
 
 Set options for your element from `context.panel.elements`.
 
-<Image
-  title="Get Options code for the Options received asynchronously"
-  src="/img/blog/2023-12-03-form-panel-3.3.0/set-options-from-code.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/set-options-from-code.png" class="border" alt="Get Options code for the Options received asynchronously" >}}
 
 ```js
 const element = context.panel.elements.find(
@@ -290,10 +255,7 @@ Every form element has the <b>Show If returned value is true</b> parameter where
 - If this code returns `true`, the element is shown on the panel.
 - If this code returns `false`, the element is hidden from the panel.
 
-<Image
-  title="Conditional visibility example."
-  src="/img/blog/2023-10-10-form-panel-3.2.1/select.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/select.png" class="border" alt="Conditional visibility example." >}}
 
 Example code to check the current value of the `select` element and show the `dateTime` element if the value equal to `max`:
 
@@ -315,10 +277,7 @@ Below is supported starting from the version 3.2.1.
 
 You can use the dashboard and global variables within your JavaScript code.
 
-<Image
-  title="Conditional visibility using a dashboard variable example."
-  src="/img/blog/2023-10-10-form-panel-3.2.1/var.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/var.png" class="border" alt="Conditional visibility using a dashboard variable example." >}}
 
 Example code to check the value of the dashboard variable `var`:
 
@@ -339,17 +298,11 @@ To map the Initial Form Elements values, use the **Initial Fields** options cate
 
 ### Data source 4.4.0
 
-<Image
-  title="Steps to configure the Initial Request for Data Source. New location of `Field Name` fields."
-  src="/img/blog/2024-08-29-form-panel-4.4.0/field-name-ds-440.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/field-name-ds-440.png" class="border" alt="Steps to configure the Initial Request for Data Source. New location of `Field Name` fields." >}}
 
 ### Query 4.4.0
 
-<Image
-  title="Explicitly specify the field-to-form element mapping for Query using Query Field. New location of Query Field fields since version 4.2.0"
-  src="/img/blog/2024-08-29-form-panel-4.4.0/field-name-query-440.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/field-name-query-440.png" class="border" alt="Explicitly specify the field-to-form element mapping for Query using Query Field. New location of Query Field fields since version 4.2.0" >}}
 
 {{< admonition type="note" >}}
 
@@ -361,18 +314,12 @@ Using the **Field name** parameter for **Data Source** and the **Query Field** f
 
 ### Data Source
 
-<Image
-  title="Explicitly specify the field-to-form element mapping for Data Source using Field name."
-  src="/img/blog/2023-10-10-form-panel-3.2.1/field-name-ds.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/field-name-ds.png" class="border" alt="Explicitly specify the field-to-form element mapping for Data Source using Field name." >}}
 
 The `Field Name` option for each Form Element is located under the code editor when the data source option is enabled. Specify a field name for appropriate form element from the data source response.
 
 ### Query
 
-<Image
-  title="Explicitly specify the field-to-form element mapping for Query using Query Field."
-  src="/img/blog/2023-10-10-form-panel-3.2.1/field-name-query.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/field-name-query.png" class="border" alt="Explicitly specify the field-to-form element mapping for Query using Query Field." >}}
 
 The `Query Field` option for each Form Element is located under the code editor when the Query option is enabled. Specify a field name for appropriate form element from the Query response.

@@ -19,10 +19,7 @@ Specific for this element are the following options:
 
 To add an option click the 'Add option' button and then specify an option type (number or string), value, label and select an icon from the given list.
 
-<Image
-  title="Add custom options for the radio custom type."
-  src="/img/plugins/business-forms/radio.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/radio.png" class="border" alt="Add custom options for the radio custom type." >}}
 
 ## Change Elements Model
 

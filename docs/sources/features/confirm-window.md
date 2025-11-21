@@ -21,10 +21,7 @@ Custom confirmation window labels have been supported starting from version 3.3.
 
 You can customize all labels using the **Update Confirmation Window** category.
 
-<Image
-  title="Customize confirmation window labels."
-  src="/img/plugins/business-forms/confirm-update.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/confirm-update.png" class="border" alt="Customize confirmation window labels." >}}
 
 ## Display Values parameter
 
@@ -39,7 +36,4 @@ The **Display Values** parameter has two options to choose from:
 - **All values** to always show all data elements regardless if there was any change in values.
 - **Updated Only** to show only the data elements with changed values.
 
-<Image
-  title="Display Values parameter."
-  src="/img/blog/2024-07-02-form-panel-4.0.0/display-values.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/display-values.png" class="border" alt="Display Values parameter." >}}
