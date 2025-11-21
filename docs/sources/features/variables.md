@@ -46,7 +46,4 @@ To demonstrate how Data Manipulation plugin can work with dashboard variables we
 
 If you are a visual style learner, you can watch the video. It covers the same ground.
 
-<Youtube
-  id="DW-yuSopejY"
-  title="Synchronize dashboard variables with Data Manipulation in Grafana."
-/>
+{{< youtube id="DW-yuSopejY" >}}

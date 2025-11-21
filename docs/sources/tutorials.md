@@ -18,22 +18,19 @@ weight: 80
 
 In this video, Daria provides two examples of what the Business Forms plugin can do and then outline the configuration steps. Towards the end, she emphasizes that the Business Forms panel can be created dynamically or, in other words, as a code with a reference where you can get copy-paste examples.
 
-<Youtube
-  id="ulbe8U8-IFA"
-  title="The powerful Business Forms panel 4.1.0 Overview."
-/>
+{{< youtube id="ulbe8U8-IFA" >}}
 
 ## How to use Business Suite to create a release dashboard in Grafana
 
 In this video, Daria explains how the release dashboard has been configured and all the Business Suite panels used.
 
-<Youtube id="tUGRQBBZoRQ" title="How to create a business dashboard in Grafana." />
+{{< youtube id="tUGRQBBZoRQ" >}}
 
 ## File Upload
 
 Below is one of our YouTube videos with a use-case review. It features three open source plugins that come together on one Grafana dashboard to provide a solution for a long-standing task - file upload using a Grafana dashboard and immediate display of the uploaded files.
 
-<Youtube id="V4Sza0uDQNs" title="File Upload using Grafana dashboard." />
+{{< youtube id="V4Sza0uDQNs" >}}
 
 You can find implementation details in the blog post.
 
@@ -47,19 +44,13 @@ To demonstrate how Business Forms plugin can work with dashboard variables we cr
 
 If you are a visual style learner, you can watch the video. It covers the same ground.
 
-<Youtube
-  id="DW-yuSopejY"
-  title="Synchronize dashboard variables with Business Forms in Grafana."
-/>
+{{< youtube id="DW-yuSopejY" >}}
 
 # Dynamic forms
 
 With custom code, you can update form elements or their values and options from any data source.
 
-<Youtube
-  id="RSVH1bSBNl8"
-  title="Static and dynamic form elements of the Business Forms panel."
-/>
+{{< youtube id="RSVH1bSBNl8" >}}
 
 You can find more details in the blog post below.
 
@@ -69,10 +60,7 @@ You can find more details in the blog post below.
 
 If your use case requires inserting, deleting, or updating your data, you can employ the Business Forms plugin. This video discusses two API servers to facilitate the process.
 
-<Youtube
-  id="SHN2S-dRIEM"
-  title="How to manipulate data on Grafana dashboard."
-/>
+{{< youtube id="SHN2S-dRIEM" >}}
 
 ## Connect to API Server
 

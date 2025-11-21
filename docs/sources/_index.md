@@ -26,10 +26,7 @@ The Business Forms panel is a conceptually new plugin for Grafana. It is the fir
 
 You can install the Business Forms panel from the [Grafana Plugins catalog](https://grafana.com/grafana/plugins/volkovlabs-form-panel/) or use the Grafana command line tool.
 
-<Youtube
-  id="1qYzHfPXJF8"
-  title="Install Business Suite plugins in Cloud, OSS, Enterprise. Getting started with the Business Suite."
-/>
+{{< youtube id="1qYzHfPXJF8" >}}
 
 For the latter, please use the following command:
 
@@ -59,10 +56,7 @@ grafana cli plugins install volkovlabs-form-panel
 
 In this video, Daria provides two examples of what the Business Forms plugin can do and then outline the configuration steps. Towards the end, she emphasizes that the Business Forms panel can be created dynamically or, in other words, as a code with a reference where you can get copy-paste examples.
 
-<Youtube
-  id="ulbe8U8-IFA"
-  title="The powerful Business Forms panel 4.1.0 Overview."
-/>
+{{< youtube id="ulbe8U8-IFA" >}}
 
 We have many other tutorials that you can find helpful. You can review all related to this plugin tutorials [here](/plugins/business-forms/tutorials).
 

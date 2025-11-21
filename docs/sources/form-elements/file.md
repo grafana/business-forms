@@ -36,7 +36,7 @@ The Data Manipulation panel with a file upload feature is used twice in that exa
 
 If you are a visual style learner, you can watch the video. It covers the same ground.
 
-<Youtube id="V4Sza0uDQNs" title="File Upload using Grafana dashboard." />
+{{< youtube id="V4Sza0uDQNs" >}}
 
 ## Change Elements Model
 

@@ -13,10 +13,7 @@ labels:
 
 With custom code, you can update form elements or their values and options from any data source.
 
-<Youtube
-  id="RSVH1bSBNl8"
-  title="Static and dynamic form elements of the Business Forms panel."
-/>
+{{< youtube id="RSVH1bSBNl8" >}}
 
 ## Select options
 
