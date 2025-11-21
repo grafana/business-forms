@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'File'
-description: 'Learn about File in Grafana'
+description: 'Learn how to use the file form element to upload files as binary or Base64 encoded data with configurable file type restrictions.'
 labels:
   products:
     - enterprise

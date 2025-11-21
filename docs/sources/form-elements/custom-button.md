@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Custom Button'
-description: 'Learn about Custom Button in Grafana'
+description: 'Learn how to add custom buttons with configurable styles, icons, and custom code execution to your forms.'
 labels:
   products:
     - enterprise

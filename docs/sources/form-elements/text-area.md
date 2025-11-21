@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Text Area'
-description: 'Learn about Text Area in Grafana'
+description: 'Learn how to use the text area form element for multi-line text input with configurable row height.'
 labels:
   products:
     - enterprise

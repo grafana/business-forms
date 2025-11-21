@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/control.png
 title: 'Control panel'
-description: 'Learn about Control panel in Grafana'
+description: 'Learn how to create control panels with multiple sections and the same identifier using the Business Forms panel.'
 labels:
   products:
     - enterprise

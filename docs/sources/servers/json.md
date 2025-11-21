@@ -5,7 +5,7 @@ tags:
 image: /img/plugins/business-forms/panel.png
 title: 'JSON API Server'
 menuTitle: JSON
-description: 'Learn about JSON API Server in Grafana'
+description: 'Learn how to set up a JSON API server on Node.js to retrieve and update JSON objects for testing the Business Forms panel.'
 labels:
   products:
     - enterprise

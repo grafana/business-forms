@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Password Input'
-description: 'Learn about Password Input in Grafana'
+description: 'Learn how to use the password input form element that masks entered text for secure data entry.'
 labels:
   products:
     - enterprise

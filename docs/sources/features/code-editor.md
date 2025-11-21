@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/blog/2024-08-29-form-panel-4.4.0/window.png
 title: 'Code Editor Toolbar'
-description: 'Learn about Code Editor Toolbar in Grafana'
+description: 'Learn how to use the code editor toolbar features including expand, copy, paste, wrap, and minimap controls.'
 labels:
   products:
     - enterprise

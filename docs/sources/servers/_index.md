@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/panel.png
 title: 'Business Forms panel and API Servers'
-description: 'Learn about Business Forms panel and API Servers in Grafana'
+description: 'Learn how to integrate the Business Forms panel with various API servers including InfluxDB, MySQL, PostgreSQL, JSON, and Node-RED.'
 labels:
   products:
     - enterprise

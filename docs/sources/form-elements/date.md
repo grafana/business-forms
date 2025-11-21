@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Date'
-description: 'Learn about Date in Grafana'
+description: 'Learn how to use the date form element for scenarios where time is irrelevant.'
 labels:
   products:
     - enterprise

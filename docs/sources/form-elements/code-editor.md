@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Code Editor'
-description: 'Learn about Code Editor in Grafana'
+description: 'Learn how to use the code editor form element with syntax highlighting and support for multiple programming languages.'
 labels:
   products:
     - enterprise

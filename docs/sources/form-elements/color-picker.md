@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Color Picker'
-description: 'Learn about Color Picker in Grafana'
+description: 'Learn how to use the color picker form element to select colors in HEX or RGB format.'
 labels:
   products:
     - enterprise

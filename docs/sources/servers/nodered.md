@@ -4,7 +4,7 @@ tags:
   - API Server
 image: /img/plugins/business-forms/panel.png
 title: 'Node-RED'
-description: 'Learn about Node-RED in Grafana'
+description: 'Learn how to use Node-RED as a visual API gateway for authentication, CORS management, and database integration with the Business Forms panel.'
 labels:
   products:
     - enterprise

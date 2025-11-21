@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'String Input'
-description: 'Learn about String Input in Grafana'
+description: 'Learn how to use the string input form element for manual text entry with optional visibility controls.'
 labels:
   products:
     - enterprise

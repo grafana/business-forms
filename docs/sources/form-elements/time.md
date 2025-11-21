@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Time'
-description: 'Learn about Time in Grafana'
+description: 'Learn how to use the time form element for scenarios where only time selection is needed without a date.'
 labels:
   products:
     - enterprise

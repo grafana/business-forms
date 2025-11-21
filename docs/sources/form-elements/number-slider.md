@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Number Slider'
-description: 'Learn about Number Slider in Grafana'
+description: 'Learn how to use the number slider form element with configurable minimum, maximum, and step values.'
 labels:
   products:
     - enterprise

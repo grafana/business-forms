@@ -5,7 +5,7 @@ tags:
 image: /img/plugins/business-forms/panel.png
 title: 'API Server for PostgreSQL'
 menuTitle: PostgresSQL
-description: 'Learn about API Server for PostgreSQL in Grafana'
+description: 'Learn how to set up a Node.js API server to retrieve and update values in a PostgreSQL database using the Business Forms panel.'
 labels:
   products:
     - enterprise

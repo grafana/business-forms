@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Radio Group with boolean options'
-description: 'Learn about Radio Group with boolean options in Grafana'
+description: 'Learn how to use the radio group form element that provides a choice between True and False values.'
 labels:
   products:
     - enterprise

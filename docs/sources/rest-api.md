@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/form-api.png
 title: 'REST API'
-description: 'Learn about REST API in Grafana'
+description: 'Learn how to use REST API to request and update data or configuration through the Business Forms panel.'
 labels:
   products:
     - enterprise

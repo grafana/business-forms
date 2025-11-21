@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/sections.png
 title: 'Form Elements'
-description: 'Learn about Form Elements in Grafana'
+description: 'Learn about the wide variety of form element types available in the Business Forms plugin to build web applications.'
 labels:
   products:
     - enterprise

@@ -5,7 +5,7 @@ tags:
 image: /img/plugins/business-forms/panel.png
 title: 'InfluxDB API'
 menuTitle: InfluxDB
-description: 'Learn about InfluxDB API in Grafana'
+description: 'Learn how to use the InfluxDB v2 API to retrieve and update data through the Business Forms panel.'
 labels:
   products:
     - enterprise

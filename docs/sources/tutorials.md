@@ -2,7 +2,7 @@
 tags:
   - Business Media
 title: 'Tutorials'
-description: 'Learn about Tutorials in Grafana'
+description: 'Learn how to use the Business Forms panel through video tutorials and blog posts covering features, use cases, and implementation examples.'
 labels:
   products:
     - enterprise

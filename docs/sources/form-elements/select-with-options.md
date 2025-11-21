@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Select with Custom options'
-description: 'Learn about Select with Custom options in Grafana'
+description: 'Learn how to create drop-down select elements where users can choose one option from a custom list.'
 labels:
   products:
     - enterprise

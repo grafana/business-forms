@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/panel.png
 title: 'Business Forms'
-description: 'Learn about Business Forms in Grafana'
+description: 'Learn how to insert and update application data and modify configuration directly from your Grafana dashboard using the Business Forms panel.'
 labels:
   products:
     - enterprise

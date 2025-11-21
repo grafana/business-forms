@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Multi-select with custom options'
-description: 'Learn about Multi-select with custom options in Grafana'
+description: 'Learn how to create multi-select drop-down elements where users can select one or many custom options.'
 labels:
   products:
     - enterprise

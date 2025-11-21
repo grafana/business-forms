@@ -5,7 +5,7 @@ tags:
 image: /img/suite.png
 hide_table_of_contents: true
 title: 'Release Notes'
-description: 'Learn about Release Notes in Grafana'
+description: 'Learn about new features, enhancements, fixes, and breaking changes across all versions of the Business Forms panel.'
 labels:
   products:
     - enterprise

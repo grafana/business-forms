@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/panel.png
 title: 'Dynamic forms'
-description: 'Learn about Dynamic forms in Grafana'
+description: 'Learn how to update form elements, values, and options dynamically from any data source using custom code.'
 labels:
   products:
     - enterprise

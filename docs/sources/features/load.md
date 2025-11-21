@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/data-manipulation-flow.png
 title: 'Load Indication'
-description: 'Learn about Load Indication in Grafana'
+description: 'Learn how the Business Forms panel indicates loading progress during initial and update requests.'
 labels:
   products:
     - enterprise

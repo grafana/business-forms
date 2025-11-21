@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Radio Group with custom options'
-description: 'Learn about Radio Group with custom options in Grafana'
+description: 'Learn how to create radio group form elements with custom options for single-selection scenarios.'
 labels:
   products:
     - enterprise

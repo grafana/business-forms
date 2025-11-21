@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Checkbox List with custom options'
-description: 'Learn about Checkbox List with custom options in Grafana'
+description: 'Learn how to create multi-selection checkbox list elements with custom options in the Business Forms panel.'
 labels:
   products:
     - enterprise

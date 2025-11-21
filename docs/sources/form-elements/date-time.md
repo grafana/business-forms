@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Date and Time'
-description: 'Learn about Date and Time in Grafana'
+description: 'Learn how to use the date and time form element with time zone support and min/max value constraints.'
 labels:
   products:
     - enterprise

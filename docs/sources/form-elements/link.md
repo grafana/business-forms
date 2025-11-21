@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Link'
-description: 'Learn about Link in Grafana'
+description: 'Learn how to add customizable link elements to your Business Forms that can open in the same or a new tab.'
 labels:
   products:
     - enterprise

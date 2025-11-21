@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Read-only Text Area'
-description: 'Learn about Read-only Text Area in Grafana'
+description: 'Learn how to use the read-only text area form element to display multiple rows of non-editable text.'
 labels:
   products:
     - enterprise

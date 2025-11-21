@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/blog/2023-12-03-form-panel-3.3.0/confirm.png
 title: 'Confirmation Window'
-description: 'Learn about Confirmation Window in Grafana'
+description: 'Learn how to configure and customize the confirmation window to highlight changes before submitting form updates.'
 labels:
   products:
     - enterprise

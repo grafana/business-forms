@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Number Input'
-description: 'Learn about Number Input in Grafana'
+description: 'Learn how to use the number input form element with configurable minimum and maximum value constraints.'
 labels:
   products:
     - enterprise

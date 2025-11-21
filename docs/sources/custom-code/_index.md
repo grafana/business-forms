@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Custom Code'
-description: 'Learn about Custom Code in Grafana'
+description: 'Learn how to use custom code to access panel options, REST API responses, form elements, and Grafana services in Business Forms.'
 labels:
   products:
     - enterprise

@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Read-only'
-description: 'Learn about Read-only in Grafana'
+description: 'Learn how to use the read-only form element to display non-editable text with optional lookup options.'
 labels:
   products:
     - enterprise

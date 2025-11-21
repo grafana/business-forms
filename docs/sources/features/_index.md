@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/panel.png
 title: 'Features'
-description: 'Learn about Features in Grafana'
+description: 'Learn about the extensive feature set of the Business Forms panel including control panels, custom requests, dynamic forms, and variables.'
 labels:
   products:
     - enterprise

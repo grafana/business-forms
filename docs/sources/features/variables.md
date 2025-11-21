@@ -3,7 +3,7 @@ tags:
   - Business Forms
   - Variables
 title: 'Variables'
-description: 'Learn about Variables in Grafana'
+description: 'Learn how dashboard and global variables are automatically replaced in URLs, headers, payloads, JavaScript code, and form elements.'
 labels:
   products:
     - enterprise

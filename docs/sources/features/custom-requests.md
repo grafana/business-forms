@@ -3,7 +3,7 @@ tags:
   - Business Forms
 image: /img/plugins/business-forms/request.png
 title: 'Custom Requests'
-description: 'Learn about Custom Requests in Grafana'
+description: 'Learn how to create custom initial and update requests with custom code for the Business Forms panel.'
 labels:
   products:
     - enterprise
