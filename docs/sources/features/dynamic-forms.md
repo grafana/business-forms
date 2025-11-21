@@ -46,15 +46,12 @@ context.panel.onOptionsChange(options);
 ## Update elements from data sources
 
 {{< admonition type="note" >}}
-
 The `context.panel.onOptionsChange()` handler calls the refresh panel.
-
 If you use it in the initial request, don't forget to disable the Synchronize option.
 Enabling the Synchronize option and using it together with `context.panel.onOptionsChange()` in the Initial Request will cause the panel to reload constantly.
-
 {{< /admonition >}}
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/infinity-reload.png" class="border" alt="Disable Synchronize with data to avoid endless reloading of the panel if onOptionsChange() is used in the initial request." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/infinity-reload.png" max-width="350px" class="border" alt="Disable Synchronize with data to avoid endless reloading of the panel if onOptionsChange() is used in the initial request." >}}
 
 ```js
 const feedback = context.panel.data.series.find(

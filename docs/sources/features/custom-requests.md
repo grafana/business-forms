@@ -26,7 +26,7 @@ Enabling the Synchronize option and using it together with `context.panel.onOpti
 
 {{< /admonition >}}
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/infinity-reload.png" class="border" alt="Disable Synchronize with data to avoid endless reloading of the panel if onOptionsChange() is used in the initial request." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/infinity-reload.png" max-width="350px" class="border" alt="Disable Synchronize with data to avoid endless reloading of the panel if onOptionsChange() is used in the initial request." >}}
 
 ```js
 const bucketsSelect = context.panel.elements.find(

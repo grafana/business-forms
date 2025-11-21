@@ -9,29 +9,28 @@ labels:
     - oss
     - cloud
 ---
+
 # Date and Time
 
 The **Date and Time** element gives access to the built-in date time Grafana component where a user can select a date and time using the familiar controls.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/calendar.png" class="border" alt="Date and time type is Grafana universal type." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/calendar.png" max-width="175px" class="border" alt="Date and time type is Grafana universal type." >}}
 
 Specific for this element are the following options:
 
 - Min. Sets the allowed minimum.
 - Max. Sets the allowed maximum.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/min-max.png" class="border" alt="Options specific to the Date and time type." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/min-max.png" max-width="300px" class="border" alt="Options specific to the Date and time type." >}}
 
 {{< admonition type="note" >}}
-
 The **Time Zone** option is available starting from version 4.0.0.
-
 {{< /admonition >}}
 
 - **UTC**. The date-time value is saved in the UTC zone,
 - **Local**. The date-time value is saved following the browser's time zone.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/time-zone.png" class="border" alt="New Time Zones option for Date and time elements." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/time-zone.png" max-width="400px" class="border" alt="New Time Zones option for Date and time elements." >}}
 
 ## Change Elements Model
 

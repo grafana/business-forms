@@ -127,7 +127,6 @@ Another possible approach is to update the variables in the data source, which w
 ### Query editor and Frontend Data Source
 
 {{< admonition type="note" >}}
-
 Query editor and Frontend Data Sources are available starting from version 4.0.0.
 {{< /admonition >}}
 
@@ -324,7 +323,7 @@ For example, during the post-processing, you can output a status message, transi
 
 In addition to the Submit and Reset button, there is a third one - Save Default. It saves the current form values in the dashboard. You can choose an icon and text instead of the pre-set ones.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/default-button.png" class="border" alt="Save Default Button configuration." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/default-button.png" max-width="400px" class="border" alt="Save Default Button configuration." >}}
 
 ## Initial Request vs Update Request
 

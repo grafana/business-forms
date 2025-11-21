@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # String Input
 
 The **String Input** is a text box where a user manually enters a string value.

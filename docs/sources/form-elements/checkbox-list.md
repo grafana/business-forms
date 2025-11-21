@@ -13,7 +13,7 @@ labels:
 
 The **Checkbox list with custom options** type allows to creation of multi-selection checkmark elements.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/checkbox.png" class="border" alt="Checkbox list with custom options." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/checkbox.png" max-width="300px" class="border" alt="Checkbox list with custom options." >}}
 
 Specific for this element are the following options:
 
