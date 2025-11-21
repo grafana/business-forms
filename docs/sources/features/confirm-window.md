@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/blog/2023-12-03-form-panel-3.3.0/confirm.png
-title: 'Confirmation Window'
-description: 'Learn how to configure and customize the confirmation window to highlight changes before submitting form updates.'
+title: Confirmation Window
+description: Learn how to configure and customize the confirmation window to highlight changes before submitting form updates.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Confirmation Window
 
 The Confirmation window, if enabled, is shown after a user clicks the submit button to highlight changes made in the Business Form.

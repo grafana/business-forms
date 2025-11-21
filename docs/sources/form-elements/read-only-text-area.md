@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Read-only Text Area'
-description: 'Learn how to use the read-only text area form element to display multiple rows of non-editable text.'
+title: Read-only Text Area
+description: Learn how to use the read-only text area form element to display multiple rows of non-editable text.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Read-only Text Area
 
 This element type is similar to the **Read-Only** type with the difference that this one allows to display of multiple rows of text.

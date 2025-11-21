@@ -1,18 +1,17 @@
 ---
-tags:
-  - Business Forms
-  - API Server
-image: /img/plugins/business-forms/panel.png
-title: 'API Server for MySQL'
+title: API Server for MySQL
 menuTitle: MySQL
-description: 'Learn how to set up a Node.js API server to retrieve and update values in a MySQL database using the Business Forms panel.'
+description: Learn how to set up a Node.js API server to retrieve and update values in a MySQL database using the Business Forms panel.
+keywords:
+  - business forms
+  - api server
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 30
 ---
-
 # API Server for MySQL
 
 API Server on Node.js enables retrieving and updating values in the MySQL database with Data Manipulation panel.

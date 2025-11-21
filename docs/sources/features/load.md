@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/data-manipulation-flow.png
-title: 'Load Indication'
-description: 'Learn how the Business Forms panel indicates loading progress during initial and update requests.'
+title: Load Indication
+description: Learn how the Business Forms panel indicates loading progress during initial and update requests.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Load indication
 
 If the data loading takes time, the Data Manipulation form will indicate that as follows.

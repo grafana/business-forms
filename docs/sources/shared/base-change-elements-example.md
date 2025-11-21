@@ -1,7 +1,6 @@
 ---
 title: base change elements example
 ---
-
 ### Code Example with Query action for Initial Request
 
 <Image

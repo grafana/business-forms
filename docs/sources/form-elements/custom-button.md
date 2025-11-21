@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Custom Button'
-description: 'Learn how to add custom buttons with configurable styles, icons, and custom code execution to your forms.'
+title: Custom Button
+description: Learn how to add custom buttons with configurable styles, icons, and custom code execution to your forms.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Custom button
 
 The **Custom button** allows add custom button to panel.

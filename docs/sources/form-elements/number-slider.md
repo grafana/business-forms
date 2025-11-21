@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Number Slider'
-description: 'Learn how to use the number slider form element with configurable minimum, maximum, and step values.'
+title: Number Slider
+description: Learn how to use the number slider form element with configurable minimum, maximum, and step values.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Number Slider
 
 The **Number Slider** is a horizontal line with a toggle that a user can drag left and right with a mouse. Alternatively, the user can enter the integer number manually.

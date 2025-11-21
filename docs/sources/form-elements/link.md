@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Link'
-description: 'Learn how to add customizable link elements to your Business Forms that can open in the same or a new tab.'
+title: Link
+description: Learn how to add customizable link elements to your Business Forms that can open in the same or a new tab.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Link
 
 :::info Version

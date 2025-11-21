@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/control.png
-title: 'Control panel'
-description: 'Learn how to create control panels with multiple sections and the same identifier using the Business Forms panel.'
+title: Control panel
+description: Learn how to create control panels with multiple sections and the same identifier using the Business Forms panel.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Control panel
 
 The Business Forms panel plugin enables the creation of control panels with multiple sections and the same identifier.

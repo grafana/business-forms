@@ -1,16 +1,15 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/form-api.png
-title: 'REST API'
-description: 'Learn how to use REST API to request and update data or configuration through the Business Forms panel.'
+title: REST API
+description: Learn how to use REST API to request and update data or configuration through the Business Forms panel.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 40
 ---
-
 # REST API
 
 The Business Forms panel can request data (`GET` request) and update data (`DELETE`, `PATCH`, `POST`, or `PUT` request) or configuration through REST API.

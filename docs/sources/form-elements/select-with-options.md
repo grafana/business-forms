@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Select with Custom options'
-description: 'Learn how to create drop-down select elements where users can choose one option from a custom list.'
+title: Select with Custom options
+description: Learn how to create drop-down select elements where users can choose one option from a custom list.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Select with Custom Options
 
 The **Select with Custom Options** type is a dropdown where users can select one option.

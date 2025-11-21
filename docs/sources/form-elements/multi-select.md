@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Multi-select with custom options'
-description: 'Learn how to create multi-select drop-down elements where users can select one or many custom options.'
+title: Multi-select with custom options
+description: Learn how to create multi-select drop-down elements where users can select one or many custom options.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Multi Select with Custom Options
 
 The **Multi-select with custom options** is a dropdown where users can select one or many options.

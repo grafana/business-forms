@@ -1,18 +1,16 @@
 ---
-tags:
-  - Business Forms
-  - Release Notes
-image: /img/suite.png
-hide_table_of_contents: true
-title: 'Release Notes'
-description: 'Learn about new features, enhancements, fixes, and breaking changes across all versions of the Business Forms panel.'
+title: Release Notes
+description: Learn about new features, enhancements, fixes, and breaking changes across all versions of the Business Forms panel.
+keywords:
+  - business forms
+  - release notes
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 90
 ---
-
 # Release Notes
 
 Track the progress of the Business Forms panel with these release notes, detailing new features, enhancements, fixes, and breaking changes across all versions.

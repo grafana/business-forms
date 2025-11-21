@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Date'
-description: 'Learn how to use the date form element for scenarios where time is irrelevant.'
+title: Date
+description: Learn how to use the date form element for scenarios where time is irrelevant.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Date
 
 :::info Version

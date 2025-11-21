@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Read-only'
-description: 'Learn how to use the read-only form element to display non-editable text with optional lookup options.'
+title: Read-only
+description: Learn how to use the read-only form element to display non-editable text with optional lookup options.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Read-only
 
 The **Read-only** type is sometimes also called the disabled type. It is a text box with a faded background and text. It does not allow a user to change the value it displays.

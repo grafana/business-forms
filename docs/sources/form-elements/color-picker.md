@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Color Picker'
-description: 'Learn how to use the color picker form element to select colors in HEX or RGB format.'
+title: Color Picker
+description: Learn how to use the color picker form element to select colors in HEX or RGB format.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Color Picker
 
 The **Color Picker** allows to check color from palette.

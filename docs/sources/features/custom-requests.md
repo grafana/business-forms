@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Custom Requests'
-description: 'Learn how to create custom initial and update requests with custom code for the Business Forms panel.'
+title: Custom Requests
+description: Learn how to create custom initial and update requests with custom code for the Business Forms panel.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Custom Requests
 
 The Business Forms panel allows you to create your own initial and update requests with custom code.

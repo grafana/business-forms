@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'String Input'
-description: 'Learn how to use the string input form element for manual text entry with optional visibility controls.'
+title: String Input
+description: Learn how to use the string input form element for manual text entry with optional visibility controls.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # String Input
 
 The **String Input** is a text box where a user manually enters a string value.

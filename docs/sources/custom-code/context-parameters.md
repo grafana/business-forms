@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Context Parameters'
-description: 'Learn how to use context parameters to access panel data, form elements, Grafana services, and other functionality in custom code.'
+title: Context Parameters
+description: Learn how to use context parameters to access panel data, form elements, Grafana services, and other functionality in custom code.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Context Parameters
 
 ## context.element

@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Code Editor'
-description: 'Learn how to use the code editor form element with syntax highlighting and support for multiple programming languages.'
+title: Code Editor
+description: Learn how to use the code editor form element with syntax highlighting and support for multiple programming languages.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Code Editor
 
 The **Code editor** highlights keywords and formats the entered text. Specific for this element are the following options:

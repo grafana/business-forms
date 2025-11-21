@@ -1,16 +1,13 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Custom Code'
-description: 'Learn how to use custom code to access panel options, REST API responses, form elements, and Grafana services in Business Forms.'
+title: Custom Code
+description: Learn how to use custom code to access panel options, REST API responses, form elements, and Grafana services in Business Forms.
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 50
 ---
-
 # Custom Code
 
 Custom code allows you to access the panel's options, REST API responses, form elements, and various Grafana services.

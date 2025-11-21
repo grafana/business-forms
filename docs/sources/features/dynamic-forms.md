@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/panel.png
-title: 'Dynamic forms'
-description: 'Learn how to update form elements, values, and options dynamically from any data source using custom code.'
+title: Dynamic forms
+description: Learn how to update form elements, values, and options dynamically from any data source using custom code.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Dynamic forms
 
 With custom code, you can update form elements or their values and options from any data source.

@@ -1,16 +1,15 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/sections.png
-title: 'Form Elements'
-description: 'Learn about the wide variety of form element types available in the Business Forms plugin to build web applications.'
+title: Form Elements
+description: Learn about the wide variety of form element types available in the Business Forms plugin to build web applications.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 30
 ---
-
 # Form Elements
 
 The Business Forms plugin is equipped with a wide variety of element types to cover almost any imaginable web application requirements.

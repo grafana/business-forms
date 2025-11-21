@@ -1,18 +1,17 @@
 ---
-tags:
-  - Business Forms
-  - API Server
-image: /img/plugins/business-forms/panel.png
-title: 'InfluxDB API'
+title: InfluxDB API
 menuTitle: InfluxDB
-description: 'Learn how to use the InfluxDB v2 API to retrieve and update data through the Business Forms panel.'
+description: Learn how to use the InfluxDB v2 API to retrieve and update data through the Business Forms panel.
+keywords:
+  - business forms
+  - api server
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 10
 ---
-
 # InfluxDB API
 
 :::info InfluxDB v2 API

@@ -1,7 +1,6 @@
 ---
 title: info use options change
 ---
-
 :::info
 Use this model to set element(s) if you use [`context.panel.onOptionsChange({})`](/plugins/business-forms/code/panel/#panelonoptionschangeoptions) method.
 

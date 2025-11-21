@@ -1,16 +1,15 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/panel.png
-title: 'Features'
-description: 'Learn about the extensive feature set of the Business Forms panel including control panels, custom requests, dynamic forms, and variables.'
+title: Features
+description: Learn about the extensive feature set of the Business Forms panel including control panels, custom requests, dynamic forms, and variables.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 60
 ---
-
 # Features
 
 The Business Forms panel provides an extensive set of features.

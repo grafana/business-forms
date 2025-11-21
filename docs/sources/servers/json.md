@@ -1,18 +1,17 @@
 ---
-tags:
-  - Business Forms
-  - API Server
-image: /img/plugins/business-forms/panel.png
-title: 'JSON API Server'
+title: JSON API Server
 menuTitle: JSON
-description: 'Learn how to set up a JSON API server on Node.js to retrieve and update JSON objects for testing the Business Forms panel.'
+description: Learn how to set up a JSON API server on Node.js to retrieve and update JSON objects for testing the Business Forms panel.
+keywords:
+  - business forms
+  - api server
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 20
 ---
-
 # JSON API Server
 
 JSON API Server on Node.js enables retrieving and updating JSON objects to test Data Manipulation panel.

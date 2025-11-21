@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Radio Group with boolean options'
-description: 'Learn how to use the radio group form element that provides a choice between True and False values.'
+title: Radio Group with boolean options
+description: Learn how to use the radio group form element that provides a choice between True and False values.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Radio Group with boolean options
 
 The **Radio Group with boolean options** provides a user with a choice between True and False.

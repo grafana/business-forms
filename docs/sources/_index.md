@@ -1,16 +1,15 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/panel.png
-title: 'Business Forms'
-description: 'Learn how to insert and update application data and modify configuration directly from your Grafana dashboard using the Business Forms panel.'
+title: Business Forms
+description: Learn how to insert and update application data and modify configuration directly from your Grafana dashboard using the Business Forms panel.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 10
 ---
-
 # Business Forms
 
 The Business Forms panel is a conceptually new plugin for Grafana. It is the first plugin that allows inserting and updating application data, as well as modifying configuration directly from your Grafana dashboard.

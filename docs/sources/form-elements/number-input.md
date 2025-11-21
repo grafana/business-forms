@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Number Input'
-description: 'Learn how to use the number input form element with configurable minimum and maximum value constraints.'
+title: Number Input
+description: Learn how to use the number input form element with configurable minimum and maximum value constraints.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Number Input
 
 The **Number Input** is a text box where users enter a number manually.

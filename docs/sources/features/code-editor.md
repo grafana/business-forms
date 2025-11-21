@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/blog/2024-08-29-form-panel-4.4.0/window.png
-title: 'Code Editor Toolbar'
-description: 'Learn how to use the code editor toolbar features including expand, copy, paste, wrap, and minimap controls.'
+title: Code Editor Toolbar
+description: Learn how to use the code editor toolbar features including expand, copy, paste, wrap, and minimap controls.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Code Editor Toolbar
 
 :::info Version

@@ -1,15 +1,15 @@
 ---
-tags:
-  - Business Media
-title: 'Tutorials'
-description: 'Learn how to use the Business Forms panel through video tutorials and blog posts covering features, use cases, and implementation examples.'
+title: Tutorials
+description: Learn how to use the Business Forms panel through video tutorials and blog posts covering features, use cases, and implementation examples.
+keywords:
+  - business media
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 80
 ---
-
 # Tutorials
 
 <Tutorials />

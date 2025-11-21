@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Password Input'
-description: 'Learn how to use the password input form element that masks entered text for secure data entry.'
+title: Password Input
+description: Learn how to use the password input form element that masks entered text for secure data entry.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Password Input
 
 The **Password Input** is a text box where every entered symbol is transformed into a dot.

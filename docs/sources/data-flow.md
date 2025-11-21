@@ -1,16 +1,15 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/data-manipulation-flow.png
-title: 'Data Flow'
-description: 'Learn how data flows through the Business Forms panel from initial requests to update requests and custom code execution.'
+title: Data Flow
+description: Learn how data flows through the Business Forms panel from initial requests to update requests and custom code execution.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 20
 ---
-
 # Data Flow
 
 :::info Version

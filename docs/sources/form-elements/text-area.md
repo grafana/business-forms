@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Text Area'
-description: 'Learn how to use the text area form element for multi-line text input with configurable row height.'
+title: Text Area
+description: Learn how to use the text area form element for multi-line text input with configurable row height.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Text Area
 
 The **Text Area** is a rectangular area where a user can enter a text.

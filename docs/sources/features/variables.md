@@ -1,15 +1,15 @@
 ---
-tags:
-  - Business Forms
-  - Variables
-title: 'Variables'
-description: 'Learn how dashboard and global variables are automatically replaced in URLs, headers, payloads, JavaScript code, and form elements.'
+title: Variables
+description: Learn how dashboard and global variables are automatically replaced in URLs, headers, payloads, JavaScript code, and form elements.
+keywords:
+  - business forms
+  - variables
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Variables
 
 Dashboard and global variables are replaced automatically in the following elements:

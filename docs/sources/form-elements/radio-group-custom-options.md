@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Radio Group with custom options'
-description: 'Learn how to create radio group form elements with custom options for single-selection scenarios.'
+title: Radio Group with custom options
+description: Learn how to create radio group form elements with custom options for single-selection scenarios.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Radio Group with custom options
 
 The **Radio Group with custom options** provides a user with a choice between two or many options.

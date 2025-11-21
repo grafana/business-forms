@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Checkbox List with custom options'
-description: 'Learn how to create multi-selection checkbox list elements with custom options in the Business Forms panel.'
+title: Checkbox List with custom options
+description: Learn how to create multi-selection checkbox list elements with custom options in the Business Forms panel.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Checkbox List with custom options
 
 The **Checkbox list with custom options** type allows to creation of multi-selection checkmark elements.

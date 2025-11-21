@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'Date and Time'
-description: 'Learn how to use the date and time form element with time zone support and min/max value constraints.'
+title: Date and Time
+description: Learn how to use the date and time form element with time zone support and min/max value constraints.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # Date and Time
 
 The **Date and Time** element gives access to the built-in date time Grafana component where a user can select a date and time using the familiar controls.

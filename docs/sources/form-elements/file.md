@@ -1,15 +1,14 @@
 ---
-tags:
-  - Business Forms
-image: /img/plugins/business-forms/request.png
-title: 'File'
-description: 'Learn how to use the file form element to upload files as binary or Base64 encoded data with configurable file type restrictions.'
+title: File
+description: Learn how to use the file form element to upload files as binary or Base64 encoded data with configurable file type restrictions.
+keywords:
+  - business forms
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 ---
-
 # File
 
 The **File** type allows users to access their file system to select a file. The file will be transferred as binary or Base64 encoded.
