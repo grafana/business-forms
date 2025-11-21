@@ -16,8 +16,10 @@ Custom code is executed after the `Initial` and `Update` requests, when `Element
 
 ## Parameters
 
-| Parameter                                                                                                                        | Description                                                                                                                                   | <span style={{fontSize:'14px'}}>Initial, Update</span> | <span style={{fontSize:'14px'}}>Change Value</span> | <span style={{fontSize:'14px'}}>ShowIf, DisableIf, Get Options</span> |
-| :------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ | --------------------------------------------------- | --------------------------------------------------------------------- |
+<!-- prettier-ignore-start -->
+
+| Parameter | Description | Initial, Update | Change Value | ShowIf, DisableIf, Get Options |
+| --------- | ----------- | --------------- | ------------ | ------------------------------ |
 | [`context.element`](/plugins/business-forms/code/panel/#contextelement)                                                          | Current element                                                                                                                               |                                                        | :heavy_check_mark:                                  |                                                                       |
 | [`context.panel.data`](/plugins/business-forms/code/panel/#paneldata)                                                            | Result set of panel queries.                                                                                                                  | :heavy_check_mark:                                     | :heavy_check_mark:                                  | :heavy_check_mark: (For `Get Options`)                                |
 | [`context.panel.elements`](/plugins/business-forms/code/panel/#panelelements)                                                    | Form elements.                                                                                                                                | :heavy_check_mark:                                     | :heavy_check_mark:                                  | :heavy_check_mark:                                                    |
@@ -59,6 +61,8 @@ Custom code is executed after the `Initial` and `Update` requests, when `Element
 | [`context.grafana.refresh()`](/plugins/business-forms/code/panel/#grafanarefresh)                                                | Function to refresh dashboard panels using application events.                                                                                | :heavy_check_mark:                                     | :heavy_check_mark:                                  |                                                                       |
 | [`context.utils.fileToBase64(file)`](/plugins/business-forms/code/panel/#utilsfiletobase64file)                                  | Convert to base64 format                                                                                                                      | :heavy_check_mark:                                     |                                                     |                                                                       |
 | [`context.utils.toDataQueryResponse(data)`](/plugins/business-forms/code/panel/#utilstodataqueryresponseres)                     | Parse the results from /api/ds/query into a DataQueryResponse                                                                                 | :heavy_check_mark:                                     | :heavy_check_mark:                                  |                                                                       |
+
+<!-- prettier-ignore-end -->
 
 ## Inspect
 
