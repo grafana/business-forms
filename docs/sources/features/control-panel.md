@@ -9,7 +9,6 @@ labels:
     - enterprise
     - oss
 ---
-import Image from "@theme/Image";
 
 # Control panel
 

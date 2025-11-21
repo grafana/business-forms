@@ -9,9 +9,6 @@ labels:
     - enterprise
     - oss
 ---
-import BlogPost from "@theme/BlogPost";
-import Youtube from "@theme/Youtube";
-import Image from "@theme/Image";
 
 # Variables
 

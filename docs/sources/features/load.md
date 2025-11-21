@@ -9,9 +9,8 @@ labels:
     - enterprise
     - oss
 ---
-import Image from "@theme/Image";
 
-# Load Indication
+# Load indication
 
 If the data loading takes time, the Data Manipulation form will indicate that as follows.
 

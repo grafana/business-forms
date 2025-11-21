@@ -12,8 +12,6 @@ labels:
     - oss
 weight: 20
 ---
-import Code from "@theme/Code";
-import Image from "@theme/Image";
 
 # JSON API Server
 

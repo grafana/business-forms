@@ -12,8 +12,6 @@ labels:
     - oss
 weight: 30
 ---
-import Code from "@theme/Code";
-import Image from "@theme/Image";
 
 # API Server for MySQL
 

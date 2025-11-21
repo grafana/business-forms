@@ -10,7 +10,6 @@ labels:
     - oss
 weight: 50
 ---
-import Image from "@theme/Image";
 
 # Custom Code
 

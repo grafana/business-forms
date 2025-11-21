@@ -10,9 +10,6 @@ labels:
     - oss
 weight: 40
 ---
-import BlogPost from "@theme/BlogPost";
-import Image from "@theme/Image";
-import Youtube from "@theme/Youtube";
 
 # REST API
 

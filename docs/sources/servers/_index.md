@@ -10,7 +10,6 @@ labels:
     - oss
 weight: 70
 ---
-import Image from "@theme/Image";
 
 # Business Forms panel and API Servers
 

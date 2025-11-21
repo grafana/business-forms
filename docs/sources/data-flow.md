@@ -10,7 +10,6 @@ labels:
     - oss
 weight: 20
 ---
-import Image from "@theme/Image";
 
 # Data Flow
 

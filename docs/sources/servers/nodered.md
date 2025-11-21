@@ -11,7 +11,6 @@ labels:
     - oss
 weight: 40
 ---
-import Image from "@theme/Image";
 
 # Node-RED
 

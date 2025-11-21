@@ -9,7 +9,6 @@ labels:
     - enterprise
     - oss
 ---
-import Image from "@theme/Image";
 
 # Context Parameters
 

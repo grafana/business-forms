@@ -9,14 +9,8 @@ labels:
     - enterprise
     - oss
 ---
-import Image from "@theme/Image";
-import BaseParameters from "./_base-parameters.mdx";
-import BaseChangeElements from "./_base-change-elements-example.mdx";
-import InfoUseChangeElements from "./_info-use-change-elements.mdx";
-import InfoUseOptionsChange from "./_info-use-options-change.mdx";
-import BaseOptionsParameters from "./_base-options-parameters.mdx";
 
-# Custom Button
+# Custom button
 
 The **Custom button** allows add custom button to panel.
 

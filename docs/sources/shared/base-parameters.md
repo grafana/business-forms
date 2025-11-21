@@ -2,8 +2,6 @@
 title: base parameters
 ---
 
-import Image from "@theme/Image";
-
 - ### `uid`
 
   _string_. Required.  

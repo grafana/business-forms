@@ -10,11 +10,6 @@ labels:
     - oss
 weight: 10
 ---
-import Feedback from "../_feedback.mdx";
-import GettingStarted from "./_getting_started.mdx";
-import Image from "@theme/Image";
-import Tutorial from "./_tutorial.mdx";
-import Youtube from "@theme/Youtube";
 
 # Business Forms
 

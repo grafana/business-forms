@@ -12,8 +12,6 @@ labels:
     - oss
 weight: 50
 ---
-import Code from "@theme/Code";
-import Image from "@theme/Image";
 
 # API Server for PostgreSQL
 

@@ -9,14 +9,6 @@ labels:
     - enterprise
     - oss
 ---
-import Image from "@theme/Image";
-import Youtube from "@theme/Youtube";
-import BlogPost from "@theme/BlogPost";
-import BaseParameters from "./_base-parameters.mdx";
-import BaseChangeElements from "./_base-change-elements-example.mdx";
-import InfoUseChangeElements from "./_info-use-change-elements.mdx";
-import InfoUseOptionsChange from "./_info-use-options-change.mdx";
-import BaseOptionsParameters from "./_base-options-parameters.mdx";
 
 # File
 
