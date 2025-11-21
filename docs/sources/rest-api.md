@@ -8,6 +8,7 @@ labels:
   products:
     - enterprise
     - oss
+weight: 40
 ---
 import BlogPost from "@theme/BlogPost";
 import Image from "@theme/Image";

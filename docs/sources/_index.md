@@ -8,6 +8,7 @@ labels:
   products:
     - enterprise
     - oss
+weight: 10
 ---
 import Feedback from "../_feedback.mdx";
 import GettingStarted from "./_getting_started.mdx";

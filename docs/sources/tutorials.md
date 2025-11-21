@@ -7,6 +7,7 @@ labels:
   products:
     - enterprise
     - oss
+weight: 80
 ---
 import BlogPost from "@theme/BlogPost";
 import Youtube from "@theme/Youtube";
