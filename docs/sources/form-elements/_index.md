@@ -45,10 +45,7 @@ The **Collapsable** parameter has been supported starting from version 4.0.0.
 
 Sections can be collapsible. This functionality is available only for the sections in the **Vertical** orientation. You can make any section **Expanded** for the form opening/refresh.
 
-<Image
-  title="Collapsible sections."
-  src="/img/blog/2024-07-02-form-panel-4.0.0/collapse.gif"
-/>
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-forms/collapse.mp4" >}}
 
 In addition, you can control the **Expanded** and **Collapsed** states in the **Custom code** using the following commands:
 
@@ -241,12 +238,9 @@ Available starting from version 4.9.0.
 
 {{< /admonition >}}
 
-If allowed, users can enter custom values into the **Select** and **Multi select** form element types
+If allowed, users can enter custom values into the **Select** and **Multi select** form element types.
 
-<Image
-  title="If allowed users can enter custom values into the Select and Multi select form element types."
-  src="/img/blog/2024-11-30-form-panel-4.9.0/select-multi-custom-value.gif"
-/>
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-forms/select-multi-custom-value.mp4" >}}
 
 ## Conditional Visibility
 
