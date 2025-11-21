@@ -115,9 +115,7 @@ if (feedback?.fields.length) {
 ## Dynamic Business Forms
 
 The Business Forms can be created dynamically following the code-specified configuration.
-You can find more details in the blog post below.
-
-<BlogPost id="form-panel-server-based-elements-20240428" />
+You can find more details in this [blog post](https://volkovlabs.io/blog/form-panel-server-based-elements-20240428/).
 
 ## Sections
 

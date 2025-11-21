@@ -77,4 +77,3 @@ We have many other tutorials that you can find helpful. You can review all relat
 
 Apache License Version 2.0, see [LICENSE](https://github.com/volkovlabs/business-forms/blob/main/LICENSE).
 
-<Feedback />

@@ -40,9 +40,7 @@ formIcon.value = "$IconVar";
 
 ## Synchronize with dashboard variables
 
-To demonstrate how Data Manipulation plugin can work with dashboard variables we created the following blog post.
-
-<BlogPost id="form-panel-use-variables-20240301" />
+To demonstrate how Data Manipulation plugin can work with dashboard variables we created this [blog post](https://volkovlabs.io/blog/form-panel-use-variables-20240301/).
 
 If you are a visual style learner, you can watch the video. It covers the same ground.
 

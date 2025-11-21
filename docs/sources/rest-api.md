@@ -65,6 +65,4 @@ Please consider that Grafana will not explicitly indicate a CORS error.
 
 ## Connect to API Server
 
-We acknowledge the risks of data manipulation and consider security concerns seriously. This blog post explores three secure ways to connect Data Manipulation panel to an API server.
-
-<BlogPost id="how-to-connect-the-data-manipulation-plugin-for-grafana-to-api-server-1abe5f60c904" />
+We acknowledge the risks of data manipulation and consider security concerns seriously. This [blog post](https://volkovlabs.io/blog/how-to-connect-the-data-manipulation-plugin-for-grafana-to-api-server-1abe5f60c904/) explores three secure ways to connect Data Manipulation panel to an API server.
