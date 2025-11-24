@@ -35,7 +35,7 @@ If you are a visual style learner, you can watch the video. It covers the same g
 
 ## Change Elements Model
 
-<InfoUseChangeElements />
+{{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ```js
 {
@@ -98,7 +98,7 @@ elementsForUI.push(element);
 context.panel.onChangeElements(elementsForUI);
 ```
 
-<BaseChangeElements />
+{{< docs/shared lookup="base-change-elements-example.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ## Element Parameters
 
@@ -128,13 +128,13 @@ context.panel.onChangeElements(elementsForUI);
   _boolean_. Required.  
   Support multiple files
 
-<BaseParameters />
+{{< docs/shared lookup="base-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 The File element does not support options for selection. However, they must be specified in the element object
 
 ## Change Options Model
 
-<InfoUseOptionsChange />
+{{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ```js
 {
@@ -208,4 +208,4 @@ context.panel.onOptionsChange({
   _boolean_. Required.  
   Support multiple files
 
-<BaseOptionsParameters />
+{{< docs/shared lookup="base-options-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}

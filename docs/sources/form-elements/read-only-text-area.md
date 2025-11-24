@@ -15,7 +15,7 @@ This element type is similar to the **Read-Only** type with the difference that 
 
 ## Change Elements Model
 
-<InfoUseChangeElements />
+{{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ```js
 {
@@ -76,7 +76,7 @@ elementsForUI.push(element);
 context.panel.onChangeElements(elementsForUI);
 ```
 
-<BaseChangeElements />
+{{< docs/shared lookup="base-change-elements-example.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ## Element Parameters
 
@@ -95,13 +95,13 @@ context.panel.onChangeElements(elementsForUI);
   _number_. Required.  
   Sets the vertical size of the element.
 
-<BaseParameters />
+{{< docs/shared lookup="base-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 The `Read-only Text Area` element does not support options for selection. However, they must be specified in the element object
 
 ## Change Options Model
 
-<InfoUseOptionsChange />
+{{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ```js
 {
@@ -163,4 +163,4 @@ context.panel.onOptionsChange({
   _number_. Required.  
   Sets the vertical size of the element.
 
-<BaseOptionsParameters />
+{{< docs/shared lookup="base-options-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}

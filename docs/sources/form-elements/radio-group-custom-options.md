@@ -23,7 +23,7 @@ To add an option click the 'Add option' button and then specify an option type (
 
 ## Change Elements Model
 
-<InfoUseChangeElements />
+{{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ```js
 {
@@ -84,7 +84,7 @@ elementsForUI.push(element);
 context.panel.onChangeElements(elementsForUI);
 ```
 
-<BaseChangeElements />
+{{< docs/shared lookup="base-change-elements-example.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ## Element Parameters
 
@@ -103,11 +103,11 @@ context.panel.onChangeElements(elementsForUI);
   _string_. Required.  
   Element options source: 'Query' | 'Custom' | 'Code'.
 
-<BaseParameters />
+{{< docs/shared lookup="base-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ## Change Options Model
 
-<InfoUseOptionsChange />
+{{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ```js
 {
@@ -214,4 +214,4 @@ context.panel.onOptionsChange({
     _string_. Required.
     Option label
 
-<BaseOptionsParameters />
+{{< docs/shared lookup="base-options-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}

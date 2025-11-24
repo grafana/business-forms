@@ -20,7 +20,7 @@ Specific for this element are the following options:
 
 ## Change Elements Model
 
-<InfoUseChangeElements />
+{{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ```js
 {
@@ -83,7 +83,7 @@ elementsForUI.push(element);
 context.panel.onChangeElements(elementsForUI);
 ```
 
-<BaseChangeElements />
+{{< docs/shared lookup="base-change-elements-example.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ## Element Parameters
 
@@ -107,13 +107,13 @@ context.panel.onChangeElements(elementsForUI);
   _number_. Optional.  
    Sets the maximum allowed input number
 
-<BaseParameters />
+{{< docs/shared lookup="base-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 The `Number Input` element does not support options for selection. However, they must be specified in the element object
 
 ## Change Options Model
 
-<InfoUseOptionsChange />
+{{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ```js
 {
@@ -181,4 +181,4 @@ context.panel.onOptionsChange({
   _number_. Optional.  
    Sets the maximum allowed input number
 
-<BaseOptionsParameters />
+{{< docs/shared lookup="base-options-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
