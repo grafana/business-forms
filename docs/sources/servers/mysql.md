@@ -12,6 +12,7 @@ labels:
     - cloud
 weight: 30
 ---
+
 # API Server for MySQL
 
 API Server on Node.js enables retrieving and updating values in the MySQL database with Data Manipulation panel.

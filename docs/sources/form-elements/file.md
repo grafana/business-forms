@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # File
 
 The **File** type allows users to access their file system to select a file. The file will be transferred as binary or Base64 encoded.

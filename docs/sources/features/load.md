@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # Load indication
 
 If the data loading takes time, the Data Manipulation form will indicate that as follows.

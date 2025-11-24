@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # Color Picker
 
 The **Color Picker** allows to check color from palette.

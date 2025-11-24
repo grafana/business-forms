@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # Control panel
 
 The Business Forms panel plugin enables the creation of control panels with multiple sections and the same identifier.

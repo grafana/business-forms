@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # Number Slider
 
 The **Number Slider** is a horizontal line with a toggle that a user can drag left and right with a mouse. Alternatively, the user can enter the integer number manually.

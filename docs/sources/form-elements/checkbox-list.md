@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # Checkbox list with custom options
 
 The **Checkbox list with custom options** type allows to creation of multi-selection checkmark elements.

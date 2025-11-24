@@ -12,6 +12,7 @@ labels:
     - cloud
 weight: 10
 ---
+
 # InfluxDB API
 
 {{< admonition type="note" >}}

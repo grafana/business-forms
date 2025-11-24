@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # Read-only Text Area
 
 This element type is similar to the **Read-Only** type with the difference that this one allows to display of multiple rows of text.

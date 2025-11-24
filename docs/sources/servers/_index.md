@@ -10,6 +10,7 @@ labels:
     - cloud
 weight: 70
 ---
+
 # Business Forms panel and API Servers
 
 Business Forms panel allows you to communicate data with the API servers. The following table lists the supported API servers and provides links to instructions on how to properly set up them.

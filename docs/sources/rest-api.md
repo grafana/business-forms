@@ -10,6 +10,7 @@ labels:
     - cloud
 weight: 40
 ---
+
 # REST API
 
 The Business Forms panel can request data (`GET` request) and update data (`DELETE`, `PATCH`, `POST`, or `PUT` request) or configuration through REST API.

@@ -10,6 +10,7 @@ labels:
     - oss
     - cloud
 ---
+
 # Variables
 
 Dashboard and global variables are replaced automatically in the following elements:

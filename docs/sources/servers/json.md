@@ -12,6 +12,7 @@ labels:
     - cloud
 weight: 20
 ---
+
 # JSON API Server
 
 JSON API Server on Node.js enables retrieving and updating JSON objects to test Data Manipulation panel.

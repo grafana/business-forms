@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # Text Area
 
 The **Text Area** is a rectangular area where a user can enter a text.

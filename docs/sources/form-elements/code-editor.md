@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # Code Editor
 
 The **Code editor** highlights keywords and formats the entered text. Specific for this element are the following options:

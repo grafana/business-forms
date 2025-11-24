@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # Password Input
 
 The **Password Input** is a text box where every entered symbol is transformed into a dot.

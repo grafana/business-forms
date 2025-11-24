@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # Confirmation Window
 
 The Confirmation window, if enabled, is shown after a user clicks the submit button to highlight changes made in the Business Form.

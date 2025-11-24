@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # Read-only
 
 The **Read-only** type is sometimes also called the disabled type. It is a text box with a faded background and text. It does not allow a user to change the value it displays.

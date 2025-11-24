@@ -10,7 +10,8 @@ labels:
     - cloud
 weight: 30
 ---
-# Form Elements
+
+# Form elements
 
 The Business Forms plugin is equipped with a wide variety of element types to cover almost any imaginable web application requirements.
 

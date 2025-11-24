@@ -11,6 +11,7 @@ labels:
     - cloud
 weight: 90
 ---
+
 # Release Notes
 
 Track the progress of the Business Forms panel with these release notes, detailing new features, enhancements, fixes, and breaking changes across all versions.

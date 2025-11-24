@@ -10,6 +10,7 @@ labels:
     - cloud
 weight: 10
 ---
+
 # Business Forms
 
 The Business Forms panel is a conceptually new plugin for Grafana. It is the first plugin that allows inserting and updating application data, as well as modifying configuration directly from your Grafana dashboard.

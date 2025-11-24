@@ -9,6 +9,7 @@ labels:
     - oss
     - cloud
 ---
+
 # Number Input
 
 The **Number Input** is a text box where users enter a number manually.
