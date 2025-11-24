@@ -17,8 +17,8 @@ The Business Forms panel allows you to communicate data with API servers. The fo
 
 | Section                  | Description                                                                   |
 | ------------------------ | ----------------------------------------------------------------------------- |
-| [InfluxDB API](influx)   | Integrate with the InfluxDB API.                                  |
-| [JSON](json)             | Create an API server on Node.js with a JSON object.             |
-| [MySQL](mysql)           | Create an API server on Node.js with a MySQL database.      |
-| [Node-RED](nodered)      | Create an API server based on Node-RED.                       |
-| [PostgreSQL](postgresql) | Create an API server on Node.js with a PostgreSQL database. |
+| [InfluxDB API](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/servers/influx/)   | Integrate with the InfluxDB API.                                  |
+| [JSON](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/servers/json/)             | Create an API server on Node.js with a JSON object.             |
+| [MySQL](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/servers/mysql/)           | Create an API server on Node.js with a MySQL database.      |
+| [Node-RED](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/servers/nodered/)      | Create an API server based on Node-RED.                       |
+| [PostgreSQL](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/servers/postgresql/) | Create an API server on Node.js with a PostgreSQL database. |

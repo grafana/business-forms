@@ -119,9 +119,9 @@ Starting from version 4.9.0, you can create **Sections** dynamically.
 
 {{< /admonition >}}
 
-In addition to simple forms, you can create [sections](/plugins/business-forms/form-elements/#sections) dynamically.
+In addition to simple forms, you can create [sections](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/form-elements/#sections) dynamically.
 
-In the following example, the data about required sections comes from the data source. The example uses the [Business Input](/plugins/business-input/) data source to create a basic data frame that contains section information, such as ID and name.
+In the following example, the data about required sections comes from the data source. The example uses the [Business Input](https://volkovlabs.io/plugins/business-input/) data source to create a basic data frame that contains section information, such as ID and name.
 
 The **Sections** and **Form Elements** categories display as not configured.
 
@@ -146,4 +146,4 @@ context.panel.sectionsUtils.add({ name: sections[2].name, id: sections[2].id, el
 
 ```
 
-For more available commands and code snippets, refer to the [Panel Parameters](/plugins/business-forms/code/panel/) section.
+For more available commands and code snippets, refer to the [Panel Parameters](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/custom-code/parameters/) section.
