@@ -63,13 +63,13 @@ The **REST API** type works with an external API server. When specifying the API
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/rest-get.png" class="border" alt="Steps to configure the Initial Request for REST API." >}}
 
-You can find ready-to-use API servers for Deno, InfluxDB, JSON API, MySQL, Node-Red, and PostgreSQL in [servers section](../servers).
+You can find ready-to-use API servers for Deno, InfluxDB, JSON API, MySQL, Node-Red, and PostgreSQL in [servers section](.https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/servers/).
 
-Find more information, tips and tricks in the [documentation](../architecture).
+Find more information, tips and tricks in the [documentation](ttps://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/rest-api/).
 
 ## Initial Request custom code
 
-To create post-processing logic, you can access panel options, API responses, form elements, Grafana services, dashboard, and global variables. Find the [code snippet here](../code).
+To create post-processing logic, you can access panel options, API responses, form elements, Grafana services, dashboard, and global variables. Find the [code snippet here](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/custom-code/).
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/init-custom.png" class="border" alt="Initial Request Custom Code exists for every Initial Request type." >}}
 
@@ -81,7 +81,7 @@ The Data Manipulation form rests at this step, awaiting the user's actions.
 
 You can enable the Highlight Changes feature, which displays all modifications made by the user in a specified color. For the Query and REST API Initial request types, simply enabling the feature in the plugin edit mode is enough.
 
-For the Data Source type, you must use the `SetInitial()` function in the Initial Request Custom Code. See the illustration for the Initial Request, Data Source type above (on the picture). Also, find [code examples here](../request).
+For the Data Source type, you must use the `SetInitial()` function in the Initial Request Custom Code. See the illustration for the Initial Request, Data Source type above (on the picture). Also, find [code examples here](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/custom-code/).
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/highlight.png" class="border" alt="Enable Highlight Changes to see the new values on the form." >}}
 
@@ -316,7 +316,7 @@ Following Confirmation, the Submit button initiates the Update Request.
 
 ## Update Request Custom Code
 
-Or in other words, the post-processing step. Similarly to the Initial Request Custom Code, this step exists in all Update Request Custom Code types. You can access the same entities from the code: panel options, API responses, form elements, Grafana services, dashboard, and global variable. Find the [code snippet here](../code).
+Or in other words, the post-processing step. Similarly to the Initial Request Custom Code, this step exists in all Update Request Custom Code types. You can access the same entities from the code: panel options, API responses, form elements, Grafana services, dashboard, and global variable. Find the [code snippet here](.https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/custom-code/).
 
 For example, during the post-processing, you can output a status message, transition the user to another dashboard, reload a page, call an initial request, etc.
 
@@ -334,6 +334,6 @@ Below is the comparative table showing the similarities and differences between 
 
 ## Buttons
 
-The below schema summarises the information about buttons available in the Data Manipulation form.
+The below schema summarizes the information about buttons available in the Data Manipulation form.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/buttons.png" class="border" alt="Three buttons are available in the Data Manipulation form." >}}

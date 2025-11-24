@@ -16,8 +16,8 @@ weight: 30
 The Business Forms plugin provides a wide variety of element types to meet almost any web application requirement.
 
 {{< admonition type="note" >}}
-All form elements (starting from version 4.9.0, including [sections](/plugins/business-forms/form-elements/#sections)) can be created dynamically.
-For more info, please refer to the [Dynamic Forms](/plugins/business-forms/dynamic/) page of the Business Forms panel documentation.
+All form elements (starting from version 4.9.0, including [sections](#sections)) can be created dynamically.
+For more info, please refer to the [Dynamic Forms](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/features/dynamic-forms/) page of the Business Forms panel documentation.
 {{< /admonition >}}
 
 ## Layout
