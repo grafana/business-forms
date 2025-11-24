@@ -1,5 +1,5 @@
 ---
-title: JSON API Server
+title: JSON API server
 menuTitle: JSON
 description: Learn how to set up a JSON API server on Node.js to retrieve and update JSON objects for testing the Business Forms panel.
 keywords:
@@ -13,7 +13,7 @@ labels:
 weight: 20
 ---
 
-# JSON API Server
+# JSON API server
 
 JSON API Server on Node.js enables retrieving and updating JSON objects to test Data Manipulation panel.
 

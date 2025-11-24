@@ -1,5 +1,5 @@
 ---
-title: Data Flow
+title: Data flow
 description: Learn how data flows through the Business Forms panel from initial requests to update requests and custom code execution.
 keywords:
   - business forms
@@ -11,7 +11,7 @@ labels:
 weight: 20
 ---
 
-# Data Flow
+# Data flow
 
 {{< admonition type="note" >}}
 
@@ -67,7 +67,7 @@ You can find ready-to-use API servers for Deno, InfluxDB, JSON API, MySQL, Node-
 
 Find more information, tips and tricks in our [documentation](../architecture).
 
-## Initial Request Custom Code
+## Initial Request custom code
 
 To create post-processing logic, you can access panel options, API responses, form elements, Grafana services, dashboard, and global variables. Find the [code snippet here](../code).
 
@@ -85,7 +85,7 @@ For the Data Source type, you must use the `SetInitial()` function in the Initia
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/highlight.png" class="border" alt="Enable Highlight Changes to see the new values on the form." >}}
 
-## Reset button
+## Reset Button
 
 The reset button is not shown by default. To review all available options, switch the visibility parameter to anything, but **Hidden**.
 **Primary**, **Secondary** and **Destructive** are pre-set visualization templates. In the **Custom**, you can specify foreground color, background color, icon and the text to replace the 'Reset' label if needed.
@@ -100,7 +100,7 @@ In the **Custom code**, you can have any custom logic required. For instance, se
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/reset.png" class="border" alt="Reset button can call the Initial Request or execute any custom code." >}}
 
-## Update request
+## Update Request
 
 The Update Request carries data from the Grafana dashboard to your data source. There are two ways of doing so - Data Source and Rest API. This process is independent of the Initial Request, which means you can use any combination of Initial and Update Request types.
 

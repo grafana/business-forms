@@ -23,7 +23,7 @@ The Business Forms panel is a conceptually new plugin for Grafana. It is the fir
 - Data Manipulation panel 2.X requires **Grafana 9** or **Grafana 8.5**.
 - Data Manipulation panel 1.X requires **Grafana 8**.
 
-## Getting Started
+## Getting started
 
 You can install the Business Forms panel from the [Grafana Plugins catalog](https://grafana.com/grafana/plugins/volkovlabs-form-panel/) or use the Grafana command line tool.
 

@@ -17,7 +17,7 @@ The Business Forms panel can request data (`GET` request) and update data (`DELE
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/form-api.png" class="border" alt="Business Forms panel uses GET or POST/PUT request to interact with API server." >}}
 
-## JSON Payload
+## JSON payload
 
 Form elements defined in the panel options are used to parse data within the initial request and send data within the update request.
 
@@ -51,6 +51,6 @@ Please consider that Grafana will not explicitly indicate a CORS error.
 
 **Cross-Origin Resource Sharing (CORS)** policy offers more flexibility by allowing interactions between different domains. When CORS restrictions are disabled, any domain can freely request data. On the other hand, when CORS restrictions are enabled, only certain domains designated in its allow list are permitted.
 
-## Connect to API Server
+## Connect to API server
 
 We acknowledge the risks of data manipulation and consider security concerns seriously. This [blog post](https://volkovlabs.io/blog/how-to-connect-the-data-manipulation-plugin-for-grafana-to-api-server-1abe5f60c904/) explores three secure ways to connect Data Manipulation panel to an API server.

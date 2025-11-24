@@ -1,5 +1,5 @@
 ---
-title: Context Parameters
+title: Context parameters
 description: Learn how to use context parameters to access panel data, form elements, Grafana services, and other functionality in custom code.
 keywords:
   - business forms
@@ -10,7 +10,7 @@ labels:
     - cloud
 ---
 
-# Context Parameters
+# Context parameters
 
 ## context.element
 

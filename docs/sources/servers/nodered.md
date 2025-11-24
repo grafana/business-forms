@@ -18,7 +18,7 @@ Node-RED is a good companion for Data Manipulation panel because it is simple, p
 
 Thanks to the community member [Alejandro Guida](https://github.com/canob) for the explanation.
 
-## Use Cases
+## Use cases
 
 Node-RED usage scenarios involving the Data Manipulation panel plugin:
 

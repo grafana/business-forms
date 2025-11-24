@@ -1,5 +1,5 @@
 ---
-title: Load Indication
+title: Load indication
 description: Learn how the Business Forms panel indicates loading progress during initial and update requests.
 keywords:
   - business forms
@@ -14,19 +14,19 @@ labels:
 
 If the data loading takes time, the Data Manipulation form will indicate that as follows.
 
-## Initial Request
+## Initial request
 
 The end user will see a running blue line at the top of the form.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/status-initial.png" class="border" alt="A moving blue line indicates an initial request being in progress." >}}
 
-## Update Request
+## Update request
 
 All buttons are disabled and moving circled dots are placed instead of the Submit button icon.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/status-update.png" class="border" alt="Dots moving in a circle indicate an update request being in progress." >}}
 
-## Custom Code
+## Custom code
 
 Custom code can be asynchronous. For that, the custom code should return the `Promise`.
 

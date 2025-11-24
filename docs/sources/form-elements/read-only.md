@@ -22,7 +22,7 @@ To add an option click the 'Add option' button and then specify an option type (
 
 Set initial value in the initial request section to display the option label with **Read-only** correctly. The value set for the item should match the value of one of the options to be displayed.
 
-## Change Elements Model
+## Change Elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -86,7 +86,7 @@ context.panel.onChangeElements(elementsForUI);
 
 {{< docs/shared lookup="base-change-elements-example.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
-## Element Parameters
+## Element parameters
 
 - ### `value`
 
@@ -105,7 +105,7 @@ context.panel.onChangeElements(elementsForUI);
 
 {{< docs/shared lookup="base-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
-## Change Options Model
+## Change Options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

@@ -1,5 +1,5 @@
 ---
-title: Custom Code
+title: Custom code
 description: Learn how to use custom code to access panel options, REST API responses, form elements, and Grafana services in Business Forms.
 labels:
   products:
@@ -9,7 +9,7 @@ labels:
 weight: 50
 ---
 
-# Custom Code
+# Custom code
 
 Custom code allows you to access the panel's options, REST API responses, form elements, and various Grafana services.
 
@@ -80,7 +80,7 @@ console.log(
 );
 ```
 
-## Refresh Dashboard after update request or show warning
+## Refresh dashboard after update request or show warning
 
 ```javascript
 if (context.panel.response && context.panel.response.ok) {
@@ -118,7 +118,7 @@ if (context.panel.response && context.panel.response.ok) {
 }
 ```
 
-## Perform initial request only on dashboard load
+## Perform Initial Request only on dashboard load
 
 ```javascript
 const getValues = async () => {
@@ -149,7 +149,7 @@ const getValues = async () => {
 return getValues();
 ```
 
-## Clear elements' values after click on the Submit or Reset button
+## Clear element values after click on the Submit or Reset button
 
 ```javascript
 context.panel.onOptionsChange({
@@ -180,7 +180,7 @@ context.panel.onChangeElements(
 
 The `context.panel.onChangeElements()` function is required to update the element values in the local state.
 
-## Simplified the Form Elements `patchFormValue` helper
+## Simplified form elements `patchFormValue` helper
 
 Before version 4.4.0, in order to update a form element value, a user had to use `context.panel.elements.map()`. In the 4.4.0, we added a new function to simplify that approach. It has an object's key as an inpit parameter and a new value.
 
@@ -203,7 +203,7 @@ context.panel.patchFormValue({ name: "Alex" });
 context.panel.patchFormValue({ name: "Alex", isAdmin: true });
 ```
 
-## Simplified the Form Elements `formValue` helper
+## Simplified form elements `formValue` helper
 
 Before version 4.4.0, in order to get a form element value, a user had to use `context.panel.elements.forEach()`. In the 4.4.0, we added a new function to simplify that approach. It has an object's key as an inpit parameter.
 

@@ -1,5 +1,5 @@
 ---
-title: Confirmation Window
+title: Confirmation window
 description: Learn how to configure and customize the confirmation window to highlight changes before submitting form updates.
 keywords:
   - business forms
@@ -10,7 +10,7 @@ labels:
     - cloud
 ---
 
-# Confirmation Window
+# Confirmation window
 
 The Confirmation window, if enabled, is shown after a user clicks the submit button to highlight changes made in the Business Form.
 

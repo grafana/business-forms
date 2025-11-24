@@ -1,5 +1,5 @@
 ---
-title: API Server for PostgreSQL
+title: API server for PostgreSQL
 menuTitle: PostgresSQL
 description: Learn how to set up a Node.js API server to retrieve and update values in a PostgreSQL database using the Business Forms panel.
 keywords:
@@ -13,7 +13,7 @@ labels:
 weight: 50
 ---
 
-# API Server for PostgreSQL
+# API server for PostgreSQL
 
 API Server on Node.js enables retrieving and updating values in the PostgreSQL database with Data Manipulation panel.
 

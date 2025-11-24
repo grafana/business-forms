@@ -1,5 +1,5 @@
 ---
-title: Code Editor
+title: Code editor
 description: Learn how to use the code editor form element with syntax highlighting and support for multiple programming languages.
 keywords:
   - business forms
@@ -10,7 +10,7 @@ labels:
     - cloud
 ---
 
-# Code Editor
+# Code editor
 
 The **Code editor** highlights keywords and formats the entered text. Specific for this element are the following options:
 
@@ -19,7 +19,7 @@ The **Code editor** highlights keywords and formats the entered text. Specific f
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/code-editor.png" class="border" alt="Options specific to the Code Editor type." >}}
 
-## Change Elements Model
+## Change Elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -86,7 +86,7 @@ context.panel.onChangeElements(elementsForUI);
 
 {{< docs/shared lookup="base-change-elements-example.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
-## Element Parameters
+## Element parameters
 
 - ### `value`
 
@@ -112,7 +112,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The code-editor element does not support options for selection. However, they must be specified in the element object.
 
-## Change Options Model
+## Change Options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

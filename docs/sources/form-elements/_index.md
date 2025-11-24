@@ -1,5 +1,5 @@
 ---
-title: Form Elements
+title: Form elements
 description: Learn about the wide variety of form element types available in the Business Forms plugin to build web applications.
 keywords:
   - business forms
@@ -140,7 +140,7 @@ You can play with **Form Elements** colors. Configurable are:
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/colors.png" class="border" alt="Color options" >}}
 
-### Select Options from Query
+### Select options from Query
 
 {{< admonition type="note" >}}
 
@@ -153,7 +153,7 @@ You can specify the **Label** and **Value** fields.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/options-from-query.png" class="border" alt="Use values from the query for your types with select options." >}}
 
-### Select Options from Get Options Code
+### Select options from GET Options code
 
 {{< admonition type="note" >}}
 
@@ -168,7 +168,7 @@ Below is supported starting from the version 3.5.0.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/options-from-code.png" class="border" alt="Use hard-coded values from the Get Options Code for your types with select options." >}}
 
-### Set Options received asynchronously
+### Set options received asynchronously
 
 The **Get Options Code** does not support asynchronous code. However, you still can work with options received asynchronously.
 
@@ -215,7 +215,7 @@ async function fetchData() {
 return fetchData();
 ```
 
-#### Step 2. Create the GET Options Code
+#### Step 2. Create the GET Options code
 
 Set options for your element from `context.panel.elements`.
 
@@ -243,7 +243,7 @@ If allowed, users can enter custom values into the **Select** and **Multi select
 
 {{< video-embed src="/media/docs/grafana/panels-visualizations/business-forms/select-multi-custom-value.mp4" >}}
 
-## Conditional Visibility
+## Conditional visibility
 
 Every form element has the <b>Show If returned value is true</b> parameter where you enter JavaScript code.
 
@@ -281,7 +281,7 @@ const test = context.grafana.replaceVariables("$var");
 return test === "test";
 ```
 
-## Field Mapping
+## Field mapping
 
 {{< admonition type="note" >}}
 

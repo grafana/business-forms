@@ -20,7 +20,7 @@ Specific for this element are the following options:
 - Max. Sets the maximum allowed input number.
 - Step. Sets the value of every move the toggle makes.
 
-## Change Elements Model
+## Change Elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -89,7 +89,7 @@ context.panel.onChangeElements(elementsForUI);
 
 {{< docs/shared lookup="base-change-elements-example.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
-## Element Parameters
+## Element parameters
 
 - ### `value`
 
@@ -124,7 +124,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The `Number Slider` element does not support options for selection. However, they must be specified in the element object
 
-## Change Options Model
+## Change Options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

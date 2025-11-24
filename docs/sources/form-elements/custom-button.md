@@ -1,5 +1,5 @@
 ---
-title: Custom Button
+title: Custom button
 description: Learn how to add custom buttons with configurable styles, icons, and custom code execution to your forms.
 keywords:
   - business forms
@@ -39,7 +39,7 @@ With the **Button place** option, the custom button element can be placed among 
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/buttons-options.png" class="border" alt="Available options for the Button Form Elements type." >}}
 
-## Change Elements Model
+## Change Elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -118,7 +118,7 @@ context.panel.onChangeElements(elementsForUI);
 
 {{< docs/shared lookup="base-change-elements-example.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
-## Element Parameters
+## Element parameters
 
 - ### `value`
 
@@ -182,7 +182,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The code-editor element does not support options for selection. However, they must be specified in the element object
 
-## Change Options Model
+## Change Options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

@@ -1,5 +1,5 @@
 ---
-title: Custom Requests
+title: Custom requests
 description: Learn how to create custom initial and update requests with custom code for the Business Forms panel.
 keywords:
   - business forms
@@ -10,11 +10,11 @@ labels:
     - cloud
 ---
 
-# Custom Requests
+# Custom requests
 
 The Business Forms panel allows you to create your own initial and update requests with custom code.
 
-## Initial Request
+## Initial request
 
 Select `Code` to choose an initial request, and then define the custom code:
 
@@ -71,7 +71,7 @@ To support the `Highlight changed values` and `Require Confirmation` features, y
 context.panel.setInitial({ value: 99, name: "Test" });
 ```
 
-## Update Request
+## Update request
 
 Select `Code` to choose an update request, and then define the custom code. Depending on the selected payload option, it will add all or only the updated values.
 
