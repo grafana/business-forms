@@ -12,13 +12,13 @@ labels:
 
 # Number Slider
 
-The **Number Slider** is a horizontal line with a toggle that a user can drag left and right with a mouse. Alternatively, the user can enter the integer number manually.
+The **Number Slider** is a horizontal line with a toggle that users can drag left and right with a mouse. Alternatively, users can enter the number manually.
 
-Specific for this element are the following options:
+This element has the following specific options:
 
-- Min. Sets the minimum allowed input number.
-- Max. Sets the maximum allowed input number.
-- Step. Sets the value of every move the toggle makes.
+- **Min**: Sets the minimum allowed input number.
+- **Max**: Sets the maximum allowed input number.
+- **Step**: Sets the value of each movement the toggle makes.
 
 ## Change Elements model
 

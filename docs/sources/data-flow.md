@@ -19,21 +19,21 @@ Relevant starting from version 3.2.0.
 
 {{< /admonition >}}
 
-The Data Manipulation plugin offers to convert any Grafana dashboard into a fully functional web application. No wonder getting lost in all option parameters and their interconnections is easy.
+The Data Manipulation plugin converts any Grafana dashboard into a fully functional web application. With many option parameters and interconnections, you can easily get lost.
 
-The schema below is created to illustrate the major parts and their roles.
+The following schema illustrates the major parts and their roles.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/data-manipulation-flow.png" class="border" alt="Data flow diagram for the Data Manipulation panel." >}}
 
 ## Initial Request
 
-The initial request is executed after the browser finishes a page-loading step. You can configure your Initial request as Query, Data Source, and REST API.
+The initial request executes after the browser finishes loading the page. You can configure your initial request as Query, Data Source, or REST API.
 
 ### Query
 
-The query is short for the native Grafana query. Any initial request carries data from a data source into Grafana and is what the core Grafana does already with excellence. The Query method works with the data frames prepared by the Data Source, the one you specified on the left.
+The query is short for the native Grafana query. Any initial request carries data from a data source into Grafana, which is what core Grafana does well. The Query method works with the data frames prepared by the data source that you specified.
 
-This method was created to allow leveraging the existing Grafana data extraction mechanism. To make it work, map every Data Manipulation form element to the appropriate data frame field.
+This method leverages the existing Grafana data extraction mechanism. To use this method, map every Data Manipulation form element to the appropriate data frame field.
 
 {{< admonition type="note" >}}
 
@@ -47,11 +47,11 @@ Since version 4.2.0. the `Query Field` and `Field Name` fields have been relocat
 
 ### Data source
 
-Do not confuse this data source with the one you can select on the left-hand side. This is a different parameter located in the **Update Request** category and is visible when the **Data source** type is selected.
+Don't confuse this data source with the one you can select on the left-hand side. This is a different parameter located in the **Update Request** category and appears when you select the **Data source** type.
 
-The **Data source** type is more flexible than the **Query** type. However, it means the developer must also take more responsibility by creating the **Initial Payload Request**.
+The **Data source** type is more flexible than the **Query** type. However, this means you must take more responsibility by creating the **Initial Payload Request**.
 
-The **Initial Payload Request** is a mandatory piece of code that needs to contain the database request at the bare minimum. More complex data parsing functionality could be added if required.
+The **Initial Payload Request** is mandatory code that must contain the database request at minimum. You can add more complex data parsing functionality if required.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/ds-all.png" class="border" alt="Steps to configure the Initial Request for Data Source." >}}
 
@@ -87,16 +87,16 @@ For the Data Source type, you must use the `SetInitial()` function in the Initia
 
 ## Reset Button
 
-The reset button is not shown by default. To review all available options, switch the visibility parameter to anything, but **Hidden**.
-**Primary**, **Secondary** and **Destructive** are pre-set visualization templates. In the **Custom**, you can specify foreground color, background color, icon and the text to replace the 'Reset' label if needed.
+The reset button isn't shown by default. To review all available options, switch the visibility parameter to anything except **Hidden**.
+**Primary**, **Secondary**, and **Destructive** are pre-set visualization templates. In **Custom**, you can specify foreground color, background color, icon, and the text to replace the Reset label if needed.
 
-When this button is not hidden (any other mode is selected), you will also get the Reset Request category. There, you can go with either Custom Code, Initial Request or Data Source option.
+When this button isn't hidden (any other mode is selected), the Reset Request category appears. You can choose Custom Code, Initial Request, or Data Source option.
 
-The **Initial request** is selected by default. In that event, the plugin executes the Initial Request again as if the form is being loaded for the first time.
+The **Initial request** is selected by default. In this case, the plugin executes the Initial Request again as if the form is loading for the first time.
 
-With the **Data Source** reset action you can specify a data source for the Reset Request and set payload in the following **Custom code** area.
+With the **Data Source** reset action, you can specify a data source for the Reset Request and set the payload in the **Custom code** area.
 
-In the **Custom code**, you can have any custom logic required. For instance, set all form elements to their defaults.
+In the **Custom code**, you can add any custom logic required. For instance, you can set all form elements to their defaults.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/reset.png" class="border" alt="Reset button can call the Initial Request or execute any custom code." >}}
 
@@ -112,7 +112,7 @@ For the Data Source type, start with the Data Source parameter. Then go to the U
 
 ### Use Initial Request after Update Request
 
-You can trigger the `Initial Request` immediately after updating the data using Custom Code. In Initial Request mode, various types can be used — but there's one important point to consider if you're using `QUERY` as the initial request type.
+You can trigger the `Initial Request` immediately after updating the data using Custom Code. In Initial Request mode, you can use various types, but consider one important point if you use `QUERY` as the initial request type.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/update-custom-code.png" class="border" alt="Code and logic after update request" >}}
 
@@ -131,10 +131,10 @@ Another possible approach is to update the variables in the data source, which w
 Query editor and Frontend Data Sources are available starting from version 4.0.0.
 {{< /admonition >}}
 
-This feature is related to the:
+This feature relates to the:
 
-- **Initial Request** -> **Initial Action** -> **Data Source**,
-- **Update Request** -> **Update Action** -> **Data Source**.
+- **Initial Request > Initial Action > Data Source**
+- **Update Request > Update Action > Data Source**
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/init-update.png" class="border" alt="The payload area relates to the Data Source (Initial and Update requests)." >}}
 

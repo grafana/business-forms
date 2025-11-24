@@ -20,19 +20,19 @@ The Business Forms panel supports the Code Editor toolbar starting from version 
 
 ## Expand the editor
 
-For a better user experience, the expand the editor area button was added.
+To improve your experience, you can expand the editor area.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/button.png" max-width="175px" class="border" alt="Expand the code area button." >}}
 
-You can find this button at the top left corner of any JavaScript area parameter.
+This button is located in the top-left corner of any JavaScript code parameter.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/window.png" class="border" alt="Use the expand the code area button to open your code in a separate window." >}}
 
 ## Additional buttons
 
-- **Copy code**. Copies the highlighted code in the memory buffer.
-- **Paste code**. Pastes the content of the memory buffer.
-- **Wrap code on new lines**. Fits the text into the visible area on the screen.
-- **Show/Hide mini map**. Shows/hides the far right area depicting the code at scale.
+- **Copy code**: Copies the highlighted code to the clipboard.
+- **Paste code**: Pastes the content from the clipboard.
+- **Wrap code on new lines**: Wraps text to fit the visible area.
+- **Show/Hide mini map**: Shows or hides the minimap on the right side of the editor.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/more-buttons.png" class="border" alt="More buttons to facilitate work with the code." >}}

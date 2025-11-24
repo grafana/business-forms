@@ -17,13 +17,13 @@ weight: 10
 
 {{< admonition type="note" >}}
 
-Check the [InfluxDB v2 API reference](https://docs.influxdata.com/influxdb/cloud/reference/api/) for details about API endpoints.
+For details about API endpoints, see the [InfluxDB v2 API reference](https://docs.influxdata.com/influxdb/cloud/reference/api/).
 
 {{< /admonition >}}
 
-InfluxDB API can be used to retrieve and update data via Data Manipulation panel.
+You can use the InfluxDB API to retrieve and update data through the Data Manipulation panel.
 
-Thanks to the community member [fercasjr](https://github.com/fercasjr) for the provided examples.
+Thanks to community member [fercasjr](https://github.com/fercasjr) for providing examples.
 
 ## Query data
 
@@ -32,7 +32,7 @@ Update according to your environment:
 - IP address or name of the server (`localhost` in the example)
 - InfluxDB org
 - Token
-- Query is represented by any valid query you already have to test.
+- Query (any valid query you want to test)
 
 ```js
 const query = `
@@ -78,13 +78,13 @@ The generated payload of the HTTP POST request includes the following:
 
 - `measurement_name`: name of the measurement that is written into InfluxDB (in this example is hardcoded).
 - `tag1`: name of the tag that is written into InfluxDB (also hardcoded).
-- `field1` and `field2`: names of fields that are written into InfluxDB (also hardcoded).
-- `body.element_id1` and `body.element_id2`: field values that are written into InfluxDB.
-- `Date.now()`: code snippet for generating the timestamp of the measurement (is in ms).
+- `field1` and `field2`: Names of fields written to InfluxDB (also hardcoded).
+- `body.element_id1` and `body.element_id2`: Field values written to InfluxDB.
+- `Date.now()`: Code snippet for generating the measurement timestamp (in milliseconds).
 
-The body's elements are coming from the plugin's form, that's why they are placed inside the `${}`.
+The body's elements come from the plugin's form and are placed inside `${}`.
 
-- `body.element_id1` is getting the `element_id1` value from the `body` object.
+- `body.element_id1` gets the `element_id1` value from the `body` object.
 
 ```js
 /**

@@ -12,10 +12,10 @@ labels:
 
 # Code editor
 
-The **Code editor** highlights keywords and formats the entered text. Specific for this element are the following options:
+The **Code editor** highlights keywords and formats the entered text. This element has the following specific options:
 
-- Language. You have a wide range of languages to select from (C, C++, C#, GO, HTML, Java, JavaScript, JSON, Markdown, MySQL, PHP, PostgreSQL, Python, Ruby, SQL, TypeScript).
-- Height. How high the entering window should be.
+- **Language**: Select from a wide range of languages (C, C++, C#, Go, HTML, Java, JavaScript, JSON, Markdown, MySQL, PHP, PostgreSQL, Python, Ruby, SQL, TypeScript).
+- **Height**: Specifies how high the entry window is.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/code-editor.png" class="border" alt="Options specific to the Code Editor type." >}}
 

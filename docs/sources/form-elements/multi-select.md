@@ -12,13 +12,13 @@ labels:
 
 # Multi Select with Custom Options
 
-The **Multi-select with custom options** is a dropdown where users can select one or many options.
+The **Multi-select with custom options** is a dropdown where users can select one or more options.
 
-Specific for this element are the following options:
+This element has the following specific option:
 
-- User options.
+- User options
 
-To add an option click the 'Add option' button and then specify an option type (number or string), value, label and select an icon from the given list.
+To add an option, click **Add option**, and then specify an option type (number or string), value, label, and select an icon from the list.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/multi.png" class="border" alt="Add custom options for the multi-select custom type." >}}
 

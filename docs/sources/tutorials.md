@@ -13,23 +13,23 @@ weight: 80
 
 # Tutorials
 
-This page contains clear, step-by-step video tutorials that showcase new features and tackle the most common challenges users face. The goal is to make your experience with Business Suite as seamless and productive as possible.
+This page contains clear, step-by-step video tutorials that showcase new features and address the most common challenges. The goal is to make your experience with Business Suite as seamless and productive as possible.
 
 ## Features overview of the Business Forms 4.1.0
 
-In this video, two examples of what the Business Forms plugin can do are provided along with an outline of their configuration steps. Towards the end, it shows how the Business Forms panel can be created dynamically or, in other words, as a code with a reference where you can get copy-paste examples.
+This video provides two examples of what the Business Forms plugin can do, along with an outline of their configuration steps. The video also shows how to create the Business Forms panel dynamically using code, with a reference where you can get copy-paste examples.
 
 {{< youtube id="ulbe8U8-IFA" >}}
 
 ## How to use Business Suite to create a release dashboard in Grafana
 
-This video explains how the release dashboard has been configured and all the Business Suite panels used.
+This video explains how to configure the release dashboard and which Business Suite panels to use.
 
 {{< youtube id="tUGRQBBZoRQ" >}}
 
-## File Upload
+## File upload
 
-Below is a YouTube video with a use-case review. It features three open source plugins that come together on one Grafana dashboard to provide a solution for a long-standing task - file upload using a Grafana dashboard and immediate display of the uploaded files.
+The following YouTube video reviews a use case. It features three open source plugins that come together on one Grafana dashboard to provide a solution for a long-standing task: file upload using a Grafana dashboard and immediate display of the uploaded files.
 
 {{< youtube id="V4Sza0uDQNs" >}}
 
@@ -37,13 +37,13 @@ You can find implementation details in the [blog post](https://volkovlabs.io/blo
 
 ## Synchronize with dashboard variables
 
-This [blog post](https://volkovlabs.io/blog/form-panel-use-variables-20240301/) demonstrate how the Business Forms plugin can work with dashboard variables.
+This [blog post](https://volkovlabs.io/blog/form-panel-use-variables-20240301/) demonstrates how the Business Forms plugin works with dashboard variables.
 
-If you are a visual style learner, you can watch the video. It covers the same ground.
+If you prefer video content, watch the following video, which covers the same information.
 
 {{< youtube id="DW-yuSopejY" >}}
 
-# Dynamic forms
+## Dynamic forms
 
 With custom code, you can update form elements or their values and options from any data source.
 

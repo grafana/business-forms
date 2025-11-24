@@ -13,7 +13,7 @@ weight: 30
 
 # Form elements
 
-The Business Forms plugin is equipped with a wide variety of element types to cover almost any imaginable web application requirements.
+The Business Forms plugin provides a wide variety of element types to meet almost any web application requirement.
 
 {{< admonition type="note" >}}
 All form elements (starting from version 4.9.0, including [sections](/plugins/business-forms/form-elements/#sections)) can be created dynamically.
@@ -22,7 +22,7 @@ For more info, please refer to the [Dynamic Forms](/plugins/business-forms/dynam
 
 ## Layout
 
-You have a choice of three layouts - **Basic**, standard **Buttons Only**, and **Sections**. To switch between them open the Layout category.
+You can choose from three layouts: **Basic**, **Buttons Only**, and **Sections**. To switch between them, open the **Layout** category.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/sections.png" class="border" alt="Layout can be Basic, Buttons Only, and Sections." >}}
 
@@ -36,7 +36,7 @@ In the **Basic** layout, all form elements are positioned vertically, one follow
 
 With the **Sections** layout, you can create as many sections as needed and place sections either vertically or horizontally using the **Orientation** option.
 
-As shown in the picture above, when the layout **Sections** is chosen, the controls to create sections appear. For every section you can specify an ID, to use for referencing later, and a name which will be a displayed as a section label.
+When you select the **Sections** layout, controls for creating sections appear. For each section, you can specify an ID for later reference and a name that displays as the section label.
 
 {{< admonition type="note" >}}
 
@@ -44,11 +44,11 @@ The **Collapsable** parameter has been supported starting from version 4.0.0.
 
 {{< /admonition >}}
 
-Sections can be collapsible. This functionality is available only for the sections in the **Vertical** orientation. You can make any section **Expanded** for the form opening/refresh.
+Sections can be collapsible. This functionality is available only for sections in the **Vertical** orientation. You can set any section to **Expanded** when the form opens or refreshes.
 
 {{< video-embed src="/media/docs/grafana/panels-visualizations/business-forms/collapse.mp4" >}}
 
-In addition, you can control the **Expanded** and **Collapsed** states in the **Custom code** using the following commands:
+You can also control the **Expanded** and **Collapsed** states in **Custom code** by using the following commands:
 
 ```js
 context.panel.expandSection(id);
@@ -61,13 +61,13 @@ The full list of the Business Form panel parameters can be found in the [Custom 
 
 ### Buttons Only
 
-The standard **Buttons Only**, as the name implies, keeps only standard buttons on your form. The standard buttons include **Submit**, **Reset**, and **Save default**. With this layout, all panel options related to other form elements are hidden, which gives a cleaner Edit mode to work with.
+The **Buttons Only** layout displays only standard buttons on your form. The standard buttons include **Submit**, **Reset**, and **Save default**. This layout hides all panel options related to other form elements, which provides a cleaner edit mode.
 
 ## Add a form element
 
-Go to the **Form Elements** category to add a form element. Start by specifying ID, label, and type. After you click the **Add Element** button, more element options are available to configure.
+To add a form element, go to the **Form Elements** category. Specify the element ID, label, and type. After you click **Add Element**, you can configure additional element options.
 
-Element types have specific options. For instance, the **Text area** type has **Rows** to regulate the element size on the dashboard.
+Element types have specific options. For example, the **Text area** type includes a **Rows** option that controls the element size on the dashboard.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/add-form-element.png" class="border" alt="Form element in Edit mode." >}}
 
@@ -85,7 +85,7 @@ You can drag-and-drop form elements in the edit mode to change their order on th
 
 ## Form element types
 
-The picture below illustrates all available element types prior to the version 4.4.0
+The following image shows all available element types before version 4.4.0:
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/elements-demo.png" class="border" alt="Form elements on UI." >}}
 
@@ -124,32 +124,31 @@ All three have some options in common.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/icons.png" class="border" alt="Optionally select an icon for this element." >}}
 
-### Custom color/background color for elements
+### Custom color and background color for elements
 
 {{< admonition type="note" >}}
 
-Colors for elements supported starting from version 4.0.0.
+Element colors are supported starting from version 4.0.0.
 
 {{< /admonition >}}
 
-You can play with **Form Elements** colors. Configurable are:
+You can customize the following **Form Elements** colors:
 
-- Background color,
-- Label background,
-- Label color.
+- Background color
+- Label background
+- Label color
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/colors.png" class="border" alt="Color options" >}}
 
-### Select options from Query
+### Select options from a query
 
 {{< admonition type="note" >}}
 
-Below is supported starting from the version 3.2.1.
+This feature is supported starting from version 3.2.1.
 
 {{< /admonition >}}
 
-Reference a query from any configured data source to populate form elements dynamically.
-You can specify the **Label** and **Value** fields.
+You can reference a query from any configured data source to populate form elements dynamically. Specify the **Label** and **Value** fields.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/options-from-query.png" class="border" alt="Use values from the query for your types with select options." >}}
 
@@ -157,28 +156,28 @@ You can specify the **Label** and **Value** fields.
 
 {{< admonition type="note" >}}
 
-Below is supported starting from the version 3.5.0.
+This feature is supported starting from version 3.5.0.
 
 {{< /admonition >}}
 
-**Get Options Code** allows to hard code options using the code editor. The code must:
+**Get Options Code** lets you hard code options using the code editor. The code must:
 
-- return array with `{label,value}` objects,
-- be synchronous.
+- Return an array with `{label,value}` objects.
+- Be synchronous.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/options-from-code.png" class="border" alt="Use hard-coded values from the Get Options Code for your types with select options." >}}
 
 ### Set options received asynchronously
 
-The **Get Options Code** does not support asynchronous code. However, you still can work with options received asynchronously.
+**Get Options Code** doesn't support asynchronous code. However, you can still work with options received asynchronously.
 
-It could be done in two steps:
+Complete the following steps:
 
-#### Step 1. **Initial Request**.
+#### Step 1: Initial request
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/initial-req-for-options.png" class="border" alt="Initial request to work with options received asynchronously." >}}
 
-In the example below, a necessary element is found and its options are updated. Once the data has been received, the element is updated using `context.panel.onChangeElements()`.
+In the following example, the code finds the required element and updates its options. After the data is received, the element is updated using `context.panel.onChangeElements()`.
 
 ```js
 const url = "https://jsonplaceholder.typicode.com/users";
@@ -239,13 +238,13 @@ Available starting from version 4.9.0.
 
 {{< /admonition >}}
 
-If allowed, users can enter custom values into the **Select** and **Multi select** form element types.
+If enabled, users can enter custom values in the **Select** and **Multi select** form element types.
 
 {{< video-embed src="/media/docs/grafana/panels-visualizations/business-forms/select-multi-custom-value.mp4" >}}
 
 ## Conditional visibility
 
-Every form element has the <b>Show If returned value is true</b> parameter where you enter JavaScript code.
+Every form element has a **Show If returned value is true** parameter where you can enter JavaScript code.
 
 - If this code returns `true`, the element is shown on the panel.
 - If this code returns `false`, the element is hidden from the panel.
@@ -270,7 +269,7 @@ Below is supported starting from the version 3.2.1.
 
 {{< /admonition >}}
 
-You can use the dashboard and global variables within your JavaScript code.
+You can use dashboard and global variables in your JavaScript code.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/var.png" class="border" alt="Conditional visibility using a dashboard variable example." >}}
 
@@ -285,11 +284,11 @@ return test === "test";
 
 {{< admonition type="note" >}}
 
-Below is supported starting from 4.4.0
+This feature is supported starting from version 4.4.0.
 
 {{< /admonition >}}
 
-To map the Initial Form Elements values, use the **Initial Fields** options category.
+To map initial form element values, use the **Initial Fields** options category.
 
 ### Data source 4.4.0
 
@@ -301,11 +300,11 @@ To map the Initial Form Elements values, use the **Initial Fields** options cate
 
 {{< admonition type="note" >}}
 
-Below is supported starting from version 3.2.1 to version 4.0.0
+This feature is supported in versions 3.2.1 through 4.0.0.
 
 {{< /admonition >}}
 
-Using the **Field name** parameter for **Data Source** and the **Query Field** for **Query**, you can specify field-to-form mapping.
+You can specify field-to-form mapping using the **Field name** parameter for **Data Source** or the **Query Field** parameter for **Query**.
 
 ### Data Source
 

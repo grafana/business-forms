@@ -12,11 +12,11 @@ labels:
 
 # File
 
-The **File** type allows users to access their file system to select a file. The file will be transferred as binary or Base64 encoded.
+The **File** type allows users to access their file system to select a file. The file is transferred as binary or Base64 encoded data.
 
-Specific for this element are the following options:
+This element has the following specific option:
 
-- Accept. Lists the allowed file extensions. Example:
+- **Accept**: Lists the allowed file extensions. For example:
 
 ```js
  .png,.gif

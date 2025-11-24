@@ -15,11 +15,11 @@ weight: 60
 
 The Business Forms panel provides an extensive set of features.
 
-| Section                                  | Description                                                                           |
-| ---------------------------------------- | ------------------------------------------------------------------------------------- |
-| [Control panel](../control)              | Explains how to create control panels with multiple sections and the same identifier. |
-| [Custom Requests](../request)            | Explains how to create initial and update requests with custom code.                  |
-| [Dynamic forms](../dynamic)              | Explains how to update the form element's values and options from any data source.    |
-| [Variables](../variables)                | Explains how to replace dashboard and global variables.                               |
-| [Load indication](../load)               | Demonstrate how the Data Manipulation indicates the loading in progress.              |
-| [Confirmation Window](../confirm-window) | Provides confirmation window details.                                                 |
+| Section                                  | Description                                                                       |
+| ---------------------------------------- | --------------------------------------------------------------------------------- |
+| [Control panel](../control)              | Create control panels with multiple sections and the same identifier.             |
+| [Custom requests](../request)            | Create initial and update requests with custom code.                              |
+| [Dynamic forms](../dynamic)              | Update form element values and options from any data source.                      |
+| [Variables](../variables)                | Replace dashboard and global variables.                                           |
+| [Load indication](../load)               | View how Business Forms indicates loading progress.                               |
+| [Confirmation window](../confirm-window) | Configure the confirmation window that displays before submitting form updates.   |

@@ -12,9 +12,9 @@ labels:
 
 # Radio Group with boolean options
 
-The **Radio Group with boolean options** provides a user with a choice between True and False.
+The **Radio Group with boolean options** provides users with a choice between True and False.
 
-This type does not have any specific options.
+This type doesn't have any specific options.
 
 ## Change Elements model
 

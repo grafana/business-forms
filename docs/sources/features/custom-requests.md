@@ -12,18 +12,17 @@ labels:
 
 # Custom requests
 
-The Business Forms panel allows you to create your own initial and update requests with custom code.
+You can create custom initial and update requests with custom code.
 
 ## Initial request
 
-Select `Code` to choose an initial request, and then define the custom code:
+To create a custom initial request, select `Code` and then define your custom code:
 
 {{< admonition type="note" >}}
 
-The `context.panel.onOptionsChange()` handler calls the refresh panel.
+The `context.panel.onOptionsChange()` handler refreshes the panel.
 
-If you use it in the initial request, don't forget to disable the Synchronize option.
-Enabling the Synchronize option and using it together with `context.panel.onOptionsChange()` in the Initial Request will cause the panel to reload constantly.
+If you use this handler in the initial request, disable the **Synchronize with data** option. Using both the **Synchronize with data** option and `context.panel.onOptionsChange()` in the initial request causes the panel to reload continuously.
 
 {{< /admonition >}}
 
@@ -73,7 +72,7 @@ context.panel.setInitial({ value: 99, name: "Test" });
 
 ## Update request
 
-Select `Code` to choose an update request, and then define the custom code. Depending on the selected payload option, it will add all or only the updated values.
+To create a custom update request, select `Code` and then define your custom code. Depending on the payload option you select, the request includes either all values or only the updated values.
 
 ```js
 /**

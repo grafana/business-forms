@@ -11,15 +11,15 @@ weight: 50
 
 # Custom code
 
-Custom code allows you to access the panel's options, REST API responses, form elements, and various Grafana services.
+You can use custom code to access the panel's options, REST API responses, form elements, and various Grafana services.
 
-Custom code is executed after the `Initial` and `Update` requests, when `Element Value Changed`.
+Custom code is executed after the `Initial` and `Update` requests and when `Element Value Changed` occurs.
 
 ## Parameters
 
 <!-- prettier-ignore-start -->
 
-| Parameter | Description | Initial, Update | Change Value | ShowIf, DisableIf, Get Options |
+| Parameter | Description | Initial, Update | Change value | ShowIf, DisableIf, GET options |
 | --------- | ----------- | --------------- | ------------ | ------------------------------ |
 | [`context.element`](/plugins/business-forms/code/panel/#contextelement) | Current element | | YES | |
 | [`context.panel.data`](/plugins/business-forms/code/panel/#paneldata) | Result set of panel queries. | YES  | YES | YES (For `Get Options`) |
@@ -65,7 +65,7 @@ Custom code is executed after the `Initial` and `Update` requests, when `Element
 
 <!-- prettier-ignore-end -->
 
-## Inspect
+## Inspect parameters
 
 To find out the current parameters, you can log them in the browser's console:
 
@@ -80,7 +80,9 @@ console.log(
 );
 ```
 
-## Refresh dashboard after update request or show warning
+## Refresh the dashboard after an update request or show a warning
+
+The following example shows how to refresh the dashboard after a successful update request or display an error notification if the request fails.
 
 ```javascript
 if (context.panel.response && context.panel.response.ok) {
@@ -94,7 +96,9 @@ if (context.panel.response && context.panel.response.ok) {
 }
 ```
 
-## Update variable after update request to interact with other panels
+## Update a variable after an update request to interact with other panels
+
+The following example demonstrates how to update a dashboard variable with data from the response, enabling interaction with other panels.
 
 ```javascript
 if (context.panel.response && context.panel.response.ok) {
@@ -104,7 +108,9 @@ if (context.panel.response && context.panel.response.ok) {
 }
 ```
 
-## Perform Initial Request after update request or show error
+## Perform an initial request after an update request or show an error
+
+The following example shows how to trigger an initial request to reload the panel after a successful update or display an error notification if the request fails.
 
 ```javascript
 if (context.panel.response && context.panel.response.ok) {
@@ -118,7 +124,9 @@ if (context.panel.response && context.panel.response.ok) {
 }
 ```
 
-## Perform Initial Request only on dashboard load
+## Perform an initial request only on dashboard load
+
+The following example demonstrates how to fetch and populate form elements only when the dashboard first loads, avoiding unnecessary requests on subsequent interactions.
 
 ```javascript
 const getValues = async () => {
@@ -149,7 +157,9 @@ const getValues = async () => {
 return getValues();
 ```
 
-## Clear element values after click on the Submit or Reset button
+## Clear element values after clicking the Submit or Reset button
+
+The following example shows how to reset or modify form element values programmatically.
 
 ```javascript
 context.panel.onOptionsChange({
@@ -168,7 +178,9 @@ The `context.panel.onOptionsChange()` handler calls refresh panel.
 
 The `context.panel.onOptionsChange()` handler is required to update the panel.
 
-## Update local state in Data Manipulation panel 3.1.0
+## Update the local state in Data Manipulation panel 3.1.0
+
+The following example demonstrates how to update element values in the local state without refreshing the entire panel.
 
 ```javascript
 context.panel.onChangeElements(
@@ -182,7 +194,7 @@ The `context.panel.onChangeElements()` function is required to update the elemen
 
 ## Simplified form elements `patchFormValue` helper
 
-Before version 4.4.0, in order to update a form element value, a user had to use `context.panel.elements.map()`. In the 4.4.0, a new function was added to simplify that approach. It has an object's key as an inpit parameter and a new value.
+Before version 4.4.0, to update a form element value, you had to use `context.panel.elements.map()`. In version 4.4.0, a new function was added to simplify that approach. It accepts an object with element IDs as keys and their new values.
 
 Before 4.4.0 version:
 
@@ -205,7 +217,7 @@ context.panel.patchFormValue({ name: "Alex", isAdmin: true });
 
 ## Simplified form elements `formValue` helper
 
-Before version 4.4.0, in order to get a form element value, a user had to use `context.panel.elements.forEach()`. In the 4.4.0, a new function was added to simplify that approach. It has an object's key as an inpit parameter.
+Before version 4.4.0, to get form element values, you had to use `context.panel.elements.forEach()`. In version 4.4.0, a new function was added to simplify that approach. It returns an object with element IDs as keys.
 
 Before 4.4.0 version:
 

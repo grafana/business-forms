@@ -29,7 +29,7 @@ You can install the Business Forms panel from the [Grafana Plugins catalog](http
 
 {{< youtube id="1qYzHfPXJF8" >}}
 
-For the latter, please use the following command:
+For the latter, use the following command:
 
 ```sh
 grafana cli plugins install volkovlabs-form-panel
@@ -40,23 +40,23 @@ grafana cli plugins install volkovlabs-form-panel
 - Provides functionality to create customizable forms.
 - Supports custom code for initial and update requests.
 - Supports API requests, including the `GET` request to get initial values and the `DELETE`, `PATCH`, `POST`, and `PUT` requests to send values updated in the form.
-- Allows adding request headers to initial and update requests.
-- Supports customization of the Submit and Reset buttons as well as the form layout.
-- Allows splitting form elements into sections.
-- Allows requesting the user's confirmation before running an update request.
-- Allows sending all or only updated elements in the request payload.
-- Allows displaying success and error notifications through custom code.
-- Supports suggestions for available parameters when writing program code in the code editor.
+- Adds request headers to initial and update requests.
+- Customizes the Submit and Reset buttons and the form layout.
+- Splits form elements into sections.
+- Requests user confirmation before running an update request.
+- Sends all or only updated elements in the request payload.
+- Displays success and error notifications through custom code.
+- Provides suggestions for available parameters when writing program code in the code editor.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/panel.png" class="border" alt="Business Forms panel for Grafana." >}}
 
 ## Tutorial
 
-In this video, two examples of what the Business Forms plugin can do are provided along with an outline of their configuration steps. Towards the end, it shows how the Business Forms panel can be created dynamically or, in other words, as a code with a reference where you can get copy-paste examples.
+This video provides two examples of what the Business Forms plugin can do, along with an outline of their configuration steps. The video also shows how to create the Business Forms panel dynamically using code, with a reference where you can get copy-paste examples.
 
 {{< youtube id="ulbe8U8-IFA" >}}
 
-There are many other tutorials that you might find helpful. You can review all related to this plugin tutorials [here](/plugins/business-forms/tutorials).
+For more tutorials, see [Tutorials](/plugins/business-forms/tutorials).
 
 ## Documentation
 

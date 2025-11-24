@@ -15,7 +15,7 @@ weight: 50
 
 # API server for PostgreSQL
 
-API Server on Node.js enables retrieving and updating values in the PostgreSQL database with Data Manipulation panel.
+The API server on Node.js enables you to retrieve and update values in a PostgreSQL database with the Data Manipulation panel.
 
 ## Features
 

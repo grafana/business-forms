@@ -12,13 +12,13 @@ labels:
 
 # Radio Group with custom options
 
-The **Radio Group with custom options** provides a user with a choice between two or many options.
+The **Radio Group with custom options** provides users with a choice between two or more options.
 
-Specific for this element are the following options:
+This element has the following specific option:
 
-- User options.
+- User options
 
-To add an option click the 'Add option' button and then specify an option type (number or string), value, label and select an icon from the given list.
+To add an option, click **Add option**, and then specify an option type (number or string), value, label, and select an icon from the list.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/radio.png" class="border" alt="Add custom options for the radio custom type." >}}
 

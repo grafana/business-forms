@@ -12,11 +12,11 @@ labels:
 
 # Text Area
 
-The **Text Area** is a rectangular area where a user can enter a text.
+The **Text Area** is a rectangular area where users can enter text.
 
-Specific for this element are the following options:
+This element has the following specific option:
 
-- Rows. Sets the vertical size of the element.
+- **Rows**: Sets the vertical size of the element.
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

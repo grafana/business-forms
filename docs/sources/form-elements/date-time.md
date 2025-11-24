@@ -12,14 +12,14 @@ labels:
 
 # Date and Time
 
-The **Date and Time** element gives access to the built-in date time Grafana component where a user can select a date and time using the familiar controls.
+The **Date and Time** element provides access to the built-in Grafana date time component where users can select a date and time using familiar controls.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/calendar.png" max-width="175px" class="border" alt="Date and time type is Grafana universal type." >}}
 
-Specific for this element are the following options:
+This element has the following specific options:
 
-- Min. Sets the allowed minimum.
-- Max. Sets the allowed maximum.
+- **Min**: Sets the allowed minimum.
+- **Max**: Sets the allowed maximum.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/min-max.png" max-width="300px" class="border" alt="Options specific to the Date and time type." >}}
 

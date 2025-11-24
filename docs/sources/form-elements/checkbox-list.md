@@ -12,15 +12,15 @@ labels:
 
 # Checkbox list with custom options
 
-The **Checkbox list with custom options** type allows to creation of multi-selection checkmark elements.
+The **Checkbox list with custom options** type lets you create multi-selection checkmark elements.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/checkbox.png" max-width="300px" class="border" alt="Checkbox list with custom options." >}}
 
-Specific for this element are the following options:
+Specific for this element is the following option:
 
-- User options.
+- User options
 
-To add an option click the 'Add option' button and then specify an option type (number or string), value, and label.
+To add an option, click **Add option**, and then specify an option type (number or string), value, and label.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/checkbox-options.png" class="border" alt="Checkbox list with custom options." >}}
 

@@ -14,11 +14,11 @@ labels:
 
 The **Select with Custom Options** type is a dropdown where users can select one option.
 
-Specific for this element are the following options:
+This element has the following specific option:
 
-- User options.
+- User options
 
-To add an option click the 'Add option' button and then specify an option type (number or string), value, label and select an icon from the given list.
+To add an option, click **Add option**, and then specify an option type (number or string), value, label, and select an icon from the list.
 
 ## Change Elements model
 

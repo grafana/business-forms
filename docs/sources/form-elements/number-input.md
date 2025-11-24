@@ -12,12 +12,12 @@ labels:
 
 # Number Input
 
-The **Number Input** is a text box where users enter a number manually.
+The **Number Input** is a text box where users manually enter a number.
 
-Specific for this element are the following options:
+This element has the following specific options:
 
-- Min. Sets the minimum allowed input number.
-- Max. Sets the maximum allowed input number.
+- **Min**: Sets the minimum allowed input number.
+- **Max**: Sets the maximum allowed input number.
 
 ## Change Elements model
 

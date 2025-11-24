@@ -12,15 +12,15 @@ labels:
 
 # Read-only
 
-The **Read-only** type is sometimes also called the disabled type. It is a text box with a faded background and text. It does not allow a user to change the value it displays.
+The **Read-only** type is sometimes also called the disabled type. It is a text box with a faded background and text. It doesn't allow users to change the value it displays.
 
-Specific for this element are the following options:
+This element has the following specific option:
 
-- User options.
+- User options
 
-To add an option click the 'Add option' button and then specify an option type (number or string), value, label and select an icon from the given list.
+To add an option, click **Add option**, and then specify an option type (number or string), value, label, and select an icon from the list.
 
-Set initial value in the initial request section to display the option label with **Read-only** correctly. The value set for the item should match the value of one of the options to be displayed.
+Set the initial value in the initial request section to display the option label with **Read-only** correctly. The value set for the item should match the value of one of the options to be displayed.
 
 ## Change Elements model
 

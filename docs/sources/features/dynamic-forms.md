@@ -12,13 +12,13 @@ labels:
 
 # Dynamic forms
 
-With custom code, you can update form elements or their values and options from any data source.
+You can use custom code to update form elements, values, and options from any data source.
 
 {{< youtube id="RSVH1bSBNl8" >}}
 
 ## Select options
 
-Define options of the `icon` element from the `icons` series with the `icon_id` and `title` columns
+The following example defines options for the `icon` element from the `icons` series using the `icon_id` and `title` columns:
 
 ```js
 const icons = context.panel.data.series.find(
@@ -47,9 +47,8 @@ context.panel.onOptionsChange(options);
 ## Update elements from data sources
 
 {{< admonition type="note" >}}
-The `context.panel.onOptionsChange()` handler calls the refresh panel.
-If you use it in the initial request, don't forget to disable the Synchronize option.
-Enabling the Synchronize option and using it together with `context.panel.onOptionsChange()` in the Initial Request will cause the panel to reload constantly.
+The `context.panel.onOptionsChange()` handler refreshes the panel.
+If you use this handler in the initial request, disable the **Synchronize with data** option. Using both the **Synchronize with data** option and `context.panel.onOptionsChange()` in the initial request causes the panel to reload continuously.
 {{< /admonition >}}
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/infinity-reload.png" max-width="350px" class="border" alt="Disable Synchronize with data to avoid endless reloading of the panel if onOptionsChange() is used in the initial request." >}}
@@ -109,22 +108,22 @@ if (feedback?.fields.length) {
 
 ## Dynamic Business Forms
 
-The Business Forms can be created dynamically following the code-specified configuration.
-You can find more details in this [blog post](https://volkovlabs.io/blog/form-panel-server-based-elements-20240428/).
+You can create Business Forms dynamically by using code-specified configuration.
+For more information, refer to this [blog post](https://volkovlabs.io/blog/form-panel-server-based-elements-20240428/).
 
 ## Sections
 
 {{< admonition type="note" >}}
 
-Starting from version 4.9.0, **Sections** can be created dynamically as well.
+Starting from version 4.9.0, you can create **Sections** dynamically.
 
 {{< /admonition >}}
 
 In addition to simple forms, you can create [sections](/plugins/business-forms/form-elements/#sections) dynamically.
 
-In the example below, the data about the required sections comes from the data source. In this case, the [Business Input](/plugins/business-input/) data source is used to create a basic data frame containing section information, such as ID and name.
+In the following example, the data about required sections comes from the data source. The example uses the [Business Input](/plugins/business-input/) data source to create a basic data frame that contains section information, such as ID and name.
 
-Next, the **Sections** and **Form Elements** categories are shown as not configured.
+The **Sections** and **Form Elements** categories display as not configured.
 
 In the **Initial Request** category, the **Initial Action** is set to **Code**.
 
@@ -147,4 +146,4 @@ context.panel.sectionsUtils.add({ name: sections[2].name, id: sections[2].id, el
 
 ```
 
-Find more available commands and code snippets in the [Panel Parameters](/plugins/business-forms/code/panel/) sections of the Business Forms panel documentation.
+For more available commands and code snippets, refer to the [Panel Parameters](/plugins/business-forms/code/panel/) section.

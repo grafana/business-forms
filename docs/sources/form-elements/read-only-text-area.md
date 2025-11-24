@@ -12,7 +12,7 @@ labels:
 
 # Read-only Text Area
 
-This element type is similar to the **Read-Only** type with the difference that this one allows to display of multiple rows of text.
+This element type is similar to the **Read-Only** type with the difference that this one allows the display of multiple rows of text.
 
 ## Change Elements model
 

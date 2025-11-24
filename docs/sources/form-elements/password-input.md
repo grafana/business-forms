@@ -12,9 +12,9 @@ labels:
 
 # Password Input
 
-The **Password Input** is a text box where every entered symbol is transformed into a dot.
+The **Password Input** is a text box where each entered character is transformed into a dot.
 
-This type does not have any specific options.
+This type doesn't have any specific options.
 
 ## Change Elements model
 

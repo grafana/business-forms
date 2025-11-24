@@ -12,11 +12,11 @@ labels:
 
 # String Input
 
-The **String Input** is a text box where a user manually enters a string value.
+The **String Input** is a text box where users manually enter a string value.
 
-Specific for this element are the following options:
+This element has the following specific option:
 
-- A visual control, a button, to make the element hidden.
+- A visual control button to hide the element.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/element.png" class="border" alt="String input element" >}}
 

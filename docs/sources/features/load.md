@@ -12,17 +12,17 @@ labels:
 
 # Load indication
 
-If the data loading takes time, the Data Manipulation form will indicate that as follows.
+When data loading takes time, the Business Forms panel displays loading indicators.
 
 ## Initial request
 
-The end user will see a running blue line at the top of the form.
+A moving blue line displays at the top of the form.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/status-initial.png" class="border" alt="A moving blue line indicates an initial request being in progress." >}}
 
 ## Update request
 
-All buttons are disabled and moving circled dots are placed instead of the Submit button icon.
+All buttons are disabled and moving circular dots display in place of the Submit button icon.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/status-update.png" class="border" alt="Dots moving in a circle indicate an update request being in progress." >}}
 

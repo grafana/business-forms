@@ -18,7 +18,7 @@ The **Date** type is available starting from version 4.9.0.
 
 {{< /admonition >}}
 
-If time is irrelevant to your scenario, instead of **Date and time**, you can select **Date** type.
+If time is irrelevant to your scenario, you can select the **Date** type instead of **Date and time**.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/date-type.png" class="border" alt="Date and Date and time types." >}}
 

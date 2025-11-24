@@ -14,16 +14,16 @@ labels:
 
 {{< admonition type="note" >}}
 
-Below is supported starting from version 3.2.1 and Grafana 10.1.0.
+This feature is supported starting from version 3.2.1 and Grafana 10.1.0.
 
 {{< /admonition >}}
 
-This element type allows you to add links to your Business form. The link text is customizable using the **Link Text** option. If not specified, the link address will be displayed.
+This element type lets you add links to your Business form. You can customize the link text using the **Link Text** option. If you don't specify link text, the link address is displayed.
 
-Specific for this element are the following options:
+This element has the following specific options:
 
 - **Link text**
-- **Open in**. The link can be opened in the same or a new tab.
+- **Open in**: The link can open in the same tab or a new tab.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/link.png" class="border" alt="The Link element type." >}}
 

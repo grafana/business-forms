@@ -12,7 +12,7 @@ labels:
 
 # Confirmation window
 
-The Confirmation window, if enabled, is shown after a user clicks the submit button to highlight changes made in the Business Form.
+When enabled, the confirmation window displays after you click the submit button. It highlights the changes you made in the Business Form.
 
 {{< admonition type="note" >}}
 
@@ -28,13 +28,13 @@ You can customize all labels using the **Update Confirmation Window** category.
 
 {{< admonition type="note" >}}
 
-The **Display Values** parameter has been supported starting from version 4.0.0.
+The **Display Values** parameter is supported starting from version 4.0.0.
 
 {{< /admonition >}}
 
-The **Display Values** parameter has two options to choose from:
+The **Display Values** parameter has two options:
 
-- **All values** to always show all data elements regardless if there was any change in values.
-- **Updated Only** to show only the data elements with changed values.
+- **All values**: Shows all data elements, regardless of whether their values changed.
+- **Updated Only**: Shows only the data elements with changed values.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/display-values.png" class="border" alt="Display Values parameter." >}}

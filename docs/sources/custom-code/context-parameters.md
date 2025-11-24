@@ -14,7 +14,7 @@ labels:
 
 ## context.element
 
-Return a current element.
+Returns the current element.
 
 #### Usage
 
@@ -32,7 +32,7 @@ const currentElement = context.element;
 
 ### panel.data
 
-Result set of panel queries.
+Returns the result set of panel queries.
 
 #### Usage
 
@@ -48,7 +48,7 @@ const data = context.panel.data;
 
 ### panel.elements
 
-Return form elements.
+Returns all form elements.
 
 #### Usage
 
@@ -64,7 +64,7 @@ const currentElements = context.panel.elements;
 
 ### panel.initial
 
-Parsed values from the initial request.
+Returns the parsed values from the initial request.
 
 #### Usage
 
@@ -104,7 +104,7 @@ if (context.panel.response && context.panel.response.ok) {
 
 ### panel.options
 
-Return panel's options.
+Returns the panel's options.
 
 #### Usage
 
@@ -120,7 +120,7 @@ const options = context.panel.options;
 
 ### panel.onOptionsChange(options)
 
-Modifies a handler to refresh the panel. The context.panel.onOptionsChange() handler is required to update the panel.
+Modifies the panel options and triggers a refresh. The `context.panel.onOptionsChange()` handler is required to update the panel.
 
 {{< admonition type="note" >}}
 
@@ -165,7 +165,7 @@ context.panel.onOptionsChange({
 
 ### panel.onChangeElements(options)
 
-Updates elements in the local state. Change elements. Accepts an array of new elements.
+Updates elements in the local state. Accepts an array of new elements.
 
 #### Usage
 
@@ -200,7 +200,7 @@ context.panel.onChangeElements(
 
 ### panel.patchFormValue(values)
 
-Update the value of the elements. Accepts an object.
+Updates the values of the specified elements. Accepts an object.
 
 #### Usage
 
@@ -229,7 +229,7 @@ context.panel.patchFormValue({ name: "Alex", isAdmin: true });
 
 ### panel.setFormValue(values)
 
-Update the value of the elements. Accepts an object. If value is not passed to the element, the value should be used from initial or cleared.
+Updates the values of elements. Accepts an object. If a value is not passed for an element, the initial value is used or the value is cleared.
 
 #### Usage
 
@@ -252,7 +252,7 @@ context.panel.setFormValue({ name: "Alex", isAdmin: true });
 
 ### panel.formValue()
 
-Return a current form value as object.
+Returns the current form values as an object.
 
 #### Usage
 
@@ -269,7 +269,7 @@ const payload = context.panel.formValue;
 
 ### panel.response
 
-Contains a current Request's response.
+Returns the current request's response.
 
 #### Usage
 
@@ -369,7 +369,7 @@ context.panel.setError("Message");
 
 ### panel.enableSubmit()
 
-Enable Submit button.
+Enables the Submit button.
 
 #### Usage
 
@@ -389,7 +389,7 @@ context.panel.enableSubmit();
 
 ### panel.disableSubmit()
 
-Disable Submit button.
+Disables the Submit button.
 
 #### Usage
 
@@ -411,7 +411,7 @@ context.panel.disableSubmit();
 
 ### panel.enableReset()
 
-Enable Reset button.
+Enables the Reset button.
 
 #### Usage
 
@@ -431,7 +431,7 @@ context.panel.disableSubmit();
 
 ### panel.disableReset()
 
-Disable Reset button.
+Disables the Reset button.
 
 #### Usage
 
@@ -451,7 +451,7 @@ context.panel.disableReset();
 
 ### panel.enableSaveDefault()
 
-Enable Save Default button.
+Enables the Save Default button.
 
 #### Usage
 
@@ -471,7 +471,7 @@ context.panel.enableSaveDefault();
 
 ### panel.disableSaveDefault()
 
-Disable Save Default button.
+Disables the Save Default button.
 
 #### Usage
 
@@ -493,7 +493,7 @@ context.panel.disableSaveDefault();
 
 ### sectionsUtils.add(section)
 
-Add a new Section.
+Adds a new section.
 
 _Added in: v4.9.0_
 
@@ -546,7 +546,7 @@ context.panel.sectionsUtils.add(newSection);
 
 ### sectionsUtils.update(sections)
 
-Change Sections.
+Updates existing sections.
 
 _Added in: v4.9.0_
 
@@ -579,7 +579,7 @@ context.panel.sectionsUtils.update([{ name: "Section 1", id: "id-s-1" }]);
 
 ### sectionsUtils.remove(id)
 
-Remove Section.
+Removes a section.
 
 _Added in: v4.9.0_
 
@@ -610,7 +610,7 @@ context.panel.removeSection("id-s-1");
 
 ### sectionsUtils.assign(id,elements)
 
-Assign elements to Section.
+Assigns elements to a section.
 
 _Added in: v4.9.0_
 
@@ -642,7 +642,7 @@ context.panel.sectionsUtils.assign("id-s-1", ["elem-1", "elem-2"]);
 
 ### sectionsUtils.unassign(elements)
 
-Unassign elements from Section.
+Unassigns elements from a section.
 
 _Added in: v4.9.0_
 
@@ -673,7 +673,7 @@ context.panel.sectionsUtils.unassign(["elem-1", "elem-2"]);
 
 ### sectionsUtils.get(id)
 
-Get Section by id. Return Section with elements assign to section.
+Returns the section with the specified ID, including all elements assigned to it.
 
 _Added in: v4.9.0_
 
@@ -695,7 +695,7 @@ context.panel.sectionsUtils.get("section-id");
 
 ### sectionsUtils.getAll()
 
-Get All Sections. Return Sections with elements assign to each section.
+Returns all sections with their assigned elements.
 
 _Added in: v4.9.0_
 
@@ -713,7 +713,7 @@ context.panel.sectionsUtils.getAll();
 
 ### sectionsUtils.collapse(id)
 
-Collapse Section.
+Collapses the specified section.
 
 _Updated in: v4.9.0_
 
@@ -735,7 +735,7 @@ context.panel.sectionsUtils.collapse("section-id");
 
 ### sectionsUtils.expand(id)
 
-Expand Section.
+Expands the specified section.
 
 _Added in: v4.9.0_
 
@@ -757,7 +757,7 @@ context.panel.sectionsUtils.expand("section-id");
 
 ### sectionsUtils.toggle(id)
 
-Toggle (Collapse/Expand) Section.
+Toggles the specified section between collapsed and expanded states.
 
 _Added in: v4.9.0_
 
@@ -799,7 +799,7 @@ const sectionsExpandedState = context.panel.sectionsUtils.expandedState;
 
 ### grafana.locationService
 
-Grafana's `locationService` function to work with the browser's location and history.
+Provides access to Grafana's `locationService` for working with the browser's location and history.
 
 #### Usage
 
@@ -817,7 +817,7 @@ const history = context.grafana.locationService.history;
 
 ### grafana.backendService
 
-Grafana's backendService used to communicate to a remote backend such as the Grafana backend, a datasource etc.
+Provides access to Grafana's `backendService` for communicating with remote backends such as the Grafana backend or a data source.
 
 #### Usage
 
@@ -921,7 +921,7 @@ const subscriber = eventBus.getStream(RefreshEvent).subscribe(() => {
 
 ### grafana.templateService
 
-Grafana's templateService function that provides access to variables and enables the update of a time range.
+Provides access to Grafana's `templateService` for working with variables and updating the time range.
 
 #### Usage
 
@@ -937,7 +937,7 @@ const regEx = context.grafana.templateService.regex;
 
 ### grafana.refresh()
 
-Function to refresh dashboard panels using application events.
+Refreshes dashboard panels using application events.
 
 #### Usage
 
@@ -949,7 +949,7 @@ context.grafana.refresh();
 
 ### utils.fileToBase64(file)
 
-Convert ot base64 format.
+Converts a file to base64 format.
 
 #### Usage
 
@@ -992,7 +992,7 @@ return getPayload();
 
 ### utils.toDataQueryResponse(res)
 
-Parse the results from /api/ds/query into a DataQueryResponse
+Parses the results from `/api/ds/query` into a `DataQueryResponse` object.
 
 #### Usage
 

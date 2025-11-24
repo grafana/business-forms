@@ -18,7 +18,7 @@ The **Time** type is available starting from version 3.8.0.
 
 {{< /admonition >}}
 
-If time is irrelevant to your scenario, instead of **Time**, you can select **Date** or **Date and Time** type.
+If date is irrelevant to your scenario, you can select the **Time** type instead of **Date** or **Date and Time**.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/time-element.png" max-width="300px" class="border" alt="Time element" >}}
 

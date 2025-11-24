@@ -12,9 +12,11 @@ labels:
 
 # Color Picker
 
-The **Color Picker** allows to check color from palette.
+The **Color Picker** lets you select a color from a palette.
 
-- Color format. HEX or RGB
+This element has the following specific option:
+
+- **Color format**: HEX or RGB
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/color-picker.png" class="border" alt="Color Picker element." >}}
 

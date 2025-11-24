@@ -13,15 +13,15 @@ labels:
 
 # Variables
 
-Dashboard and global variables are replaced automatically in the following elements:
+Business Forms automatically replaces dashboard and global variables in the following elements:
 
-- URL for initial and update requests
-- Header parameters' values
-- Payload of the update request
+- URLs for initial and update requests
+- Header parameter values
+- Update request payloads
 - JavaScript code
-- Sections names (starting from version 4.9.0)
-- Form elements labels (starting from version 4.9.0)
-- Button texts (starting from version 4.9.0)
+- Section names (starting from version 4.9.0)
+- Form element labels (starting from version 4.9.0)
+- Button text (starting from version 4.9.0)
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/var-sections-labels-buttons.png" class="border" alt="Use dashboard variables in the sections, labels, and button texts." >}}
 
@@ -38,8 +38,8 @@ formIcon.value = "$IconVar";
 
 ## Synchronize with dashboard variables
 
-This [blog post](https://volkovlabs.io/blog/form-panel-use-variables-20240301/) demonstrates how Data Manipulation plugin can work with dashboard variables.
+For information about how Business Forms works with dashboard variables, refer to this [blog post](https://volkovlabs.io/blog/form-panel-use-variables-20240301/).
 
-If you are a visual style learner, you can watch the video. It covers the same ground.
+The following video covers the same content.
 
 {{< youtube id="DW-yuSopejY" >}}
