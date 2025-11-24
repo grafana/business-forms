@@ -65,7 +65,7 @@ The **REST API** type works with an external API server. When specifying the API
 
 You can find ready-to-use API servers for Deno, InfluxDB, JSON API, MySQL, Node-Red, and PostgreSQL in [servers section](../servers).
 
-Find more information, tips and tricks in our [documentation](../architecture).
+Find more information, tips and tricks in the [documentation](../architecture).
 
 ## Initial Request custom code
 
@@ -138,7 +138,7 @@ This feature is related to the:
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/init-update.png" class="border" alt="The payload area relates to the Data Source (Initial and Update requests)." >}}
 
-We simplified work with the payload creation. The Business Forms panel has a designated area to enter the payload request.
+Working with the payload creation has been simplified. The Business Forms panel has a designated area to enter the payload request.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/ini-payload.png" class="border" alt="Payload for the Initial Request example." >}}
 

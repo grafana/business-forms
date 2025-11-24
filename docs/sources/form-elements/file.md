@@ -26,7 +26,7 @@ Specific for this element are the following options:
 
 #### Example of the File type in a project
 
-You can find an example of the File type in the following article. There we demonstrate how Data Manipulation can interact with other plugins ([the Business Variable panel](/plugins/business-variable/) and [the Base64 panel](/plugins/business-media/)).
+You can find an example of the File type in the following article. It demonstrates how Data Manipulation can interact with other plugins ([the Business Variable panel](/plugins/business-variable/) and [the Base64 panel](/plugins/business-media/)).
 
 The Data Manipulation panel with a file upload feature is used twice in that example. One time to illustrate the configuration using Data Source and the other to HTTP API Server. Learn more in this [blog post](https://volkovlabs.io/blog/form-panel-file-upload-20240310/).
 

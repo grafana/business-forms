@@ -33,7 +33,7 @@ Once values have been updated, all the form elements will create a similar paylo
 
 ## NGINX
 
-We recommend that you run Grafana behind an NGINX reverse proxy for an additional security layer. The reverse proxy also allows you to expose additional API endpoints and static files within the scope of the same domain, which makes it CORS-ready.
+It's recommended that you run Grafana behind an NGINX reverse proxy for an additional security layer. The reverse proxy also allows you to expose additional API endpoints and static files within the scope of the same domain, which makes it CORS-ready.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/form-nginx-api.png" class="border" alt="Grafana and Server API behind an NGINX reverse proxy." >}}
 
@@ -53,4 +53,4 @@ Please consider that Grafana will not explicitly indicate a CORS error.
 
 ## Connect to API server
 
-We acknowledge the risks of data manipulation and consider security concerns seriously. This [blog post](https://volkovlabs.io/blog/how-to-connect-the-data-manipulation-plugin-for-grafana-to-api-server-1abe5f60c904/) explores three secure ways to connect Data Manipulation panel to an API server.
+Data manipulation can be risky and these security concerns have been considered seriously. This [blog post](https://volkovlabs.io/blog/how-to-connect-the-data-manipulation-plugin-for-grafana-to-api-server-1abe5f60c904/) explores three secure ways to connect Data Manipulation panel to an API server.

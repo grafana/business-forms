@@ -25,7 +25,7 @@ Dashboard and global variables are replaced automatically in the following eleme
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/var-sections-labels-buttons.png" class="border" alt="Use dashboard variables in the sections, labels, and button texts." >}}
 
-Three types of variables are thoroughly explained in our [Grafana Crash Course](/grafana/variables).
+Three types of variables are thoroughly explained in the [Grafana Crash Course](/grafana/variables).
 
 ## JavaScript code
 
@@ -38,7 +38,7 @@ formIcon.value = "$IconVar";
 
 ## Synchronize with dashboard variables
 
-To demonstrate how Data Manipulation plugin can work with dashboard variables we created this [blog post](https://volkovlabs.io/blog/form-panel-use-variables-20240301/).
+This [blog post](https://volkovlabs.io/blog/form-panel-use-variables-20240301/) demonstrates how Data Manipulation plugin can work with dashboard variables.
 
 If you are a visual style learner, you can watch the video. It covers the same ground.
 

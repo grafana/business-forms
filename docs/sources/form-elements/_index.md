@@ -178,7 +178,7 @@ It could be done in two steps:
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/initial-req-for-options.png" class="border" alt="Initial request to work with options received asynchronously." >}}
 
-In the example below, we find a necessary element and update its options. Once the data has been received, we update the element using `context.panel.onChangeElements()`.
+In the example below, a necessary element is found and its options are updated. Once the data has been received, the element is updated using `context.panel.onChangeElements()`.
 
 ```js
 const url = "https://jsonplaceholder.typicode.com/users";

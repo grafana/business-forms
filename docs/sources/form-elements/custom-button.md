@@ -27,7 +27,7 @@ Custom buttons are supported starting from the version 4.4.0.
 
 {{< /admonition >}}
 
-In addition to all other types, in release 4.4.0 we added a custom button type.
+In addition to all other types, in release 4.4.0, a custom button type was added.
 
 With the **Button** Form Elements type, you can have more functionality on your form, such as calculating a value, performing validation checks, or any other.
 

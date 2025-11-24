@@ -113,7 +113,7 @@ context.panel.options.elements.forEach((element) => {
 
 /**
  * Set URL
- * Important to declare precision for timestamp, by default is ns and in the following code we are generating a timestamp in ms
+ * Important to declare precision for timestamp, by default is ns and in the following code a timestamp is generated in ms
  */
 const url = `http://localhost:8086/api/v2/write?org=org_example&bucket=bucket_example&precision=ms`;
 

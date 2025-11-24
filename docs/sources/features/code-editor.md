@@ -20,7 +20,7 @@ The Business Forms panel supports the Code Editor toolbar starting from version 
 
 ## Expand the editor
 
-For a better user experience, we added the expand the editor area button.
+For a better user experience, the expand the editor area button was added.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/button.png" max-width="175px" class="border" alt="Expand the code area button." >}}
 

@@ -52,11 +52,11 @@ grafana cli plugins install volkovlabs-form-panel
 
 ## Tutorial
 
-In this video, Daria provides two examples of what the Business Forms plugin can do and then outline the configuration steps. Towards the end, she emphasizes that the Business Forms panel can be created dynamically or, in other words, as a code with a reference where you can get copy-paste examples.
+In this video, two examples of what the Business Forms plugin can do are provided along with an outline of their configuration steps. Towards the end, it shows how the Business Forms panel can be created dynamically or, in other words, as a code with a reference where you can get copy-paste examples.
 
 {{< youtube id="ulbe8U8-IFA" >}}
 
-We have many other tutorials that you can find helpful. You can review all related to this plugin tutorials [here](/plugins/business-forms/tutorials).
+There are many other tutorials that you might find helpful. You can review all related to this plugin tutorials [here](/plugins/business-forms/tutorials).
 
 ## Documentation
 

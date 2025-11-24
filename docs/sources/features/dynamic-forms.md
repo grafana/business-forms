@@ -122,7 +122,7 @@ Starting from version 4.9.0, **Sections** can be created dynamically as well.
 
 In addition to simple forms, you can create [sections](/plugins/business-forms/form-elements/#sections) dynamically.
 
-In the example below, the data about the required sections comes from the data source. In this case, we use the [Business Input](/plugins/business-input/) data source to create a basic data frame containing section information, such as ID and name.
+In the example below, the data about the required sections comes from the data source. In this case, the [Business Input](/plugins/business-input/) data source is used to create a basic data frame containing section information, such as ID and name.
 
 Next, the **Sections** and **Form Elements** categories are shown as not configured.
 

@@ -17,19 +17,19 @@ This page contains clear, step-by-step video tutorials that showcase new feature
 
 ## Features overview of the Business Forms 4.1.0
 
-In this video, Daria provides two examples of what the Business Forms plugin can do and then outline the configuration steps. Towards the end, she emphasizes that the Business Forms panel can be created dynamically or, in other words, as a code with a reference where you can get copy-paste examples.
+In this video, two examples of what the Business Forms plugin can do are provided along with an outline of their configuration steps. Towards the end, it shows how the Business Forms panel can be created dynamically or, in other words, as a code with a reference where you can get copy-paste examples.
 
 {{< youtube id="ulbe8U8-IFA" >}}
 
 ## How to use Business Suite to create a release dashboard in Grafana
 
-In this video, Daria explains how the release dashboard has been configured and all the Business Suite panels used.
+This video explains how the release dashboard has been configured and all the Business Suite panels used.
 
 {{< youtube id="tUGRQBBZoRQ" >}}
 
 ## File Upload
 
-Below is one of our YouTube videos with a use-case review. It features three open source plugins that come together on one Grafana dashboard to provide a solution for a long-standing task - file upload using a Grafana dashboard and immediate display of the uploaded files.
+Below is a YouTube video with a use-case review. It features three open source plugins that come together on one Grafana dashboard to provide a solution for a long-standing task - file upload using a Grafana dashboard and immediate display of the uploaded files.
 
 {{< youtube id="V4Sza0uDQNs" >}}
 
@@ -37,7 +37,7 @@ You can find implementation details in the [blog post](https://volkovlabs.io/blo
 
 ## Synchronize with dashboard variables
 
-To demonstrate how Business Forms plugin can work with dashboard variables we created this [blog post](https://volkovlabs.io/blog/form-panel-use-variables-20240301/).
+This [blog post](https://volkovlabs.io/blog/form-panel-use-variables-20240301/) demonstrate how the Business Forms plugin can work with dashboard variables.
 
 If you are a visual style learner, you can watch the video. It covers the same ground.
 
@@ -59,4 +59,4 @@ If your use case requires inserting, deleting, or updating your data, you can em
 
 ## Connect to API Server
 
-We acknowledge the risks of data manipulation and consider security concerns seriously. This [blog post](https://volkovlabs.io/blog/how-to-connect-the-data-manipulation-plugin-for-grafana-to-api-server-1abe5f60c904/) explores three secure ways to connect Data Manipulation panel to an API server.
+Data manipulation can be risky and these security concerns have been considered seriously. This [blog post](https://volkovlabs.io/blog/how-to-connect-the-data-manipulation-plugin-for-grafana-to-api-server-1abe5f60c904/) explores three secure ways to connect Data Manipulation panel to an API server.

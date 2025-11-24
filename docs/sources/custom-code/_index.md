@@ -182,7 +182,7 @@ The `context.panel.onChangeElements()` function is required to update the elemen
 
 ## Simplified form elements `patchFormValue` helper
 
-Before version 4.4.0, in order to update a form element value, a user had to use `context.panel.elements.map()`. In the 4.4.0, we added a new function to simplify that approach. It has an object's key as an inpit parameter and a new value.
+Before version 4.4.0, in order to update a form element value, a user had to use `context.panel.elements.map()`. In the 4.4.0, a new function was added to simplify that approach. It has an object's key as an inpit parameter and a new value.
 
 Before 4.4.0 version:
 
@@ -205,7 +205,7 @@ context.panel.patchFormValue({ name: "Alex", isAdmin: true });
 
 ## Simplified form elements `formValue` helper
 
-Before version 4.4.0, in order to get a form element value, a user had to use `context.panel.elements.forEach()`. In the 4.4.0, we added a new function to simplify that approach. It has an object's key as an inpit parameter.
+Before version 4.4.0, in order to get a form element value, a user had to use `context.panel.elements.forEach()`. In the 4.4.0, a new function was added to simplify that approach. It has an object's key as an inpit parameter.
 
 Before 4.4.0 version:
 
