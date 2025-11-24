@@ -9,7 +9,7 @@ labels:
     - oss
     - cloud
 ---
-# Checkbox List with custom options
+# Checkbox list with custom options
 
 The **Checkbox list with custom options** type allows to creation of multi-selection checkmark elements.
 
@@ -23,7 +23,7 @@ To add an option click the 'Add option' button and then specify an option type (
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/checkbox-options.png" class="border" alt="Checkbox list with custom options." >}}
 
-## Change Elements Model
+## Change Elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -91,7 +91,7 @@ context.panel.onChangeElements(elementsForUI);
 
 {{< docs/shared lookup="base-change-elements-example.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
-## Element Parameters
+## Element parameters
 
 - ### `value`
 
@@ -110,7 +110,7 @@ context.panel.onChangeElements(elementsForUI);
 
 {{< docs/shared lookup="base-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
-## Change Options Model
+## Change Options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

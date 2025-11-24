@@ -1,9 +1,9 @@
 ---
 title: base change elements example
 ---
-### Code Example with Query action for Initial Request
+### Code example with query action for initial request
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/query-action.png" class="border" alt="Initial Request" >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/query-action.png" max-width="550px" class="border" alt="Initial Request" >}}
 
 ```js
 /**
