@@ -91,7 +91,7 @@ context.panel.onChangeElements(elementsForUI);
 
 <BaseChangeElements />
 
-<!-- {{< docs/shared lookup="base-change-elements-example.md" source="business-forms" version="<PLUGINS_VERSION>" >}} -->
+{{< docs/shared lookup="base-change-elements-example.md" source="volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
 ## Element Parameters
 
