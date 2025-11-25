@@ -55,6 +55,7 @@ export const ElementDateEditor: React.FC<Props> = ({ value, onChange, label, ...
           />
         </InlineField>
         <Button
+          aria-label={`Remove ${label} date`}
           icon="minus"
           onClick={() => {
             onChange('');

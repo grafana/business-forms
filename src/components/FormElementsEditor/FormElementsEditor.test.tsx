@@ -2003,11 +2003,11 @@ describe('Form Elements Editor', () => {
      * @param elementSelectors
      * @param id
      */
-    const openOption = (elementSelectors: typeof selectors, id: string) => {
+    const openOption = (elementSelectors: typeof selectors, id: string, label: string) => {
       /**
        * Check option presence
        */
-      expect(elementSelectors.optionLabel(false, id)).toBeInTheDocument();
+      expect(screen.getByText(label)).toBeInTheDocument();
 
       /**
        * Check if option content exists
@@ -2040,7 +2040,7 @@ describe('Form Elements Editor', () => {
       /**
        * Added option should be opened
        */
-      expect(elementSelectors.optionLabel(false, FORM_ELEMENT_OPTION_DEFAULT.id)).toBeInTheDocument();
+      expect(screen.getByText('[select]')).toBeInTheDocument();
       expect(elementSelectors.optionContent(false, FORM_ELEMENT_OPTION_DEFAULT.id)).toBeInTheDocument();
     });
 
@@ -2066,8 +2066,8 @@ describe('Form Elements Editor', () => {
        */
       await act(() => fireEvent.click(elementSelectors.buttonAddOption()));
 
-      expect(elementSelectors.optionLabel(false, originalOption.id)).toBeInTheDocument();
-      expect(elementSelectors.optionLabel(false, FORM_ELEMENT_OPTION_DEFAULT.id)).toBeInTheDocument();
+      expect(screen.getByText('label [111]')).toBeInTheDocument();
+      expect(screen.getByText('[select]')).toBeInTheDocument();
     });
 
     it('Should remove option', async () => {
@@ -2085,22 +2085,22 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      openElement(element.id, element.type);
 
       /**
        * Remove option
        */
-      expect(elementSelectors.optionLabel(false, originalOption.id)).toBeInTheDocument();
+      expect(screen.getByText('label [111]')).toBeInTheDocument();
 
       const optionLabelSelectors = getFormElementsEditorSelectors(
-        within(elementSelectors.optionLabel(false, originalOption.id))
+        within(screen.getByText('label [111]'))
       );
       await act(() => fireEvent.click(optionLabelSelectors.buttonRemoveOption()));
 
       /**
        * Option should be removed
        */
-      expect(elementSelectors.optionLabel(true, originalOption.id)).not.toBeInTheDocument();
+      expect(screen.queryByText('label [111]')).not.toBeInTheDocument();
     });
 
     it('Should not update option value if option with the same value exists', async () => {
@@ -2125,7 +2125,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open 2 option
        */
-      const option2Selectors = openOption(elementSelectors, option2.id);
+      const option2Selectors = openOption(elementSelectors, option2.id, 'label [100]');
 
       /**
        * Change value which is already exist
@@ -2143,8 +2143,10 @@ describe('Form Elements Editor', () => {
       /**
        * Check if option is not updated
        */
-      expect(elementSelectors.optionLabel(false, option1.id)).toBeInTheDocument();
-      expect(elementSelectors.optionLabel(false, option2.id)).toBeInTheDocument();
+      expect(screen.getByText('label [111]')).toBeInTheDocument();
+      expect(screen.getByText('label [100]')).toBeInTheDocument();
+      // expect(elementSelectors.optionLabel(false, option1.id)).toBeInTheDocument();
+      // expect(elementSelectors.optionLabel(false, option2.id)).toBeInTheDocument();
     });
 
     it('Should toggle option visibility', async () => {
@@ -2163,13 +2165,13 @@ describe('Form Elements Editor', () => {
        * Open select element
        */
       const elementSelectors = openElement(element.id, element.type);
-      expect(elementSelectors.optionLabel(false, option1.id)).toBeInTheDocument();
+      expect(screen.getByText('label [111]')).toBeInTheDocument();
       expect(elementSelectors.fieldOptionType(false)).toBeInTheDocument();
 
       /**
        * Toggle option visibility
        */
-      await act(() => fireEvent.click(elementSelectors.optionLabel(false, option1.id)));
+      await act(() => fireEvent.click(screen.getByText('label [111]')));
       expect(elementSelectors.fieldOptionType(true)).not.toBeInTheDocument();
     });
 
