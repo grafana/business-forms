@@ -1,5 +1,5 @@
 ---
-title: String Input
+title: String input
 description: Learn how to use the string input form element for manual text entry with optional visibility controls.
 keywords:
   - business forms
@@ -10,7 +10,7 @@ labels:
     - cloud
 ---
 
-# String Input
+# String input
 
 The **String Input** is a text box where users manually enter a string value.
 
@@ -20,7 +20,7 @@ This element has the following specific option:
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/element.png" class="border" alt="String input element" >}}
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -99,7 +99,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The string element does not support options for selection. However, they must be specified in the element object
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

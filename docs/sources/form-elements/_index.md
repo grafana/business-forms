@@ -56,7 +56,7 @@ context.panel.collapseSection(id);
 ```
 
 {{< admonition type="note" >}}
-The full list of the Business Form panel parameters can be found in the [Custom Code](/plugins/business-forms/code/#parameters) section of the panel's documentation.
+The full list of the Business Form panel parameters can be found in the [Custom Code](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/custom-code/#parameters) section of the panel's documentation.
 {{< /admonition >}}
 
 ### Buttons Only

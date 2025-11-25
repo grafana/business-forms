@@ -1,5 +1,5 @@
 ---
-title: Radio Group with custom options
+title: Radio group with custom options
 description: Learn how to create radio group form elements with custom options for single-selection scenarios.
 keywords:
   - business forms
@@ -10,7 +10,7 @@ labels:
     - cloud
 ---
 
-# Radio Group with custom options
+# Radio group with custom options
 
 The **Radio Group with custom options** provides users with a choice between two or more options.
 
@@ -22,7 +22,7 @@ To add an option, click **Add option**, and then specify an option type (number 
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/radio.png" class="border" alt="Add custom options for the radio custom type." >}}
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -106,7 +106,7 @@ context.panel.onChangeElements(elementsForUI);
 
 {{< docs/shared lookup="base-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

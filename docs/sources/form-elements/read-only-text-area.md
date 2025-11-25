@@ -1,5 +1,5 @@
 ---
-title: Read-only Text Area
+title: Read-only text area
 description: Learn how to use the read-only text area form element to display multiple rows of non-editable text.
 keywords:
   - business forms
@@ -10,11 +10,11 @@ labels:
     - cloud
 ---
 
-# Read-only Text Area
+# Read-only text area
 
 This element type is similar to the **Read-Only** type with the difference that this one allows the display of multiple rows of text.
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -100,7 +100,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The `Read-only Text Area` element does not support options for selection. However, they must be specified in the element object
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

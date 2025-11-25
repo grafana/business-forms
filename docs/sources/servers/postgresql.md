@@ -20,12 +20,12 @@ The API server on Node.js enables you to retrieve and update values in a Postgre
 ## Features
 
 - CORS enabled.
-- Includes [SQL statements](https://github.com/VolkovLabs/business-forms/blob/main/server-pg/feedback.sql) and the [Docker image](https://github.com/VolkovLabs/business-forms/blob/main/server-pg/Dockerfile) to get started.
+- Includes [SQL statements](https://github.com/grafana/business-forms/blob/main/server-pg/init.sql) and the [Docker image](hhttps://github.com/grafana/business-forms/blob/main/server-pg/Dockerfile) to get started.
 
 ## Example
 
 <!-- <Code
-  url="https://github.com/VolkovLabs/business-forms/blob/main/server-pg/server.ts"
+  url="https://github.com/grafana/business-forms/blob/main/server-pg/server.ts"
   language="js"
 /> -->
 

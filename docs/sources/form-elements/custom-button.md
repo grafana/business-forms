@@ -39,7 +39,7 @@ With the **Button place** option, you can place the custom button element among 
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/buttons-options.png" class="border" alt="Available options for the Button Form Elements type." >}}
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -182,7 +182,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The code-editor element does not support options for selection. However, they must be specified in the element object
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

@@ -2,7 +2,7 @@
 title: info use options change
 ---
 {{< admonition type="note" >}}
-Use this model to set elements if you use the [`context.panel.onOptionsChange({})`](/plugins/business-forms/code/panel/#panelonoptionschangeoptions) method.
+Use this model to set elements if you use the [`context.panel.onOptionsChange({})`](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/custom-code/context-parameters/#panelonoptionschangeoptions) method.
 
 Elements added through this method are added to the panel options. The element's operation might not match the expected behavior.
 

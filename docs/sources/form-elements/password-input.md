@@ -1,5 +1,5 @@
 ---
-title: Password Input
+title: Password input
 description: Learn how to use the password input form element that masks entered text for secure data entry.
 keywords:
   - business forms
@@ -10,13 +10,13 @@ labels:
     - cloud
 ---
 
-# Password Input
+# Password input
 
 The **Password Input** is a text box where each entered character is transformed into a dot.
 
 This type doesn't have any specific options.
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -95,7 +95,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The `Password Input` element does not support options for selection. However, they must be specified in the element object
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

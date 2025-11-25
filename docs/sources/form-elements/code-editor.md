@@ -19,7 +19,7 @@ The **Code editor** highlights keywords and formats the entered text. This eleme
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/code-editor.png" class="border" alt="Options specific to the Code Editor type." >}}
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -112,7 +112,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The code-editor element does not support options for selection. However, they must be specified in the element object.
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

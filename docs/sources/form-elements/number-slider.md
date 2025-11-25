@@ -1,5 +1,5 @@
 ---
-title: Number Slider
+title: Number slider
 description: Learn how to use the number slider form element with configurable minimum, maximum, and step values.
 keywords:
   - business forms
@@ -10,7 +10,7 @@ labels:
     - cloud
 ---
 
-# Number Slider
+# Number slider
 
 The **Number Slider** is a horizontal line with a toggle that users can drag left and right with a mouse. Alternatively, users can enter the number manually.
 
@@ -20,7 +20,7 @@ This element has the following specific options:
 - **Max**: Sets the maximum allowed input number.
 - **Step**: Sets the value of each movement the toggle makes.
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -124,7 +124,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The `Number Slider` element does not support options for selection. However, they must be specified in the element object
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

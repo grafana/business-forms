@@ -21,7 +21,7 @@ The JSON API server on Node.js enables you to retrieve and update JSON objects t
 
 - CORS enabled.
 - Update requests can be `PATCH`, `POST`, or `PUT`.
-- Includes the [Docker image](https://github.com/VolkovLabs/business-forms/blob/main/server-json/Dockerfile) to get started.
+- Includes the [Docker image](https://github.com/grafana/business-forms/blob/main/server-json/Dockerfile) to get started.
 
 ## Example
 

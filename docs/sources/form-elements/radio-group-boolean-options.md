@@ -1,5 +1,5 @@
 ---
-title: Radio Group with boolean options
+title: Radio group with boolean options
 description: Learn how to use the radio group form element that provides a choice between True and False values.
 keywords:
   - business forms
@@ -10,13 +10,13 @@ labels:
     - cloud
 ---
 
-# Radio Group with boolean options
+# Radio group with boolean options
 
 The **Radio Group with boolean options** provides users with a choice between True and False.
 
 This type doesn't have any specific options.
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -95,7 +95,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The `Radio Group with boolean options` element does not support options for selection. However, they must be specified in the element object
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

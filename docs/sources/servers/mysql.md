@@ -22,7 +22,7 @@ The API server on Node.js enables you to retrieve and update values in a MySQL d
 - CORS enabled.
 - Customizable through environment variables.
 - Includes checks and error handling.
-- Includes [SQL statement](https://github.com/VolkovLabs/business-forms/blob/main/server-mysql/feedbacks.sql), the [Docker image](https://github.com/VolkovLabs/business-forms/blob/main/server-mysql/Dockerfile), and [README](https://github.com/VolkovLabs/business-forms/blob/main/server-mysql/README.md) to get started.
+- Includes [SQL statement](https://github.com/grafana/business-forms/blob/main/server-mysql/feedbacks.sql), the [Docker image](https://github.com/grafana/business-forms/blob/main/server-mysql/Dockerfile), and [README](https://github.com/grafana/business-forms/blob/main/server-mysql/README.md) to get started.
 
 ## Example
 

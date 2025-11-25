@@ -1,5 +1,5 @@
 ---
-title: Number Input
+title: Number input
 description: Learn how to use the number input form element with configurable minimum and maximum value constraints.
 keywords:
   - business forms
@@ -10,7 +10,7 @@ labels:
     - cloud
 ---
 
-# Number Input
+# Number input
 
 The **Number Input** is a text box where users manually enter a number.
 
@@ -19,7 +19,7 @@ This element has the following specific options:
 - **Min**: Sets the minimum allowed input number.
 - **Max**: Sets the maximum allowed input number.
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -112,7 +112,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The `Number Input` element does not support options for selection. However, they must be specified in the element object
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

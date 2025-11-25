@@ -22,7 +22,7 @@ If time is irrelevant to your scenario, you can select the **Date** type instead
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/date-type.png" class="border" alt="Date and Date and time types." >}}
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -115,7 +115,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The Date element does not support options for selection. However, they must be specified in the element object
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

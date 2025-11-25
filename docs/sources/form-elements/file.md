@@ -34,7 +34,7 @@ If you are a visual style learner, you can watch the video. It covers the same g
 
 {{< youtube id="V4Sza0uDQNs" >}}
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -133,7 +133,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The File element does not support options for selection. However, they must be specified in the element object
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

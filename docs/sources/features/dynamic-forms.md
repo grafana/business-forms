@@ -146,4 +146,4 @@ context.panel.sectionsUtils.add({ name: sections[2].name, id: sections[2].id, el
 
 ```
 
-For more available commands and code snippets, refer to the [Panel Parameters](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/custom-code/parameters/) section.
+For more available commands and code snippets, refer to the [Context parameters](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/custom-code/context-parameters/) section.

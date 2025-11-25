@@ -1,5 +1,5 @@
 ---
-title: Text Area
+title: Text area
 description: Learn how to use the text area form element for multi-line text input with configurable row height.
 keywords:
   - business forms
@@ -10,7 +10,7 @@ labels:
     - cloud
 ---
 
-# Text Area
+# Text area
 
 The **Text Area** is a rectangular area where users can enter text.
 
@@ -102,7 +102,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The `Read-only Text Area` element does not support options for selection. However, they must be specified in the element object
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

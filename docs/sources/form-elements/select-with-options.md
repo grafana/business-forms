@@ -1,5 +1,5 @@
 ---
-title: Select with Custom options
+title: Select with custom options
 description: Learn how to create drop-down select elements where users can choose one option from a custom list.
 keywords:
   - business forms
@@ -20,7 +20,7 @@ This element has the following specific option:
 
 To add an option, click **Add option**, and then specify an option type (number or string), value, label, and select an icon from the list.
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -110,7 +110,7 @@ context.panel.onChangeElements(elementsForUI);
 
 {{< docs/shared lookup="base-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

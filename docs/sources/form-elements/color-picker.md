@@ -1,5 +1,5 @@
 ---
-title: Color Picker
+title: Color picker
 description: Learn how to use the color picker form element to select colors in HEX or RGB format.
 keywords:
   - business forms
@@ -10,7 +10,7 @@ labels:
     - cloud
 ---
 
-# Color Picker
+# Color picker
 
 The **Color Picker** lets you select a color from a palette.
 
@@ -20,7 +20,7 @@ This element has the following specific option:
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/color-picker.png" class="border" alt="Color Picker element." >}}
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -106,7 +106,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The `Color Picker` element does not support options for selection. However, they must be specified in the element object.
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

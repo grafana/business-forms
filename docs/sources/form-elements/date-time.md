@@ -1,5 +1,5 @@
 ---
-title: Date and Time
+title: Date and time
 description: Learn how to use the date and time form element with time zone support and min/max value constraints.
 keywords:
   - business forms
@@ -10,7 +10,7 @@ labels:
     - cloud
 ---
 
-# Date and Time
+# Date and time
 
 The **Date and Time** element provides access to the built-in Grafana date time component where users can select a date and time using familiar controls.
 
@@ -32,7 +32,7 @@ The **Time Zone** option is available starting from version 4.0.0.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/time-zone.png" max-width="400px" class="border" alt="New Time Zones option for Date and time elements." >}}
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -132,7 +132,7 @@ context.panel.onChangeElements(elementsForUI);
 
 The Date-Time element does not support options for selection. However, they must be specified in the element object
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 

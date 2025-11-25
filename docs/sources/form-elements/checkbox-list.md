@@ -24,7 +24,7 @@ To add an option, click **Add option**, and then specify an option type (number 
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/checkbox-options.png" class="border" alt="Checkbox list with custom options." >}}
 
-## Change Elements model
+## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -111,7 +111,7 @@ context.panel.onChangeElements(elementsForUI);
 
 {{< docs/shared lookup="base-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
-## Change Options model
+## Change options model
 
 {{< docs/shared lookup="info-use-options-change.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
