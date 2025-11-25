@@ -1,7 +1,6 @@
 import { SelectableValue, StandardEditorProps } from '@grafana/data';
-import { Button, Icon, IconButton, useTheme2 } from '@grafana/ui';
+import { Button, Collapse, Icon, IconButton, Stack, useTheme2 } from '@grafana/ui';
 import { DragDropContext, Draggable, DraggingStyle, Droppable, DropResult, NotDraggingStyle } from '@hello-pangea/dnd';
-import { Collapse } from '@volkovlabs/components';
 import React, { useCallback, useMemo, useState } from 'react';
 
 import { TEST_IDS } from '../../constants';
@@ -128,45 +127,45 @@ export const FormElementsEditor: React.FC<Props> = ({ value, onChange, context }
                         className={styles.item}
                       >
                         <Collapse
-                          fill="solid"
-                          headerTestId={TEST_IDS.formElementsEditor.sectionLabel(element.id, element.type)}
-                          contentTestId={TEST_IDS.formElementsEditor.sectionContent(element.id, element.type)}
                           isOpen={isOpen}
                           onToggle={() => onToggleElement(element.uid)}
-                          title={
-                            <>
+                          label={
+                            <Stack flex={1} alignItems="center" justifyContent="space-between">
                               {element.title} [{element.id}]
-                            </>
-                          }
-                          actions={
-                            <>
-                              <IconButton
-                                name="trash-alt"
-                                variant="secondary"
-                                size="sm"
-                                className={styles.removeButton}
-                                data-testid={TEST_IDS.formElementsEditor.buttonRemoveElement}
-                                onClick={() => onElementRemove(getElementUniqueId(element))}
-                                aria-label="Remove"
-                              />
-                              <div className={styles.dragHandle} {...provided.dragHandleProps}>
-                                <Icon
-                                  title="Drag and drop to reorder"
-                                  name="draggabledots"
-                                  size="lg"
-                                  className={styles.dragIcon}
+                              <Stack alignItems="center" gap={0.5}>
+                                <IconButton
+                                  name="trash-alt"
+                                  variant="secondary"
+                                  size="sm"
+                                  className={styles.removeButton}
+                                  data-testid={TEST_IDS.formElementsEditor.buttonRemoveElement}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    onElementRemove(getElementUniqueId(element));
+                                  }}
+                                  aria-label="Remove"
                                 />
-                              </div>
-                            </>
+                                <div className={styles.dragHandle} {...provided.dragHandleProps} onClick={(e) => e.stopPropagation()}>
+                                  <Icon
+                                    title="Drag and drop to reorder"
+                                    name="draggabledots"
+                                    size="lg"
+                                    className={styles.dragIcon}
+                                  />
+                                </div>
+                              </Stack>
+                            </Stack>
                           }
                         >
-                          <ElementEditor
-                            element={element}
-                            onChange={onChangeElement}
-                            layoutSectionOptions={layoutSectionOptions}
-                            onChangeOption={onChangeElementOption}
-                            data={context.data}
-                          />
+                          <div data-testid={TEST_IDS.formElementsEditor.sectionContent(element.id, element.type)}>
+                            <ElementEditor
+                              element={element}
+                              onChange={onChangeElement}
+                              layoutSectionOptions={layoutSectionOptions}
+                              onChangeOption={onChangeElementOption}
+                              data={context.data}
+                            />
+                          </div>
                         </Collapse>
                       </div>
                     )}

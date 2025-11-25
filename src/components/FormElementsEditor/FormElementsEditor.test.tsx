@@ -50,16 +50,16 @@ describe('Form Elements Editor', () => {
    * @param elementId
    * @param elementType
    */
-  const openElement = (elementId: string, elementType: string): ReturnType<typeof getFormElementsEditorSelectors> => {
+  const openElement = (elementId: string, elementType: string, label: string): ReturnType<typeof getFormElementsEditorSelectors> => {
     /**
      * Check element presence
      */
-    expect(selectors.sectionLabel(false, elementId, elementType)).toBeInTheDocument();
+    expect(screen.getByText(label)).toBeInTheDocument();
 
     /**
      * Make Select Element is opened
      */
-    fireEvent.click(selectors.sectionLabel(false, elementId, elementType));
+    fireEvent.click(screen.getByText(label));
 
     /**
      * Check if element content exists
@@ -95,7 +95,7 @@ describe('Form Elements Editor', () => {
       /**
        * Check if section is missing
        */
-      expect(selectors.sectionLabel(true, 'newId', FormElementType.STRING)).not.toBeInTheDocument();
+      expect(screen.queryByText('[newId]')).not.toBeInTheDocument();
 
       /**
        * Check if empty element can't be created
@@ -122,7 +122,7 @@ describe('Form Elements Editor', () => {
       /**
        * Check if new element exists
        */
-      expect(selectors.sectionLabel(false, 'newId', FormElementType.STRING)).toBeInTheDocument();
+      expect(screen.getByText('New Id [newId]')).toBeInTheDocument();
 
       /**
        * Check if form was reset
@@ -160,7 +160,7 @@ describe('Form Elements Editor', () => {
        * Check if new element exists
        */
 
-      const elementSelectors = openElement(newElementId, newElementType);
+      const elementSelectors = openElement(newElementId, newElementType, 'New Slider [newSlider]');
 
       expect(elementSelectors.fieldSliderStep()).toHaveValue(SLIDER_DEFAULT.step);
       expect(elementSelectors.fieldSliderMin()).toHaveValue(SLIDER_DEFAULT.min);
@@ -194,7 +194,7 @@ describe('Form Elements Editor', () => {
       /**
        * Check if new element exists
        */
-      const elementSelectors = openElement(newElementId, newElementType);
+      const elementSelectors = openElement(newElementId, newElementType, 'New Number [newSlider]');
 
       expect(elementSelectors.fieldNumberMin()).toHaveValue(null);
       expect(elementSelectors.fieldNumberMax()).toHaveValue(null);
@@ -227,7 +227,7 @@ describe('Form Elements Editor', () => {
       /**
        * Check if new element exists
        */
-      const elementSelectors = openElement(newElementId, newElementType);
+      const elementSelectors = openElement(newElementId, newElementType, 'New Code [newSlider]');
 
       expect(elementSelectors.fieldCodeHeight()).toHaveValue(CODE_EDITOR_CONFIG.height.min);
       expect(elementSelectors.fieldCodeLanguage()).toHaveValue(CodeLanguage.JAVASCRIPT);
@@ -260,7 +260,7 @@ describe('Form Elements Editor', () => {
       /**
        * Check if new element exists
        */
-      const elementSelectors = openElement(newElementId, newElementType);
+      const elementSelectors = openElement(newElementId, newElementType, 'New Checkbox [newCheckbox]');
 
       expect(elementSelectors.options()).toBeInTheDocument();
     });
@@ -292,7 +292,7 @@ describe('Form Elements Editor', () => {
       /**
        * Check if new element exists
        */
-      const elementSelectors = openElement(newElementId, newElementType);
+      const elementSelectors = openElement(newElementId, newElementType, 'New Custom Button [button]');
 
       expect(elementSelectors.fieldCustomButtonIcon()).toBeInTheDocument();
     });
@@ -309,7 +309,7 @@ describe('Form Elements Editor', () => {
       /**
        * Check if section exists
        */
-      expect(selectors.sectionLabel(true, newElementId, newElementType)).toBeInTheDocument();
+      expect(screen.getByText('[id]')).toBeInTheDocument();
 
       /**
        * Fill new element form
@@ -329,6 +329,7 @@ describe('Form Elements Editor', () => {
       expect(selectors.addElementError()).toBeInTheDocument();
       expect(selectors.buttonAddElement()).toBeDisabled();
       expect(selectors.newElementLabel()).toHaveValue('New Code');
+      expect(screen.queryByText('New Code [id]')).not.toBeInTheDocument();
 
       /**
        * Remove element conflict
@@ -341,7 +342,7 @@ describe('Form Elements Editor', () => {
       expect(selectors.buttonAddElement()).not.toBeDisabled();
       fireEvent.click(selectors.buttonAddElement());
 
-      expect(selectors.sectionLabel(false, newElementId, FormElementType.NUMBER)).toBeInTheDocument();
+      expect(screen.getByText('New Code [id]')).toBeInTheDocument();
     });
   });
 
@@ -353,13 +354,13 @@ describe('Form Elements Editor', () => {
 
     render(getComponent({ value: elements, onChange }));
     expect(selectors.root()).toBeInTheDocument();
-    expect(selectors.sectionLabel(false, 'id', FORM_ELEMENT_DEFAULT.type)).toBeInTheDocument();
+    expect(screen.getByText('[id]')).toBeInTheDocument();
     expect(selectors.sectionContent(true, 'id', FORM_ELEMENT_DEFAULT.type)).not.toBeInTheDocument();
 
     /**
      * Make Id Element is opened
      */
-    const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+    const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
     expect(elementSelectors.fieldId()).toBeInTheDocument();
     expect(elementSelectors.fieldWidth()).toBeInTheDocument();
@@ -390,7 +391,7 @@ describe('Form Elements Editor', () => {
     /**
      * Make Slider Element is opened
      */
-    const elementSelectors = openElement('slider', FormElementType.SLIDER);
+    const elementSelectors = openElement('slider', FormElementType.SLIDER, '[slider]');
 
     expect(elementSelectors.fieldSliderMin()).toBeInTheDocument();
     expect(elementSelectors.fieldSliderMax()).toBeInTheDocument();
@@ -409,7 +410,7 @@ describe('Form Elements Editor', () => {
     /**
      * Make Number Element is opened
      */
-    const elementSelectors = openElement('number', FormElementType.NUMBER);
+    const elementSelectors = openElement('number', FormElementType.NUMBER, '[number]');
 
     expect(elementSelectors.fieldNumberMin()).toBeInTheDocument();
     expect(elementSelectors.fieldNumberMax()).toBeInTheDocument();
@@ -427,7 +428,7 @@ describe('Form Elements Editor', () => {
     /**
      * Make Textarea Element is opened
      */
-    const elementSelectors = openElement('textarea', FormElementType.TEXTAREA);
+    const elementSelectors = openElement('textarea', FormElementType.TEXTAREA, '[textarea]');
 
     expect(elementSelectors.fieldTextareaRows()).toBeInTheDocument();
   });
@@ -444,7 +445,7 @@ describe('Form Elements Editor', () => {
     /**
      * Make Code Element is opened
      */
-    const elementSelectors = openElement('code', FormElementType.CODE);
+    const elementSelectors = openElement('code', FormElementType.CODE, '[code]');
 
     expect(elementSelectors.fieldCodeLanguage()).toBeInTheDocument();
     expect(elementSelectors.fieldCodeHeight()).toBeInTheDocument();
@@ -469,7 +470,7 @@ describe('Form Elements Editor', () => {
     /**
      * Make Select Element is opened
      */
-    const elementSelectors = openElement('select', FormElementType.SELECT);
+    const elementSelectors = openElement('select', FormElementType.SELECT, '[select]');
 
     expect(elementSelectors.fieldType()).toBeInTheDocument();
     expect(elementSelectors.options()).toBeInTheDocument();
@@ -494,7 +495,7 @@ describe('Form Elements Editor', () => {
     /**
      * Make Select Element is opened
      */
-    const elementSelectors = openElement('select', FormElementType.MULTISELECT);
+    const elementSelectors = openElement('select', FormElementType.MULTISELECT, '[select]');
 
     expect(elementSelectors.fieldType()).toBeInTheDocument();
     expect(elementSelectors.options()).toBeInTheDocument();
@@ -518,7 +519,7 @@ describe('Form Elements Editor', () => {
     /**
      * Make Select Element is opened
      */
-    const elementSelectors = openElement('file', FormElementType.FILE);
+    const elementSelectors = openElement('file', FormElementType.FILE, '[file]');
 
     expect(elementSelectors.fieldType()).toBeInTheDocument();
     expect(elementSelectors.fieldAccept()).toBeInTheDocument();
@@ -554,7 +555,7 @@ describe('Form Elements Editor', () => {
     /**
      * Make Element is opened
      */
-    const elementSelectors = openElement('element', FormElementType.STRING);
+    const elementSelectors = openElement('element', FormElementType.STRING, '[element]');
 
     expect(elementSelectors.fieldNamePicker(true)).not.toBeInTheDocument();
   });
@@ -589,7 +590,7 @@ describe('Form Elements Editor', () => {
     /**
      * Make Element is opened
      */
-    const elementSelectors = openElement('element', FormElementType.STRING);
+    const elementSelectors = openElement('element', FormElementType.STRING, '[element]');
 
     expect(elementSelectors.fieldFromQueryPicker(true)).not.toBeInTheDocument();
   });
@@ -605,8 +606,8 @@ describe('Form Elements Editor', () => {
     render(getComponent({ value: elements, onChange }));
 
     expect(selectors.root()).toBeInTheDocument();
-    expect(selectors.sectionLabel(false, textElement.id, textElement.type)).toBeInTheDocument();
-    expect(selectors.sectionLabel(false, numberElement.id, numberElement.type)).toBeInTheDocument();
+    expect(screen.getByText('[text]')).toBeInTheDocument();
+    expect(screen.getByText('[number]')).toBeInTheDocument();
   });
 
   /**
@@ -620,22 +621,22 @@ describe('Form Elements Editor', () => {
     render(getComponent({ value: elements, onChange }));
 
     expect(selectors.root()).toBeInTheDocument();
-    expect(selectors.sectionLabel(false, textElement.id, textElement.type)).toBeInTheDocument();
-    expect(selectors.sectionLabel(false, numberElement.id, numberElement.type)).toBeInTheDocument();
+    expect(screen.getByText('[text]')).toBeInTheDocument();
+    expect(screen.getByText('[number]')).toBeInTheDocument();
 
     /**
      * Remove text section
      */
     const textSectionLabelSelectors = getFormElementsEditorSelectors(
-      within(selectors.sectionLabel(false, textElement.id, textElement.type))
+      within(screen.getByText('[text]'))
     );
     fireEvent.click(textSectionLabelSelectors.buttonRemoveElement());
 
     /**
      * Check if section is removed
      */
-    expect(selectors.sectionLabel(true, textElement.id, textElement.type)).not.toBeInTheDocument();
-    expect(selectors.sectionLabel(false, numberElement.id, numberElement.type)).toBeInTheDocument();
+    expect(screen.queryByText('[text]')).not.toBeInTheDocument();
+    expect(screen.getByText('[number]')).toBeInTheDocument();
   });
 
   /**
@@ -725,7 +726,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Change id
@@ -746,7 +747,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Choose hidden option
@@ -769,7 +770,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(element.id, element.type);
+        const elementSelectors = openElement(element.id, element.type, '[id]');
 
         /**
          * Change type
@@ -794,7 +795,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(element.id, element.type);
+        const elementSelectors = openElement(element.id, element.type, '[id]');
 
         /**
          * Change type
@@ -813,7 +814,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(element.id, element.type);
+        const elementSelectors = openElement(element.id, element.type, '[id]');
 
         /**
          * Change type
@@ -832,7 +833,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(element.id, element.type);
+        const elementSelectors = openElement(element.id, element.type, '[id]');
 
         /**
          * Change type
@@ -851,7 +852,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(element.id, element.type);
+        const elementSelectors = openElement(element.id, element.type, '[id]');
 
         /**
          * Change type
@@ -872,7 +873,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(element.id, element.type);
+        const elementSelectors = openElement(element.id, element.type, '[id]');
 
         /**
          * Change type
@@ -891,7 +892,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(element.id, element.type);
+        const elementSelectors = openElement(element.id, element.type, '[id]');
 
         /**
          * Change type
@@ -902,8 +903,8 @@ describe('Form Elements Editor', () => {
       });
 
       it('Should not update Type if element with the same id and type exists', async () => {
-        const elementOne = { ...FORM_ELEMENT_DEFAULT, id: 'id', type: FormElementType.STRING };
-        const elementTwo = { ...FORM_ELEMENT_DEFAULT, id: 'id', type: FormElementType.NUMBER };
+        const elementOne = { ...FORM_ELEMENT_DEFAULT, title: 'One', id: 'id', type: FormElementType.STRING };
+        const elementTwo = { ...FORM_ELEMENT_DEFAULT, title: 'Two', id: 'id', type: FormElementType.NUMBER };
         const elements = [elementOne, elementTwo];
         jest.spyOn(window, 'alert').mockImplementationOnce(() => null);
 
@@ -912,7 +913,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(elementTwo.id, elementTwo.type);
+        const elementSelectors = openElement(elementTwo.id, elementTwo.type, 'Two [id]');
 
         /**
          * Change on already exist type
@@ -922,8 +923,7 @@ describe('Form Elements Editor', () => {
         /**
          * Check if type is not updated because conflict
          */
-        expect(selectors.sectionLabel(false, elementOne.id, elementOne.type)).toBeInTheDocument();
-        expect(selectors.sectionLabel(false, elementTwo.id, elementTwo.type)).toBeInTheDocument();
+        expect(screen.getAllByText(/\[id\]/)).toHaveLength(2);
       });
 
       it('Should keep optionsSource and queryOptions', async () => {
@@ -965,7 +965,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(element.id, element.type);
+        const elementSelectors = openElement(element.id, element.type, '[id]');
 
         /**
          * Change type
@@ -1005,7 +1005,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(element.id, element.type);
+        const elementSelectors = openElement(element.id, element.type, '[id]');
 
         /**
          * Change type
@@ -1042,7 +1042,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[id]');
 
       expect(elementSelectors.optionsCustomValues(false, 'Allow')).not.toBeChecked();
 
@@ -1059,7 +1059,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Change width
@@ -1079,7 +1079,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Change Element background
@@ -1099,7 +1099,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      openElement('id', FORM_ELEMENT_DEFAULT.type);
+      openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       expect(selectors.buttonRemoveBackground()).toBeInTheDocument();
     });
@@ -1114,7 +1114,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Remove background button
@@ -1145,7 +1145,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Change Label background
@@ -1166,7 +1166,7 @@ describe('Form Elements Editor', () => {
       /**
        * Make Textarea Element is opened
        */
-      const elementSelectors = openElement('textarea', FormElementType.TEXTAREA);
+      const elementSelectors = openElement('textarea', FormElementType.TEXTAREA, '[textarea]');
 
       expect(elementSelectors.fieldTextareaRows()).toBeInTheDocument();
       expect(elementSelectors.fieldIsEscapingEditor()).toBeInTheDocument();
@@ -1189,7 +1189,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      openElement('id', FORM_ELEMENT_DEFAULT.type);
+      openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       expect(selectors.buttonRemoveLabelBackground()).toBeInTheDocument();
     });
@@ -1204,7 +1204,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Remove label background button
@@ -1235,7 +1235,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Change Label Color
@@ -1255,7 +1255,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      openElement('id', FORM_ELEMENT_DEFAULT.type);
+      openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       expect(selectors.buttonRemoveLabelColor()).toBeInTheDocument();
     });
@@ -1270,7 +1270,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Remove label color button
@@ -1301,7 +1301,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Change label
@@ -1319,7 +1319,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Change labelWidth
@@ -1337,7 +1337,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Change tooltip
@@ -1355,7 +1355,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Change tooltip
@@ -1374,7 +1374,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[id]');
 
       /**
        * Change slider min
@@ -1393,7 +1393,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[id]');
 
       /**
        * Change slider max
@@ -1412,7 +1412,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[id]');
 
       /**
        * Change step
@@ -1432,7 +1432,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[id]');
 
       /**
        * Change number min
@@ -1472,7 +1472,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[id]');
 
       /**
        * Change number max
@@ -1512,7 +1512,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[id]');
 
       const field = elementSelectors.fieldMaxDate();
       const fieldSelectors = getFormElementsEditorSelectors(within(field));
@@ -1574,7 +1574,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[id]');
 
       const field = elementSelectors.fieldMinDate();
       const fieldSelectors = getFormElementsEditorSelectors(within(field));
@@ -1636,7 +1636,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[timeID]');
 
       /**
        * Choose hidden option
@@ -1659,7 +1659,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[timeID]');
 
       /**
        * Choose hidden option
@@ -1686,7 +1686,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[id]');
 
       /**
        * Change code language
@@ -1705,7 +1705,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[id]');
 
       /**
        * Change code language
@@ -1724,7 +1724,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[id]');
 
       /**
        * Change textarea rows
@@ -1745,7 +1745,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FormElementType.FILE);
+      const elementSelectors = openElement('id', FormElementType.FILE, '[id]');
 
       /**
        * Change field name
@@ -1766,7 +1766,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FormElementType.FILE);
+      const elementSelectors = openElement('id', FormElementType.FILE, '[id]');
 
       /**
        * Check initial value
@@ -1795,7 +1795,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FormElementType.SELECT);
+      const elementSelectors = openElement('id', FormElementType.SELECT, '[id]');
 
       /**
        * Change field name
@@ -1818,7 +1818,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FormElementType.LINK);
+      const elementSelectors = openElement('id', FormElementType.LINK, '[id]');
 
       /**
        * Change target
@@ -1839,7 +1839,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FormElementType.LINK);
+      const elementSelectors = openElement('id', FormElementType.LINK, '[id]');
 
       /**
        * Change link text
@@ -1858,7 +1858,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[id]');
 
       /**
        * Change textarea rows
@@ -1877,7 +1877,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[id]');
 
       expect(elementSelectors.fieldDisableIf()).toBeInTheDocument();
       /**
@@ -1896,7 +1896,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('color-picker', FormElementType.COLOR_PICKER);
+      const elementSelectors = openElement('color-picker', FormElementType.COLOR_PICKER, '[color-picker]');
 
       expect(elementSelectors.optionsColorFormat(false, ColorFormat.HEX)).not.toBeChecked();
 
@@ -1915,7 +1915,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(element.id, element.type);
+        const elementSelectors = openElement(element.id, element.type, '[id]');
 
         /**
          * Change type
@@ -1937,7 +1937,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(element.id, element.type);
+        const elementSelectors = openElement(element.id, element.type, '[id]');
 
         /**
          * Change type
@@ -1958,7 +1958,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(element.id, element.type);
+        const elementSelectors = openElement(element.id, element.type, '[id]');
 
         /**
          * Change type
@@ -1979,7 +1979,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open id element
          */
-        const elementSelectors = openElement(element.id, element.type);
+        const elementSelectors = openElement(element.id, element.type, '[id]');
 
         /**
          * Change type
@@ -2030,7 +2030,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[select]');
 
       /**
        * Add option
@@ -2059,7 +2059,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[select]');
 
       /**
        * Add option
@@ -2085,7 +2085,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      openElement(element.id, element.type);
+      openElement(element.id, element.type, '[select]');
 
       /**
        * Remove option
@@ -2120,7 +2120,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[select]');
 
       /**
        * Open 2 option
@@ -2145,8 +2145,6 @@ describe('Form Elements Editor', () => {
        */
       expect(screen.getByText('label [111]')).toBeInTheDocument();
       expect(screen.getByText('label [100]')).toBeInTheDocument();
-      // expect(elementSelectors.optionLabel(false, option1.id)).toBeInTheDocument();
-      // expect(elementSelectors.optionLabel(false, option2.id)).toBeInTheDocument();
     });
 
     it('Should toggle option visibility', async () => {
@@ -2164,7 +2162,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[select]');
       expect(screen.getByText('label [111]')).toBeInTheDocument();
       expect(elementSelectors.fieldOptionType(false)).toBeInTheDocument();
 
@@ -2205,7 +2203,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open Element
          */
-        openElement(element.id, element.type);
+        openElement(element.id, element.type, '[select]');
 
         /**
          * Simulate drop option 1 to index 0
@@ -2258,7 +2256,7 @@ describe('Form Elements Editor', () => {
         /**
          * Open Element
          */
-        openElement(element.id, element.type);
+        openElement(element.id, element.type, '[select]');
 
         /**
          * Simulate drop field 1 to outside the list
@@ -2309,7 +2307,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[select]');
 
       await act(async () =>
         fireEvent.change(elementSelectors.fieldQueryOptionsValue(), { target: { value: 'A:Time' } })
@@ -2337,7 +2335,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[select]');
 
       expect(elementSelectors.fieldQueryOptionsLabel()).toHaveValue('Time');
 
@@ -2371,7 +2369,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[select]');
 
       expect(elementSelectors.fieldQueryOptionsLabel()).toHaveValue('Time');
 
@@ -2404,7 +2402,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[select]');
 
       /**
        * Change Value Field
@@ -2435,7 +2433,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[select]');
 
       expect(elementSelectors.fieldQueryOptionsLabel()).toHaveValue('Time');
 
@@ -2466,7 +2464,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[select]');
 
       expect(elementSelectors.fieldQueryOptionsLabel()).toHaveValue('Time');
 
@@ -2500,7 +2498,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[select]');
 
       expect(elementSelectors.fieldQueryOptionsLabel()).toHaveValue('Time');
 
@@ -2533,7 +2531,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[select]');
 
       expect(elementSelectors.fieldQueryOptionsLabel()).toHaveValue('Time');
 
@@ -2564,7 +2562,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open select element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[select]');
 
       /**
        * Change Get Options Field
@@ -2596,7 +2594,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Check section field presence
@@ -2610,7 +2608,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type);
+      const elementSelectors = openElement('id', FORM_ELEMENT_DEFAULT.type, '[id]');
 
       /**
        * Change section
@@ -2635,7 +2633,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[string]');
 
       await act(() => fireEvent.change(elementSelectors.fieldWidth(), { target: { value: '10' } }));
       await act(() => fireEvent.change(elementSelectors.fieldWidth(), { target: { value: '20' } }));
@@ -2675,7 +2673,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[button]');
       expect(elementSelectors.fieldCustomButtonIcon()).toBeInTheDocument();
       expect(elementSelectors.fieldCustomButtonIcon()).toHaveValue('');
 
@@ -2693,7 +2691,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[button]');
 
       /**
        * Choose hidden option
@@ -2715,7 +2713,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[button]');
 
       expect(elementSelectors.fieldCustomButtonLabel()).toBeInTheDocument();
       expect(elementSelectors.fieldCustomButtonLabel()).toHaveValue('Button');
@@ -2734,7 +2732,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[button]');
 
       /**
        * Choose hidden option
@@ -2758,7 +2756,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[button]');
 
       /**
        * Choose hidden option
@@ -2789,7 +2787,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[button]');
 
       expect(elementSelectors.fieldCustomButtonBackground()).toHaveValue('');
       /**
@@ -2818,7 +2816,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[button]');
 
       expect(elementSelectors.fieldCustomButtonForeground()).toHaveValue('');
       /**
@@ -2847,7 +2845,7 @@ describe('Form Elements Editor', () => {
       /**
        * Open id element
        */
-      const elementSelectors = openElement(element.id, element.type);
+      const elementSelectors = openElement(element.id, element.type, '[button]');
 
       expect(elementSelectors.fieldCustomButtonCustomCode()).toBeInTheDocument();
       expect(elementSelectors.fieldCustomButtonCustomCode()).toHaveValue('');
@@ -2869,7 +2867,7 @@ describe('Form Elements Editor', () => {
     /**
      * Check element presence
      */
-    expect(selectors.sectionLabel(false, element.id, element.type)).toBeInTheDocument();
+    expect(screen.getByText('[string]')).toBeInTheDocument();
 
     /**
      * Rerender with new elements
@@ -2882,7 +2880,7 @@ describe('Form Elements Editor', () => {
     /**
      * Check if only updated elements is rendered
      */
-    expect(selectors.sectionLabel(true, element.id, element.type)).not.toBeInTheDocument();
-    expect(selectors.sectionLabel(false, updatedElement.id, updatedElement.type)).toBeInTheDocument();
+    expect(screen.queryByText('[string]')).not.toBeInTheDocument();
+    expect(screen.getByText('[select]')).toBeInTheDocument();
   });
 });
