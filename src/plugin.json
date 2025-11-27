@@ -12,7 +12,12 @@
     },
     "description": "Insert, update application data, and modify configuration",
     "keywords": ["Form", "JSON", "Data"],
-    "links": [],
+    "links": [
+      {
+        "name": "Documentation",
+        "url": "https://grafana.com/docs/plugins/volkovlabs-form-panel/"
+      }
+    ],
     "logos": {
       "large": "img/logo.svg",
       "small": "img/logo.svg"

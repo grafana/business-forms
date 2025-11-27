@@ -50,14 +50,14 @@ Explore detailed guides and resources to maximize the potential of Business Form
 
 | Section                                                                      | Description                                                 |
 | ---------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| [Data Flow](https://volkovlabs.io/plugins/business-forms/data-flow/)         | Understand data flow and its specifics.                     |
-| [Form Elements](https://volkovlabs.io/plugins/business-forms/form-elements/) | Learn about form element configurations.                    |
-| [REST API](https://volkovlabs.io/plugins/business-forms/architecture/)       | Dive into REST API architecture and NGINX usage.            |
-| [Custom Code](https://volkovlabs.io/plugins/business-forms/code/)            | Access plugin options, API responses, and Grafana services. |
-| [Features](https://volkovlabs.io/plugins/business-forms/features/)           | Explore all plugin capabilities.                            |
-| [Servers](https://volkovlabs.io/plugins/business-forms/servers/)             | View examples of API server implementations.                |
-| [Tutorials](https://volkovlabs.io/plugins/business-forms/tutorials/)         | Follow step-by-step guides.                                 |
-| [Release Notes](https://volkovlabs.io/plugins/business-forms/release/)       | Stay updated with the latest features and fixes.            |
+| [Data flow](https://grafana.com/docs/plugins/volkovlabs-form-panel/latest/data-flow/)         | Understand data flow and its specifics.                     |
+| [Form elements](https://grafana.com/docs/plugins/volkovlabs-form-panel/latest/form-elements/) | Learn about form element configurations.                    |
+| [REST API](hhttps://grafana.com/docs/plugins/volkovlabs-form-panel/latest/rest-api/)       | Dive into REST API architecture and NGINX usage.            |
+| [Custom code](https://grafana.com/docs/plugins/volkovlabs-form-panel/latest/custom-code/)            | Access plugin options, API responses, and Grafana services. |
+| [Features](https://grafana.com/docs/plugins/volkovlabs-form-panel/latest/features/)           | Explore all plugin capabilities.                            |
+| [Servers](https://grafana.com/docs/plugins/volkovlabs-form-panel/latest/servers/)             | View examples of API server implementations.                |
+| [Tutorials](https://grafana.com/docs/plugins/volkovlabs-form-panel/latest/tutorials/)         | Follow step-by-step guides.                                 |
+| [Release notes](https://grafana.com/docs/plugins/volkovlabs-form-panel/latest/release/)       | Stay updated with the latest features and fixes.            |
 
 ## 📜 License
 
