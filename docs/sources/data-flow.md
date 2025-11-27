@@ -63,9 +63,9 @@ The **REST API** type works with an external API server. When specifying the API
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/rest-get.png" class="border" alt="Steps to configure the Initial Request for REST API." >}}
 
-You can find ready-to-use API servers for Deno, InfluxDB, JSON API, MySQL, Node-Red, and PostgreSQL in [servers section](.https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/servers/).
+You can find ready-to-use API servers for Deno, InfluxDB, JSON API, MySQL, Node-Red, and PostgreSQL in [servers section](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/servers/).
 
-Find more information, tips and tricks in the [documentation](ttps://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/rest-api/).
+Find more information, tips and tricks in the [documentation](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/rest-api/).
 
 ## Initial Request custom code
 
