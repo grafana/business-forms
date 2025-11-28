@@ -127,6 +127,7 @@ export const LayoutSectionsEditor: React.FC<Props> = ({ value, onChange, context
             onClick={() => {
               onRemoveSection(section);
             }}
+            aria-label={`Remove ${section.name} section`}
             icon="trash-alt"
             data-testid={TEST_IDS.layoutSectionsEditor.buttonRemove}
           />
