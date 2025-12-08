@@ -49,6 +49,7 @@ export const HeaderParametersEditor: React.FC<Props> = ({ value: parameters, onC
             />
           </InlineField>
           <Button
+            aria-label={`Remove ${parameter.name} parameter`}
             variant="secondary"
             onClick={() => {
               parameters = parameters.filter((p) => p.name !== parameter.name);
