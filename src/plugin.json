@@ -16,6 +16,10 @@
       {
         "name": "Documentation",
         "url": "https://grafana.com/docs/plugins/volkovlabs-form-panel/"
+      },
+      {
+        "name": "Repository",
+        "url": "https://github.com/grafana/business-forms/"
       }
     ],
     "logos": {
