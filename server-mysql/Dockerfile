@@ -1,4 +1,4 @@
-FROM node:18.12.1-bullseye-slim
+FROM node:18.12.1-bullseye-slim@sha256:70bf84739156657c85440e6a55a3d77a7cac668f9c4c3c44005bc29bdc529db7
 
 ## Create app directory
 WORKDIR /home/node/app
