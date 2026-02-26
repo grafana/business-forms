@@ -75,7 +75,7 @@ To create post-processing logic, you can access panel options, API responses, fo
 
 ## Ball is on the user's side
 
-The Business Forms form rests at this step, awaiting the user's actions.
+The panel form rests at this step, awaiting the user's actions.
 
 ## Highlight Changes
 
@@ -334,6 +334,6 @@ Below is the comparative table showing the similarities and differences between 
 
 ## Buttons
 
-The below schema summarizes the information about buttons available in the Business Forms form.
+The below schema summarizes the information about buttons available in the panel form.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/buttons.png" class="border" alt="Three buttons are available in the Business Forms form." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/buttons.png" class="border" alt="Three buttons are available in the Business Forms panel form." >}}
