@@ -15,7 +15,7 @@ weight: 20
 
 # JSON API server
 
-The JSON API server on Node.js enables you to retrieve and update JSON objects to test the Data Manipulation panel.
+The JSON API server on Node.js enables you to retrieve and update JSON objects to test the Business Forms panel.
 
 ## Features
 

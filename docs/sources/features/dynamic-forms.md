@@ -109,7 +109,6 @@ if (feedback?.fields.length) {
 ## Dynamic Business Forms
 
 You can create Business Forms dynamically by using code-specified configuration.
-For more information, refer to this [blog post](https://volkovlabs.io/blog/form-panel-server-based-elements-20240428/).
 
 ## Sections
 
@@ -121,7 +120,7 @@ Starting from version 4.9.0, you can create **Sections** dynamically.
 
 In addition to simple forms, you can create [sections](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/form-elements/#sections) dynamically.
 
-In the following example, the data about required sections comes from the data source. The example uses the [Business Input](https://volkovlabs.io/plugins/business-input/) data source to create a basic data frame that contains section information, such as ID and name.
+In the following example, the data about required sections comes from the data source. The example uses the [Business Input](https://grafana.com/docs/plugins/marcusolsson-static-datasource/<PLUGINS_VERSION>/) data source to create a basic data frame that contains section information, such as ID and name.
 
 The **Sections** and **Form Elements** categories display as not configured.
 

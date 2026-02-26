@@ -21,7 +21,7 @@ For details about API endpoints, see the [InfluxDB v2 API reference](https://doc
 
 {{< /admonition >}}
 
-You can use the InfluxDB API to retrieve and update data through the Data Manipulation panel.
+You can use the InfluxDB API to retrieve and update data through the Business Forms panel.
 
 Thanks to community member [fercasjr](https://github.com/fercasjr) for providing examples.
 

@@ -26,11 +26,10 @@ This element has the following specific option:
 
 #### Example of the File type in a project
 
-You can find an example of the File type in the following article. It demonstrates how Data Manipulation can interact with other plugins ([the Business Variable panel](https://volkovlabs.io/plugins/business-variable/) and [the Base64 panel](https://grafana.com/docs/plugins/volkovlabs-image-panel/)).
+The following video shows an example of the File type in a project.
+It demonstrates how the Business Forms panel can interact with other plugins like the the [Business Variable panel](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/) and the [Business Media panel](https://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/).
 
-The Data Manipulation panel with a file upload feature is used twice in that example. One time to illustrate the configuration using Data Source and the other to HTTP API Server. Learn more in this [blog post](https://volkovlabs.io/blog/form-panel-file-upload-20240310/).
-
-If you are a visual style learner, you can watch the video. It covers the same ground.
+The Business Forms panel with a file upload feature is used twice in this example. One time to illustrate the configuration using Data Source and the other to HTTP API Server.
 
 {{< youtube id="V4Sza0uDQNs" >}}
 
