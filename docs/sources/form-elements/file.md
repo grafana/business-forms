@@ -26,8 +26,7 @@ This element has the following specific option:
 
 #### Example of the File type in a project
 
-The following video shows an example of the File type in a project.
-It demonstrates how the Business Forms panel can interact with other plugins like the the [Business Variable panel](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/) and the [Business Media panel](https://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/).
+The following video shows an example of the File type in a project, and it demonstrates how the Business Forms panel can interact with other plugins like the the [Business Variable panel](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/) and the [Business Media panel](https://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/).
 
 The Business Forms panel with a file upload feature is used twice in this example. One time to illustrate the configuration using Data Source and the other to HTTP API Server.
 
