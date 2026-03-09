@@ -178,7 +178,7 @@ The `context.panel.onOptionsChange()` handler calls refresh panel.
 
 The `context.panel.onOptionsChange()` handler is required to update the panel.
 
-## Update the local state in Data Manipulation panel 3.1.0
+## Update the local state in Business Forms (Data Manipulation) panel 3.1.0
 
 The following example demonstrates how to update element values in the local state without refreshing the entire panel.
 

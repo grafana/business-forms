@@ -33,13 +33,9 @@ The following YouTube video reviews a use case. It features three open source pl
 
 {{< youtube id="V4Sza0uDQNs" >}}
 
-You can find implementation details in the [blog post](https://volkovlabs.io/blog/form-panel-file-upload-20240310/).
-
 ## Synchronize with dashboard variables
 
-This [blog post](https://volkovlabs.io/blog/form-panel-use-variables-20240301/) demonstrates how the Business Forms plugin works with dashboard variables.
-
-If you prefer video content, watch the following video, which covers the same information.
+This video demonstrates how the Business Forms plugin works with dashboard variables.
 
 {{< youtube id="DW-yuSopejY" >}}
 
@@ -49,14 +45,9 @@ With custom code, you can update form elements or their values and options from 
 
 {{< youtube id="RSVH1bSBNl8" >}}
 
-You can find more details in this [blog post](https://volkovlabs.io/blog/form-panel-server-based-elements-20240428/).
-
 ## Manipulate Data using Grafana dashboard
 
 If your use case requires inserting, deleting, or updating your data, you can employ the Business Forms plugin. This video discusses two API servers to facilitate the process.
 
 {{< youtube id="SHN2S-dRIEM" >}}
 
-## Connect to API Server
-
-Data manipulation can be risky and these security concerns have been considered seriously. This [blog post](https://volkovlabs.io/blog/how-to-connect-the-data-manipulation-plugin-for-grafana-to-api-server-1abe5f60c904/) explores three secure ways to connect Data Manipulation panel to an API server.

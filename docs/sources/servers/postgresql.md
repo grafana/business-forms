@@ -15,12 +15,12 @@ weight: 50
 
 # API server for PostgreSQL
 
-The API server on Node.js enables you to retrieve and update values in a PostgreSQL database with the Data Manipulation panel.
+The API server on Node.js enables you to retrieve and update values in a PostgreSQL database with the Business Forms panel.
 
 ## Features
 
 - CORS enabled.
-- Includes [SQL statements](https://github.com/grafana/business-forms/blob/main/server-pg/init.sql) and the [Docker image](hhttps://github.com/grafana/business-forms/blob/main/server-pg/Dockerfile) to get started.
+- Includes [SQL statements](https://github.com/grafana/business-forms/blob/main/server-pg/init.sql) and the [Docker image](https://github.com/grafana/business-forms/blob/main/server-pg/Dockerfile) to get started.
 
 ## Example
 

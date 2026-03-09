@@ -19,11 +19,11 @@ Relevant starting from version 3.2.0.
 
 {{< /admonition >}}
 
-The Data Manipulation plugin converts any Grafana dashboard into a fully functional web application. With many option parameters and interconnections, you can easily get lost.
+The Business Forms plugin converts any Grafana dashboard into a fully functional web application. With many option parameters and interconnections, you can easily get lost.
 
 The following schema illustrates the major parts and their roles.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/data-manipulation-flow.png" class="border" alt="Data flow diagram for the Data Manipulation panel." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/data-manipulation-flow.png" class="border" alt="Data flow diagram for the Business Forms panel." >}}
 
 ## Initial Request
 
@@ -33,7 +33,7 @@ The initial request executes after the browser finishes loading the page. You ca
 
 The query is short for the native Grafana query. Any initial request carries data from a data source into Grafana, which is what core Grafana does well. The Query method works with the data frames prepared by the data source that you specified.
 
-This method leverages the existing Grafana data extraction mechanism. To use this method, map every Data Manipulation form element to the appropriate data frame field.
+This method leverages the existing Grafana data extraction mechanism. To use this method, map every Business Forms panel form element to the appropriate data frame field.
 
 {{< admonition type="note" >}}
 
@@ -75,7 +75,7 @@ To create post-processing logic, you can access panel options, API responses, fo
 
 ## Ball is on the user's side
 
-The Data Manipulation form rests at this step, awaiting the user's actions.
+The panel form rests at this step, awaiting the user's actions.
 
 ## Highlight Changes
 
@@ -334,6 +334,6 @@ Below is the comparative table showing the similarities and differences between 
 
 ## Buttons
 
-The below schema summarizes the information about buttons available in the Data Manipulation form.
+The below schema summarizes the information about buttons available in the panel form.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/buttons.png" class="border" alt="Three buttons are available in the Data Manipulation form." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/buttons.png" class="border" alt="Three buttons are available in the Business Forms panel form." >}}

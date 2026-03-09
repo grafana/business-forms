@@ -73,5 +73,4 @@ For more tutorials, see [Tutorials](https://grafana.com/docs/plugins/volkovlabs-
 
 ## License
 
-Apache License Version 2.0, see [LICENSE](https://github.com/volkovlabs/business-forms/blob/main/LICENSE).
-
+Apache License Version 2.0, refer to the [LICENSE](https://github.com/grafana/business-forms/blob/main/LICENSE).

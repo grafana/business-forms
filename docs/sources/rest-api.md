@@ -21,7 +21,7 @@ The Business Forms panel requests data (`GET` request) and updates data (`DELETE
 
 The panel uses form elements defined in the panel options to parse data within the initial request and send data within the update request.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/elements.png" class="border" alt="Form elements defined in Data Manipulation panel." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/elements.png" class="border" alt="Form elements defined in Business Forms panel." >}}
 
 The JSON response of the initial request includes the form elements' identifiers and values. The panel parses the response and updates the initial values on the form.
 
@@ -50,7 +50,3 @@ Note that Grafana doesn't explicitly indicate a CORS error.
 **Same-Origin** is a policy that strictly restricts interaction with resources to the same domain, host, and port. For example, the `abc.com` domain can retrieve data from `abc.com/page1`, but can't access any other domain such as `anyotherdomain.com`.
 
 **Cross-Origin Resource Sharing (CORS)** policy offers more flexibility by allowing interactions between different domains. When CORS restrictions are disabled, any domain can request data. When CORS restrictions are enabled, only certain domains designated in its allow list are permitted.
-
-## Connect to API server
-
-Data manipulation can be risky and these security concerns have been considered seriously. This [blog post](https://volkovlabs.io/blog/how-to-connect-the-data-manipulation-plugin-for-grafana-to-api-server-1abe5f60c904/) explores three secure ways to connect Data Manipulation panel to an API server.
