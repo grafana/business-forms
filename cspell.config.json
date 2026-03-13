@@ -1,0 +1,37 @@
+{
+  "language": "en",
+  "ignorePaths": [
+    "CHANGELOG.md",
+    "README.md",
+    "package.json",
+    ".config/**",
+    "docker-compose.yml",
+    "docker-compose.yaml",
+    "node_modules/**",
+    "dist/**",
+    "docs/docs.mk",
+    "docs/make-docs",
+    "docs/Makefile",
+    "coverage/**",
+    "provisioning/**",
+    "playwright-report/**",
+    "src/dashboards/**"
+  ],
+  "words": [
+    "anyotherdomain",
+    "apinum",
+    "chucknorris",
+    "draggables",
+    "draggabledots",
+    "Guida",
+    "initialelements",
+    "objectvalues",
+    "pangea",
+    "pgsql",
+    "serie",
+    "uuidv",
+    "Unassigns",
+    "Volkov",
+    "volkovlabs"
+  ]
+}
