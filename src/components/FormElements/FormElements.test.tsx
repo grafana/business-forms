@@ -1595,7 +1595,7 @@ describe('Form Elements', () => {
        */
       expect(selectors.fieldRadioContainer()).toBeInTheDocument();
       expect(selectors.element(false, 'radio', FormElementType.RADIO)).toHaveStyle({
-        backgroundColor: 'red',
+        'background-color': 'rgb(255, 0, 0)',
       });
     });
   });
