@@ -22,8 +22,6 @@ import { getCPConfigVersion, getEntries, getPackageJson, getPluginJson, hasReadm
 import { externals } from '../bundler/externals.ts';
 import { copyFilePatterns } from '../bundler/copyFiles.ts';
 
-import { externals } from '../bundler/externals.ts';
-
 const pluginJson = getPluginJson();
 const cpVersion = getCPConfigVersion();
 const pluginVersion = getPackageJson().version;
@@ -217,6 +215,12 @@ const config = async (env: Env): Promise<Configuration> => {
     resolve: {
       alias: {
         '@': path.resolve(process.cwd(), SOURCE_DIR),
+        // Scenes 5 expects a table `defaultOptions` export that Grafana 12 moved to `defaultTableOptions`.
+        '@grafana/schema/dist/esm/raw/composable/table/panelcfg/x/TablePanelCfg_types.gen': path.resolve(
+          process.cwd(),
+          SOURCE_DIR,
+          'shims/grafanaTablePanelCfg.ts'
+        ),
       },
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
       // handle resolving "rootDir" paths

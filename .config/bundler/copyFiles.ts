@@ -12,6 +12,8 @@ export const copyFilePatterns = [
   { from: hasReadme() ? 'README.md' : '../README.md', to: '.', force: true },
   { from: 'plugin.json', to: '.' },
   { from: '../LICENSE', to: '.' },
+  { from: '../LICENSE-original', to: '.', noErrorOnMissing: true },
+  { from: '../NOTICES.md', to: '.', noErrorOnMissing: true },
   { from: '../CHANGELOG.md', to: '.', force: true },
   { from: '**/*.json', to: '.' },
   { from: '**/query_help.md', to: '.', noErrorOnMissing: true },
