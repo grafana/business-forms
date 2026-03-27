@@ -47,6 +47,7 @@ npm run test:e2e:docker         # Playwright in Docker container
 - **Never modify anything inside `.config/`** — it is managed by Grafana plugin tooling.
 - **Never change `id` or `type` in `src/plugin.json`** — changes to plugin.json require a Grafana server restart.
 - When you need Grafana API docs, fetch from `https://grafana.com/developers/plugin-tools/llms.txt`.
+- **Always update the PR summary** when pushing new commits to a PR.
 
 ## Project Structure
 
