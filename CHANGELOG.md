@@ -14,6 +14,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Updated Playwright Dockerfile and docker-compose for E2E.
 - Bumped default Grafana image version.
 - Cleaned up transitive dependencies.
+- Updated patch/minor dependencies for Grafana, webpack,
+  SWC, and ESLint plugins.
+- Replaced deprecated `MutableRefObject` with `RefObject`.
+- Replaced deprecated `toArray` with `Array.from`.
 
 ### Fixed
 
