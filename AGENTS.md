@@ -50,7 +50,7 @@ npm run test:e2e:docker         # Playwright in Docker container
 
 ## Project Structure
 
-```
+```text
 src/
   components/       # PascalCase dirs, each with Component.tsx, .test.tsx, .styles.ts, index.ts
   constants/        # Shared constants including TEST_IDS (tests.ts)
@@ -99,7 +99,7 @@ import { FormElements } from '../FormElements';
 | Enums                | PascalCase name, UPPER_SNAKE values                   | `FormElementType.BOOLEAN`               |
 | Constants            | UPPER_SNAKE_CASE                                      | `TEST_IDS`, `FORM_ELEMENT_DEFAULT`      |
 | Hooks                | camelCase, `use` prefix                               | `useAutoSave`, `useFormLayout`          |
-| Barrel exports       | `index.ts` with `export * from './...'` per directory |
+| Barrel exports       | `index.ts` with `export * from './...'` per directory |                                         |
 
 ## Formatting & TypeScript
 

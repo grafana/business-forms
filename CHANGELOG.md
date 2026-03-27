@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Changed
+
+- Updated Node.js from 20 to 24.
+- Updated `@grafana/create-plugin` scaffolding.
+- Updated `plugin-ci-workflows` from v6.1.1 to v7.0.0.
+- Updated Playwright Dockerfile and docker-compose for E2E.
+- Bumped default Grafana image version.
+- Cleaned up transitive dependencies.
+
+### Fixed
+
+- Fixed Jest setup and style assertion.
+- Fixed scene context typing and legacy scenes router resolution.
+- Fixed build errors in ESLint config and TypeScript.
+- Fixed Docker E2E run to exit cleanly.
+
+### Added
+
+- Added `AGENTS.md` with build/test commands, code style
+  guidelines, and project conventions.
+- Added `cspell.config.json` for spell checking.
+- Added `pull-requests: read` permission to CD workflow (required by v7.0.0).
+
 ## [6.3.0] - 2025-10-22
 
 ### Project Updates
