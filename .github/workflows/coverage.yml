@@ -83,4 +83,4 @@ jobs:
         with:
           json-summary-path: coverage/coverage-summary.json
           json-summary-compare-path: ${{ steps.base-coverage.outputs.exists == 'true' && '/tmp/base-coverage/coverage-summary.json' || '' }}
-          file-coverage-mode: all
+          file-coverage-mode: changes-affected
