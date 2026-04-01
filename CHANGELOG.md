@@ -23,6 +23,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Simplified docker-compose: removed redundant Grafana
   service variants and consolidated profiles.
 - Simplified npm scripts for docker compose.
+- Updated `uuid` from v11 to v13, removed `@types/uuid`.
+- Updated `@grafana/scenes` to 7.3.0,
+  `@grafana/plugin-e2e` to 3.4.10,
+  `@playwright/test` to 1.59.0.
 
 ### Fixed
 
