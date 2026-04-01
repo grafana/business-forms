@@ -41,6 +41,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   guidelines, and project conventions.
 - Added `cspell.config.json` for spell checking.
 - Added `pull-requests: read` permission to CD workflow (required by v7.0.0).
+- Added PR coverage report workflow with base branch comparison.
+- Added PR file changes summary workflow with categorized
+  change list.
 
 ## [6.3.0] - 2025-10-22
 
