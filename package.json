@@ -75,7 +75,7 @@
   "overrides": {
     "dompurify": "3.3.3",
     "immutable": "5.1.5",
-    "react-grid-layout": "1.5.3"
+    "react-grid-layout": "2.2.3"
   },
   "dependencies": {
     "@emotion/css": "^11.13.5",
