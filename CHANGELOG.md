@@ -18,6 +18,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   SWC, and ESLint plugins.
 - Replaced deprecated `MutableRefObject` with `RefObject`.
 - Replaced deprecated `toArray` with `Array.from`.
+- Updated server Dockerfiles to Node 24 and
+  docker-compose-wait 2.12.1.
+- Simplified docker-compose: removed redundant Grafana
+  service variants and consolidated profiles.
+- Simplified npm scripts for docker compose.
 
 ### Fixed
 
