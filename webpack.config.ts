@@ -1,30 +1,28 @@
-// webpack.config.ts
+import path from 'path';
 import type { Configuration } from 'webpack';
+import { NormalModuleReplacementPlugin } from 'webpack';
 import { merge } from 'webpack-merge';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
-import grafanaConfig from './.config/webpack/webpack.config';
+import grafanaConfig, { Env } from './.config/webpack/webpack.config';
 
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-
-/**
- * Config
- */
-const config = async (env): Promise<Configuration> => {
+const config = async (env: Env): Promise<Configuration> => {
   const baseConfig = await grafanaConfig(env);
+  const legacyScenesPath = path.join(
+    'node_modules',
+    '@volkovlabs',
+    'components',
+    'node_modules',
+    '@grafana',
+    'scenes'
+  );
+  const legacyReactRouterDomPath = path.resolve(__dirname, 'node_modules/@grafana/ui/node_modules/react-router-dom');
 
   return merge(baseConfig, {
-    output: {
-      asyncChunks: true,
-    },
-    resolve: {
-      plugins: [new TsconfigPathsPlugin()],
-    },
     plugins: [
-      new CopyWebpackPlugin({
-        patterns: [
-          { from: '../LICENSE-original', to: '.' },
-          { from: '../NOTICES.md', to: '.' },
-        ],
+      // @volkovlabs/components vendors @grafana/scenes v5, which expects the React Router v5 Switch API.
+      new NormalModuleReplacementPlugin(/^react-router-dom$/, (resource) => {
+        if (resource.context.includes(legacyScenesPath)) {
+          resource.request = legacyReactRouterDomPath;
+        }
       }),
     ],
   });

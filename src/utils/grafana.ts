@@ -9,5 +9,5 @@ export const getFieldValues = (field?: Field): unknown[] => {
     return [];
   }
 
-  return field.values.toArray ? field.values.toArray() : field.values;
+  return Array.from(field.values);
 };

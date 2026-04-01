@@ -1,4 +1,4 @@
-FROM node:18.12.1-bullseye-slim
+FROM node:24-alpine
 
 ## Create app directory
 WORKDIR /home/node/app
@@ -11,7 +11,7 @@ RUN yarn add mysql@2.18.1 && \
     chown -R node:node /home/node/app
 
 ## Add the wait script to the image
-ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.9.0/wait /wait
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.12.1/wait /wait
 RUN chmod +x /wait
 
 ## Set the user to use when running this image

@@ -420,7 +420,7 @@ export interface DateTimeOptions {
   value?: string;
 
   /**
-   * Is Transfrom to UTC
+   * Is Transform to UTC
    *
    * @type {boolean}
    */

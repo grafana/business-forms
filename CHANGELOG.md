@@ -3,6 +3,48 @@
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Changed
+
+- Updated Node.js from 20 to 24.
+- Updated `@grafana/create-plugin` scaffolding.
+- Updated `plugin-ci-workflows` from v6.1.1 to v7.0.0.
+- Updated Playwright Dockerfile and docker-compose for E2E.
+- Bumped default Grafana image version.
+- Cleaned up transitive dependencies.
+- Updated patch/minor dependencies for Grafana, webpack,
+  SWC, and ESLint plugins.
+- Replaced deprecated `MutableRefObject` with `RefObject`.
+- Replaced deprecated `toArray` with `Array.from`.
+- Updated server Dockerfiles to Node 24 and
+  docker-compose-wait 2.12.1.
+- Simplified docker-compose: removed redundant Grafana
+  service variants and consolidated profiles.
+- Simplified npm scripts for docker compose.
+- Updated `uuid` from v11 to v13, removed `@types/uuid`.
+- Updated `@grafana/scenes` to 7.3.0,
+  `@grafana/plugin-e2e` to 3.4.10,
+  `@playwright/test` to 1.59.0.
+
+### Fixed
+
+- Fixed Jest setup and style assertion.
+- Fixed scene context typing and legacy scenes router resolution.
+- Fixed build errors in ESLint config and TypeScript.
+- Fixed Docker E2E run to exit cleanly.
+
+### Added
+
+- Added `AGENTS.md` with build/test commands, code style
+  guidelines, and project conventions.
+- Added `cspell.config.json` for spell checking.
+- Added `pull-requests: read` permission to CD workflow (required by v7.0.0).
+- Added PR coverage report workflow with base branch comparison.
+- Added PR file changes summary workflow with categorized
+  change list.
+
 ## [6.3.0] - 2025-10-22
 
 ### Project Updates

@@ -1362,7 +1362,7 @@ describe('Panel', () => {
       expect(datasourceRequestMock).not.toHaveBeenCalled();
     });
 
-    it('Should make initial datasource request (response doesn`t return state property)', async () => {
+    it('Should make initial datasource request (response does not return state property)', async () => {
       const datasourceRequestMock = jest.fn(() =>
         Promise.resolve({
           data: [],
