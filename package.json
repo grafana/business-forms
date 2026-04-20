@@ -1,7 +1,7 @@
 {
   "name": "business-forms",
   "description": "Insert, update application data, and modify configuration",
-  "version": "6.3.2",
+  "version": "6.3.3",
   "scripts": {
     "build": "webpack -c ./webpack.config.ts --env production",
     "dev": "webpack -w -c ./webpack.config.ts --env development",
