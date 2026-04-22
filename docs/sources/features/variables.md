@@ -25,7 +25,7 @@ Business Forms automatically replaces dashboard and global variables in the foll
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/var-sections-labels-buttons.png" class="border" alt="Use dashboard variables in the sections, labels, and button texts." >}}
 
-Variable types are thoroughly explained in the [Grafana Crash Course](https://volkovlabs.io/grafana/variables/).
+Variable types are thoroughly explained in the [Grafana Crash Course](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/exploring-variables/).
 
 ## JavaScript code
 

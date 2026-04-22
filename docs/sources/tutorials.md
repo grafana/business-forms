@@ -1,6 +1,6 @@
 ---
 title: Tutorials
-description: Learn how to use the Business Forms panel through video tutorials and blog posts covering features, use cases, and implementation examples.
+description: Learn how to use the Business Forms panel through video tutorials covering features, use cases, and implementation examples.
 keywords:
   - business media
 labels:
@@ -50,4 +50,3 @@ With custom code, you can update form elements or their values and options from 
 If your use case requires inserting, deleting, or updating your data, you can employ the Business Forms plugin. This video discusses two API servers to facilitate the process.
 
 {{< youtube id="SHN2S-dRIEM" >}}
-
