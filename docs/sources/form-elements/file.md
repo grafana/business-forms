@@ -24,14 +24,6 @@ This element has the following specific option:
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/accepted.png" class="border" alt="Options specific to the File type." >}}
 
-#### Example of the File type in a project
-
-The following video shows an example of the File type in a project, and it demonstrates how the Business Forms panel can interact with other plugins like the the [Business Variable panel](https://grafana.com/docs/plugins/volkovlabs-variable-panel/<PLUGINS_VERSION>/) and the [Business Media panel](https://grafana.com/docs/plugins/volkovlabs-image-panel/<PLUGINS_VERSION>/).
-
-The Business Forms panel with a file upload feature is used twice in this example. One time to illustrate the configuration using Data Source and the other to HTTP API Server.
-
-{{< youtube id="V4Sza0uDQNs" >}}
-
 ## Change elements model
 
 {{< docs/shared lookup="info-use-change-elements.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}

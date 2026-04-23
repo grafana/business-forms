@@ -35,9 +35,3 @@ const formIcon = context.panel.elements.find(
 );
 formIcon.value = "$IconVar";
 ```
-
-## Synchronize with dashboard variables
-
-For information about how Business Forms works with dashboard variables, refer to this video:
-
-{{< youtube id="DW-yuSopejY" >}}

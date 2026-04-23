@@ -56,7 +56,6 @@ Explore detailed guides and resources to maximize the potential of Business Form
 | [Custom code](https://grafana.com/docs/plugins/volkovlabs-form-panel/latest/custom-code/)            | Access plugin options, API responses, and Grafana services. |
 | [Features](https://grafana.com/docs/plugins/volkovlabs-form-panel/latest/features/)           | Explore all plugin capabilities.                            |
 | [Servers](https://grafana.com/docs/plugins/volkovlabs-form-panel/latest/servers/)             | View examples of API server implementations.                |
-| [Tutorials](https://grafana.com/docs/plugins/volkovlabs-form-panel/latest/tutorials/)         | Follow step-by-step guides.                                 |
 | [Release notes](https://grafana.com/grafana/plugins/volkovlabs-form-panel/?tab=changelog)       | Stay updated with the latest features and fixes.            |
 
 ## 📜 License
