@@ -14,8 +14,6 @@ labels:
 
 You can use custom code to update form elements, values, and options from any data source.
 
-{{< youtube id="RSVH1bSBNl8" >}}
-
 ## Select options
 
 The following example defines options for the `icon` element from the `icons` series using the `icon_id` and `title` columns:

@@ -27,8 +27,6 @@ The Business Forms panel is a conceptually new plugin for Grafana. It is the fir
 
 You can install the Business Forms panel from the [Grafana Plugins catalog](https://grafana.com/grafana/plugins/volkovlabs-form-panel/) or use the Grafana command line tool.
 
-{{< youtube id="1qYzHfPXJF8" >}}
-
 For the latter, use the following command:
 
 ```sh
@@ -50,14 +48,6 @@ grafana cli plugins install volkovlabs-form-panel
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/panel.png" class="border" alt="Business Forms panel for Grafana." >}}
 
-## Tutorial
-
-This video provides two examples of what the Business Forms plugin can do, along with an outline of their configuration steps. The video also shows how to create the Business Forms panel dynamically using code, with a reference where you can get copy-paste examples.
-
-{{< youtube id="ulbe8U8-IFA" >}}
-
-For more tutorials, see [Tutorials](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/tutorials).
-
 ## Documentation
 
 | Section                        | Description                                                                                |
@@ -68,7 +58,6 @@ For more tutorials, see [Tutorials](https://grafana.com/docs/plugins/volkovlabs-
 | [Custom code](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/custom-code/) | Explains how to access plugin options, API responses, form elements, and Grafana services. |
 | [Features](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/features/) | Explains the plugin features. |
 | [Servers](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/servers/) | Provides examples of API server implementations. |
-| [Tutorials](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/tutorials/) | Easy to follow tutorials |
 | [Release notes](https://grafana.com/docs/plugins/volkovlabs-form-panel/<PLUGINS_VERSION>/release/) | Stay up to date with the latest features and updates. |
 
 ## License
