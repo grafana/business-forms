@@ -73,7 +73,7 @@
     "node": ">=24"
   },
   "overrides": {
-    "dompurify": "3.3.3",
+    "dompurify": "3.4.0",
     "immutable": "5.1.5",
     "react-grid-layout": "1.5.3"
   },
