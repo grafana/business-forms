@@ -5,6 +5,18 @@ import { TextDecoder, TextEncoder } from 'util';
 import ResizeObserver from 'resize-observer-polyfill';
 
 /**
+ * Suppress i18next initialization advertisement logged by @grafana/ui during tests
+ */
+const originalConsoleInfo = console.info;
+console.info = (...args) => {
+  const message = args.map((arg) => (typeof arg === 'string' ? arg : '')).join(' ');
+  if (message.includes('i18next is made possible') || message.includes('Locize')) {
+    return;
+  }
+  originalConsoleInfo(...args);
+};
+
+/**
  * Fetch
  */
 const fetchMock = () =>
