@@ -25,6 +25,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Added `overrides` to pin patched transitive dependencies: `brace-expansion`,
   `flatted`, `lodash`, `postcss`, `protocol-buffers-schema`, `protobufjs` (critical CVE),
   and `serialize-javascript`.
+- Added `markdownlint-cli2@0.22.1` as devDependency; updated `.markdownlint.json` to disable
+  MD041 and MD060; added `npm run markdownlint` script.
 
 ### Fixed
 
@@ -34,6 +36,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Fixed E2E tests for Grafana 13 / React 19: added `e2e-empty.json` provisioned dashboard for
   `addPanel()` tests, added `page.waitForLoadState('networkidle')` after `addPanel()` and
   `backToDashboard()`, and mounted `provisioning/` as a volume in the playwright docker service.
+- Aligned Playwright test Dockerfile base image to `v1.59.1-noble` to match `@playwright/test` version.
 - Fixed inaccurate unit test descriptions in `FormPanel`, `InitialFieldsEditor`, `migration`, and `form-element` tests.
 - Removed redundant assertion comment in `FormPanel` test.
 - Removed deprecated `--ext` flags from `lint` and `lint:fix` scripts; added `files` pattern
