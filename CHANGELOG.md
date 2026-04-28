@@ -20,7 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Updated `webpack` to 5.106.2.
 - Updated `plugin-ci-workflows` from v7.0.0 to v7.3.1.
 - Updated CI workflow to `plugin-ci-workflows@v7.3.1`, removed `<=13.0` Grafana upper bound,
-  enabled React 19 preview image testing, and enabled Grafana dev image.
+  enabled Grafana dev and React 19 preview image testing, and added concurrency cancellation.
 - Updated CD workflow to stamp `[Unreleased]` with version and date on publish.
 - Added `overrides` to pin patched transitive dependencies: `brace-expansion`,
   `flatted`, `lodash`, `postcss`, `protocol-buffers-schema`, `protobufjs` (critical CVE),
@@ -31,6 +31,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Fixed `HeaderParametersEditor` to use immutable array operations instead of mutating props in place.
 - Added `eslint-disable` annotations for intentional `react-hooks/refs` and `react-hooks/set-state-in-effect`
   patterns flagged by `eslint-plugin-react-hooks@7.1.1`.
+- Fixed E2E tests for Grafana 13 / React 19: added `e2e-empty.json` provisioned dashboard for
+  `addPanel()` tests, added `page.waitForLoadState('networkidle')` after `addPanel()` and
+  `backToDashboard()`, and mounted `provisioning/` as a volume in the playwright docker service.
 
 ## [6.3.2] - 2026-04-06
 
