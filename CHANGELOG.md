@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- Switched to `markdownlint-cli2` (v0.22.1) as a devDependency; added `npm run markdownlint` script scoped to `AGENTS.md`, `CHANGELOG.md`, and `README.md`. Fixed pre-existing MD022 violation in `README.md`.
+- Added `concurrency: cancel-in-progress` to `coverage.yml` and `pr-files.yml` workflows.
+
 - Added `cspell@10` as a devDependency and `npm run spellcheck` script; runs the same glob as CI so local and CI spell checks are always identical.
 - Suppressed i18next marketing banner from test output in `jest-setup.js`.
 - Updated GitHub Actions: `actions/setup-node` to v6.4.0, `actions/github-script` to v9.0.0, `davelosert/vitest-coverage-report-action` to v2.11.2, `tj-actions/changed-files` to v47.0.6.
