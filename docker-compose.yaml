@@ -23,6 +23,7 @@ services:
     profiles:
       - dev
       - prod
+      - playwright
 
   server-delay:
     build:
@@ -32,6 +33,7 @@ services:
     profiles:
       - dev
       - prod
+      - playwright
 
   postgres:
     image: postgres
