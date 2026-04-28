@@ -1,7 +1,7 @@
 import { SelectableValue } from '@grafana/data';
+import { getJestSelectors } from '@volkovlabs/jest-selectors';
 
 import { TEST_IDS } from '../constants';
-import { getJestSelectors } from '@volkovlabs/jest-selectors';
 
 /**
  * Get Custom Code Editor Selectors

@@ -23,6 +23,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   `addPanel()` tests and `page.waitForLoadState('networkidle')` after navigation calls.
 - Added `server-postgres` to the playwright docker profile so update tests have a backend.
 - Mounted `playwright.config.ts` as a volume so config changes apply without rebuilding the Docker image.
+- Set `retries: 0` (was 6) and global `timeout: 30000` ms in `playwright.config.ts`; added per-operation
+  `navigationTimeout: 10000` and `actionTimeout: 10000` to prevent hanging ops without masking real failures.
+- Reduced `test.setTimeout` from 60000 ms to 30000 ms for the three `addPanel()` tests in `panel.spec.ts`.
 
 ### Dependencies
 
@@ -35,6 +38,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   `postcss`, `protocol-buffers-schema`, `protobufjs` (critical CVE), and `serialize-javascript`.
 - Updated `@grafana/scenes` to 7.4.2, `@grafana/plugin-e2e` to 3.6.1,
   `@playwright/test` to 1.59.1.
+- Added `rc-slider@^10.5.0` as a direct dependency; it was previously provided transitively via
+  `@volkovlabs/components` and `SliderElement.tsx` imports it directly.
 - Updated `@swc/core` to 1.15.32, `@swc/helpers` to 0.5.21, `@types/node` to 24.12.2.
 - Updated `eslint-plugin-react-hooks` to 7.1.1, `prettier` to 3.8.3, `sass` to 1.99.0,
   `webpack` to 5.106.2.
