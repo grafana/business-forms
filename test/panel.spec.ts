@@ -69,7 +69,6 @@ test.describe('Data Manipulation Panel', () => {
       /**
        * Add new visualization
        */
-      test.setTimeout(30000);
       const editPage = await dashboardPage.addPanel();
       await page.waitForLoadState('networkidle');
       await editPage.setVisualization('Business Forms');
@@ -96,7 +95,6 @@ test.describe('Data Manipulation Panel', () => {
       /**
        * Add new visualization
        */
-      test.setTimeout(30000);
       const editPage = await dashboardPage.addPanel();
       await page.waitForLoadState('networkidle');
       await editPage.setVisualization('Business Forms');
@@ -237,7 +235,6 @@ test.describe('Data Manipulation Panel', () => {
       /**
        * Add new visualization
        */
-      test.setTimeout(30000);
       const editPage = await dashboardPage.addPanel();
       await page.waitForLoadState('networkidle');
       await editPage.setVisualization('Business Forms');
