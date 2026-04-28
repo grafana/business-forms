@@ -4,6 +4,7 @@ import { getJestSelectors } from '@/utils';
 import React from 'react';
 
 import { DatasourcePayloadEditor } from './DatasourcePayloadEditor';
+import { DatasourceQueryEditor } from './DatasourceQueryEditor';
 /**
  * Props
  */
@@ -15,6 +16,31 @@ type Props = React.ComponentProps<typeof DatasourcePayloadEditor>;
 jest.mock('@grafana/runtime', () => ({
   getDataSourceSrv: jest.fn(),
   getTemplateSrv: jest.fn(),
+}));
+
+/**
+ * DatasourceQueryEditor mock implementation
+ */
+const DatasourceQueryEditorMock = ({ value, onChange, datasourceUid }: any) => (
+  <>
+    <input
+      data-testid="data-testid query-editor"
+      value={value as string}
+      onChange={(event) => {
+        if (onChange) {
+          onChange(event.target.value);
+        }
+      }}
+    />
+    <span data-testid="data-testid datasourceUID-key">{datasourceUid}</span>
+  </>
+);
+
+/**
+ * Mock DatasourceQueryEditor
+ */
+jest.mock('./DatasourceQueryEditor', () => ({
+  DatasourceQueryEditor: jest.fn(),
 }));
 
 /**
@@ -42,6 +68,7 @@ describe('DatasourcePayloadEditor', () => {
   };
 
   beforeEach(() => {
+    jest.mocked(DatasourceQueryEditor).mockImplementation(DatasourceQueryEditorMock);
     jest.mocked(getDataSourceSrv).mockReset();
     jest.mocked(getTemplateSrv).mockReturnValue({
       replace: jest.fn((str) => str),

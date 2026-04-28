@@ -1,9 +1,8 @@
 import { PanelPlugin, SelectableValue } from '@grafana/data';
 import { getAvailableIcons } from '@grafana/ui';
-import { DatasourceEditor } from '@volkovlabs/components';
-
 import {
   CustomCodeEditor,
+  DatasourceEditor,
   DatasourcePayloadEditor,
   FormElementsEditor,
   FormPanel,

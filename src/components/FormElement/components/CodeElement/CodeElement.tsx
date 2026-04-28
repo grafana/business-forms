@@ -1,5 +1,5 @@
 import { InlineField } from '@grafana/ui';
-import { AutosizeCodeEditor } from '@volkovlabs/components';
+import { AutosizeCodeEditor } from '@/components/AutosizeCodeEditor';
 import React, { useMemo } from 'react';
 
 import { TEST_IDS } from '@/constants';

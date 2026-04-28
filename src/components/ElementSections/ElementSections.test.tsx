@@ -13,10 +13,11 @@ import { ElementSections } from './ElementSections';
 type Props = React.ComponentProps<typeof ElementSections>;
 
 /**
- * Mock @volkovlabs/components
+ * Mock AutosizeCodeEditor
  */
-jest.mock('@volkovlabs/components');
-
+jest.mock('@/components/AutosizeCodeEditor', () => ({
+  AutosizeCodeEditor: jest.fn(() => null),
+}));
 /**
  * Form Elements
  */

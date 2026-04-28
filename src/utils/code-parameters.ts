@@ -1,7 +1,106 @@
 import { AlertPayload, DataQueryResponse, EventBus, PanelData } from '@grafana/data';
 import { BackendSrv, FetchResponse, LocationService, TemplateSrv, toDataQueryResponse } from '@grafana/runtime';
-import { CodeEditorSuggestionItemKind } from '@grafana/ui';
-import { CodeParameterItem, CodeParametersBuilder } from '@volkovlabs/components';
+import { CodeEditorSuggestionItem, CodeEditorSuggestionItemKind } from '@grafana/ui';
+
+/**
+ * Code Parameter Group
+ */
+interface CodeParameterGroup {
+ /**
+ * Detail
+ *
+ * @type {string}
+ */
+ detail: string;
+
+  /**
+ * Items
+ */
+ items: Record<string, CodeParameterGroup | CodeParameterItem>;
+}
+
+/**
+ * Code Parameter Item
+ */
+export class CodeParameterItem<TValue = unknown> {
+ /**
+ * Detail
+ *
+ * @type {string}
+ */
+ detail: string;
+
+  /**
+ * Kind
+ *
+ * @type {CodeEditorSuggestionItemKind}
+ */
+ kind: CodeEditorSuggestionItemKind;
+
+  /**
+ * Value — phantom type for type inference only
+ *
+ * @type {TValue}
+ */
+ value: TValue;
+
+  constructor(detail: string, kind: CodeEditorSuggestionItemKind = CodeEditorSuggestionItemKind.Property) {
+ this.detail = detail;
+ this.kind = kind;
+ this.value = {} as TValue;
+ }
+}
+
+/**
+ * Code Parameters Builder
+ * Recursively flattens a nested parameter-group tree into Monaco editor suggestion items.
+ */
+export class CodeParametersBuilder<TGroup extends CodeParameterGroup> {
+ /**
+ * Suggestions
+ */
+ suggestions: CodeEditorSuggestionItem[];
+
+  constructor(group: TGroup, basePath = 'context') {
+ this.suggestions = [];
+ this.suggestions.push({
+ label: basePath,
+ kind: CodeEditorSuggestionItemKind.Constant,
+ detail: group.detail,
+ });
+ this.addSuggestions(basePath, group);
+ }
+
+  /**
+ * Add suggestions recursively
+ */
+ private addSuggestions(path: string, group: CodeParameterGroup): void {
+ Object.entries(group.items).forEach(([key, item]) => {
+ const fullPath = `${path}.${key}`;
+ if ('items' in item) {
+ this.suggestions.push({
+ label: fullPath,
+ detail: (item as CodeParameterGroup).detail,
+ kind: CodeEditorSuggestionItemKind.Property,
+ });
+ this.addSuggestions(fullPath, item as CodeParameterGroup);
+ } else {
+ this.suggestions.push({
+ label: fullPath,
+ detail: item.detail,
+ kind: item.kind,
+ });
+ }
+ });
+ }
+
+  /**
+ * Create payload — identity helper for type inference
+ */
+ create(payload: unknown): unknown {
+ return payload;
+ }
+}
 
 import { FormElement, LayoutSection, LayoutSectionWithElements, LocalFormElement, PanelOptions } from '@/types';
 

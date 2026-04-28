@@ -6,7 +6,34 @@ import { FORM_ELEMENT_DEFAULT, OptionsSource } from '@/constants';
 import { ButtonVariant, CustomButtonShow, FormElementType, LinkTarget } from '@/types';
 import { getFormElementsSelectors, normalizeElementsForLocalState } from '@/utils';
 
+import { NumberInput } from '@/components/NumberInput';
 import { FormElements } from './FormElements';
+
+/**
+ * Mock NumberInput
+ */
+jest.mock('@/components/NumberInput', () => ({
+  NumberInput: jest.fn(),
+}));
+
+/**
+ * NumberInput mock implementation — validates on change, uses type=number for toHaveValue(number)
+ */
+const NumberInputMock = ({ value, onChange, min, max, step, ...rest }: any) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    let v = Number(event.target.value);
+    if (Number.isNaN(v)) {
+      v = 0;
+    }
+    if (max !== undefined && v > max) {
+      v = max;
+    } else if (min !== undefined && v < min) {
+      v = min;
+    }
+    onChange?.(v);
+  };
+  return <input {...rest} type="number" value={Number(value)} onChange={handleChange} />;
+};
 
 /**
  * Mock timers
@@ -24,6 +51,10 @@ const replaceVariables = jest.fn(replaceVariablesMock) as any;
  */
 describe('Form Elements', () => {
   const onChangeElement = jest.fn();
+
+  beforeEach(() => {
+    jest.mocked(NumberInput).mockImplementation(NumberInputMock);
+  });
   /**
    * Form Elements Selectors
    */

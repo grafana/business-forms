@@ -170,4 +170,11 @@ export const TEST_IDS = {
     fieldNamePicker: 'data-testid initial-fields-editor field-name-picker',
     fieldFromQueryPicker: 'data-testid initial-fields-editor field-from-query-picker',
   },
+  payloadEditor: {
+    loadingMessage: 'data-testid payload-editor loading-message',
+    errorMessage: 'data-testid payload-editor error-message',
+  },
+  datasourceEditor: {
+    fieldSelect: 'data-testid datasource-editor field-select',
+  },
 };

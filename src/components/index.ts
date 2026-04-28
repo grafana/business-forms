@@ -10,3 +10,7 @@ export * from './HeaderParametersEditor';
 export * from './InitialFieldsEditor';
 export * from './LayoutSectionsEditor';
 export * from './NewElement';
+
+export * from './AutosizeCodeEditor';
+export * from './DatasourceEditor';
+export * from './NumberInput';

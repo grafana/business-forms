@@ -1,5 +1,5 @@
 import { InlineField } from '@grafana/ui';
-import { NumberInput } from '@volkovlabs/components';
+import { NumberInput } from '@/components/NumberInput';
 import React from 'react';
 
 import { TEST_IDS } from '@/constants';

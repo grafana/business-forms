@@ -12,7 +12,7 @@ import {
   Select,
   useStyles2,
 } from '@grafana/ui';
-import { AutosizeCodeEditor } from '@volkovlabs/components';
+import { AutosizeCodeEditor } from '@/components/AutosizeCodeEditor';
 import React, { ChangeEvent, useMemo } from 'react';
 
 import {

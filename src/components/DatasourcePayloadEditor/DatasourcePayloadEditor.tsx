@@ -1,6 +1,6 @@
 import { StandardEditorProps } from '@grafana/data';
 import { getTemplateSrv } from '@grafana/runtime';
-import { DatasourcePayloadEditor as PayloadEditor } from '@volkovlabs/components';
+import { DatasourceQueryEditor } from './DatasourceQueryEditor';
 import { get } from 'lodash';
 import React, { useMemo } from 'react';
 
@@ -29,7 +29,7 @@ export const DatasourcePayloadEditor: React.FC<Props> = ({ context, value, onCha
   );
 
   return (
-    <PayloadEditor
+    <DatasourceQueryEditor
       value={value}
       onChange={(payload) => {
         onChange(payload);

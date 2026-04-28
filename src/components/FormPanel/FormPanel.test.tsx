@@ -3,7 +3,7 @@ import { getAppEvents, RefreshEvent } from '@grafana/runtime';
 import { sceneGraph, SceneObject } from '@grafana/scenes';
 import { PanelContextProvider } from '@grafana/ui';
 import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
-import { useDatasourceRequest } from '@volkovlabs/components';
+import { useDatasourceRequest } from '@/hooks';
 import React, { ReactElement } from 'react';
 
 import {
@@ -43,7 +43,8 @@ import { useDashboardRefresh } from '../../hooks';
 jest.mock('../../hooks', () => ({
   ...jest.requireActual('../../hooks'),
   useDashboardRefresh: jest.fn(),
-}));
+  useDatasourceRequest: jest.fn(),
+}))
 
 /**
  * Mock Form Elements
@@ -2841,7 +2842,7 @@ describe('Panel', () => {
       expect(replaceVariables).toHaveBeenCalledWith(`context.panel.patchFormValue({ test2: '15' });`);
 
       expect(elementsSelectors.fieldNumber()).toBeInTheDocument();
-      expect(elementsSelectors.fieldNumber()).toHaveValue(15);
+      expect(elementsSelectors.fieldNumber()).toHaveValue('15');
     });
 
     it('Should execute code on initial request with setFormValue correctly', async () => {
@@ -2873,7 +2874,7 @@ describe('Panel', () => {
       expect(replaceVariables).toHaveBeenCalledWith(`context.panel.setFormValue({ test2: '15' });`);
 
       expect(elementsSelectors.fieldNumber()).toBeInTheDocument();
-      expect(elementsSelectors.fieldNumber()).toHaveValue(15);
+      expect(elementsSelectors.fieldNumber()).toHaveValue('15');
     });
 
     it('Should execute code on initial request with formValue correctly', async () => {
@@ -2907,7 +2908,7 @@ describe('Panel', () => {
       );
 
       expect(elementsSelectors.fieldNumber()).toBeInTheDocument();
-      expect(elementsSelectors.fieldNumber()).toHaveValue(10);
+      expect(elementsSelectors.fieldNumber()).toHaveValue('10');
 
       expect(appEventsMock.publish).toHaveBeenCalledWith({
         type: AppEvents.alertSuccess.name,
