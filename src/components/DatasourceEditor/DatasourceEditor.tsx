@@ -37,7 +37,7 @@ export const DatasourceEditor: React.FC<Props> = ({ value, onChange }) => {
 
   return (
     <Select
-      onChange={(item) => onChange(item.value!)}
+      onChange={(item) => item.value && onChange(item.value)}
       options={options}
       value={value}
       data-testid={TEST_IDS.datasourceEditor.fieldSelect}
