@@ -46,7 +46,6 @@ export default defineConfig({
      */
     baseURL: process.env.GRAFANA_URL || 'http://localhost:3000',
 
-
     /**
      * Navigation timeout (covers waitForLoadState, goto, etc.).
      */

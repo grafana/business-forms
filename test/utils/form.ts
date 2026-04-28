@@ -20,11 +20,11 @@ const getElementsSelector = getLocatorSelectors(TEST_IDS.formElements);
  * Each .then() registers the next waitForResponse immediately after the previous one
   * resolves, ensuring no response is missed.
   */
-export function waitForDatasourceRefresh(page: Page, count = 1): Promise<void> {
+export function waitForDatasourceRefresh(page: Page, count = 1, timeout = 8000): Promise<void> {
   const pred = (resp: Response) => resp.url().includes('/api/ds/query');
-  let promise = page.waitForResponse(pred);
+  let promise = page.waitForResponse(pred, { timeout });
   for (let i = 1; i < count; i++) {
-    promise = promise.then(() => page.waitForResponse(pred));
+    promise = promise.then(() => page.waitForResponse(pred, { timeout }));
   }
   return promise.then(() => undefined);
 }
