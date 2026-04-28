@@ -169,9 +169,8 @@ mocks, config files, and server dirs are excluded from linting.
 
 ### Markdown Lint
 
-Always run `npx markdownlint-cli <file>` when updating
-`.md` files and fix any issues before committing. This
-includes `AGENTS.md`, `README.md`, and `CHANGELOG.md`.
+Always run `npm run markdownlint` after editing `AGENTS.md` or `CHANGELOG.md`
+and fix any issues before committing.
 
 ### Additional Rules
 
