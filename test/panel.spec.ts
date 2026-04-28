@@ -3,11 +3,6 @@ import { ModalHelper, PanelHelper, waitForDatasourceRefresh } from './utils';
 import { FormElementType } from '../src/types/form-element';
 
 test.describe('Data Manipulation Panel', () => {
-  test('Check grafana version', async ({ grafanaVersion }) => {
-    console.log('Grafana version: ', grafanaVersion);
-    expect(grafanaVersion).toBeDefined();
-  });
-
   test.describe('Base', () => {
     test('Should display a Form panels with all elements', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
       /**
