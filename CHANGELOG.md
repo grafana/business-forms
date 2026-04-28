@@ -19,6 +19,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Updated `webpack` to 5.106.2.
 - Updated `plugin-ci-workflows` from v7.0.0 to v7.3.1.
 - Updated CD workflow to stamp `[Unreleased]` with version and date on publish.
+- Added `overrides` to pin patched transitive dependencies: `brace-expansion`,
+  `flatted`, `lodash`, `postcss`, `protocol-buffers-schema`, `protobufjs` (critical CVE),
+  and `serialize-javascript`.
 
 ## [6.3.2] - 2026-04-06
 
