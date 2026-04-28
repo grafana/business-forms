@@ -1,5 +1,4 @@
 import { css } from '@emotion/css';
-import { GrafanaTheme2 } from '@grafana/data';
 import { CodeEditor, type Monaco, type MonacoEditor, useStyles2 } from '@grafana/ui';
 import React, { useCallback, useMemo } from 'react';
 
@@ -24,7 +23,7 @@ const calculateHeight = (value: string, minHeight?: number, maxHeight?: number):
   return Math.min(Math.max(contentHeight, min), max);
 };
 
-const getStyles = (_theme: GrafanaTheme2) => ({
+const getStyles = () => ({
   wrapper: css`
     width: 100%;
   `,

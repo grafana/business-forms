@@ -7,15 +7,15 @@ import { CodeEditorSuggestionItem, CodeEditorSuggestionItemKind } from '@grafana
  */
 interface CodeParameterGroup {
  /**
- * Detail
- *
- * @type {string}
- */
+  * Detail
+  *
+  * @type {string}
+  */
  detail: string;
 
   /**
- * Items
- */
+   * Items
+   */
  items: Record<string, CodeParameterGroup | CodeParameterItem>;
 }
 
@@ -24,24 +24,24 @@ interface CodeParameterGroup {
  */
 export class CodeParameterItem<TValue = unknown> {
  /**
- * Detail
- *
- * @type {string}
- */
+  * Detail
+  *
+  * @type {string}
+  */
  detail: string;
 
   /**
- * Kind
- *
- * @type {CodeEditorSuggestionItemKind}
- */
+   * Kind
+   *
+   * @type {CodeEditorSuggestionItemKind}
+   */
  kind: CodeEditorSuggestionItemKind;
 
   /**
- * Value — phantom type for type inference only
- *
- * @type {TValue}
- */
+   * Value — phantom type for type inference only
+   *
+   * @type {TValue}
+   */
  value: TValue;
 
   constructor(detail: string, kind: CodeEditorSuggestionItemKind = CodeEditorSuggestionItemKind.Property) {
@@ -57,8 +57,8 @@ export class CodeParameterItem<TValue = unknown> {
  */
 export class CodeParametersBuilder<TGroup extends CodeParameterGroup> {
  /**
- * Suggestions
- */
+  * Suggestions
+  */
  suggestions: CodeEditorSuggestionItem[];
 
   constructor(group: TGroup, basePath = 'context') {
@@ -72,8 +72,8 @@ export class CodeParametersBuilder<TGroup extends CodeParameterGroup> {
  }
 
   /**
- * Add suggestions recursively
- */
+   * Add suggestions recursively
+   */
  private addSuggestions(path: string, group: CodeParameterGroup): void {
  Object.entries(group.items).forEach(([key, item]) => {
  const fullPath = `${path}.${key}`;
@@ -95,8 +95,8 @@ export class CodeParametersBuilder<TGroup extends CodeParameterGroup> {
  }
 
   /**
- * Create payload — identity helper for type inference
- */
+   * Create payload — identity helper for type inference
+   */
  create(payload: unknown): unknown {
  return payload;
  }

@@ -12,9 +12,9 @@ import {
   Select,
   useStyles2,
 } from '@grafana/ui';
-import { AutosizeCodeEditor } from '@/components/AutosizeCodeEditor';
 import React, { ChangeEvent, useMemo } from 'react';
 
+import { AutosizeCodeEditor } from '@/components/AutosizeCodeEditor';
 import {
   BOOLEAN_OPTIONS,
   CODE_EDITOR_SUGGESTIONS,

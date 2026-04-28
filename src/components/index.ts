@@ -1,5 +1,7 @@
+export * from './AutosizeCodeEditor';
 export * from './CustomButtonsRow';
 export * from './CustomCodeEditor';
+export * from './DatasourceEditor';
 export * from './DatasourcePayloadEditor';
 export * from './ElementEditor';
 export * from './ElementSections';
@@ -10,7 +12,4 @@ export * from './HeaderParametersEditor';
 export * from './InitialFieldsEditor';
 export * from './LayoutSectionsEditor';
 export * from './NewElement';
-
-export * from './AutosizeCodeEditor';
-export * from './DatasourceEditor';
 export * from './NumberInput';

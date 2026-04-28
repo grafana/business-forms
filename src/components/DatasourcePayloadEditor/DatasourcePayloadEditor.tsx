@@ -1,10 +1,10 @@
 import { StandardEditorProps } from '@grafana/data';
 import { getTemplateSrv } from '@grafana/runtime';
-import { DatasourceQueryEditor } from './DatasourceQueryEditor';
 import { get } from 'lodash';
 import React, { useMemo } from 'react';
 
 import { PanelOptions } from '../../types';
+import { DatasourceQueryEditor } from './DatasourceQueryEditor';
 
 /**
  * Properties

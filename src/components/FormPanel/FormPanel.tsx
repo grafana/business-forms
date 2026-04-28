@@ -21,7 +21,6 @@ import {
   toDataQueryResponse,
 } from '@grafana/runtime';
 import { Alert, Button, ConfirmModal, LoadingBar, usePanelContext, useStyles2, useTheme2 } from '@grafana/ui';
-import { useDatasourceRequest } from '@/hooks';
 import { CustomButtonsRow } from 'components/CustomButtonsRow';
 import { debounce, isEqual } from 'lodash';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -36,7 +35,7 @@ import {
   ResetActionMode,
   TEST_IDS,
 } from '@/constants';
-import { useDashboardRefresh, useFormLayout, useMutableState } from '@/hooks';
+import { useDashboardRefresh, useDatasourceRequest, useFormLayout, useMutableState } from '@/hooks';
 import {
   ButtonVariant,
   FormElement,

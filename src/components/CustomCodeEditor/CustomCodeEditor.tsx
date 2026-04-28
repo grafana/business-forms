@@ -1,12 +1,13 @@
 import { StandardEditorProps } from '@grafana/data';
 import { getTemplateSrv } from '@grafana/runtime';
 import { CodeEditorSuggestionItem, CodeEditorSuggestionItemKind } from '@grafana/ui';
-import { AutosizeCodeEditor } from '@/components/AutosizeCodeEditor';
 /**
  * Monaco
  */
 import type * as monacoType from 'monaco-editor/esm/vs/editor/editor.api';
 import React, { useCallback } from 'react';
+
+import { AutosizeCodeEditor } from '@/components/AutosizeCodeEditor';
 
 import { CODE_EDITOR_SUGGESTIONS, TEST_IDS } from '../../constants';
 import { CodeEditorSettings, CodeLanguage } from '../../types';

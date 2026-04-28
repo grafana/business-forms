@@ -1,5 +1,6 @@
 import { PanelPlugin, SelectableValue } from '@grafana/data';
 import { getAvailableIcons } from '@grafana/ui';
+
 import {
   CustomCodeEditor,
   DatasourceEditor,

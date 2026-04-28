@@ -1,7 +1,7 @@
 import { InlineField } from '@grafana/ui';
-import { NumberInput } from '@/components/NumberInput';
 import React from 'react';
 
+import { NumberInput } from '@/components/NumberInput';
 import { TEST_IDS } from '@/constants';
 import { FormElementByType, FormElementType, LocalFormElement } from '@/types';
 import { applyLabelStyles, applyWidth, formatNumberValue } from '@/utils';
