@@ -11,6 +11,7 @@ export default defineConfig(
   ...grafanaConfig,
   prettierConfig,
   {
+    files: ['src/**/*.{ts,tsx}'],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
@@ -96,6 +97,7 @@ export default defineConfig(
     'src/__mocks__/**',
     'src/**/*.test.ts*',
     'test/*',
+    'playwright-report/**',
     'webpack.config.ts',
   ])
 );
