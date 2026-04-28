@@ -5,7 +5,7 @@ import { FormElementType } from '../src/types/form-element';
 test.describe('Data Manipulation Panel', () => {
   test('Check grafana version', async ({ grafanaVersion }) => {
     console.log('Grafana version: ', grafanaVersion);
-    expect(grafanaVersion).toEqual(grafanaVersion);
+    expect(grafanaVersion).toBeDefined();
   });
 
   test.describe('Base', () => {
@@ -586,7 +586,7 @@ test.describe('Data Manipulation Panel', () => {
   });
 
   test.describe('Element change', () => {
-    test('Should call element change function', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
+    test('Should enable number element when facility is selected', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
       /**
        * Go To Panels dashboard validation.json
        * return dashboardPage
