@@ -40,7 +40,24 @@ E2E tests use **Playwright** with `@grafana/plugin-e2e`:
 ```bash
 npm run test:e2e                # Playwright headless
 npm run test:e2e:dev            # Playwright with UI
-npm run test:e2e:docker         # Playwright in Docker container
+npm run test:e2e:docker         # Playwright in Docker container (default Grafana version)
+```
+
+To run against a specific Grafana image/version, pass env vars and always include `--build`
+to force a Grafana image rebuild (without it, Docker reuses the cached image):
+
+```bash
+GRAFANA_IMAGE=grafana-enterprise GRAFANA_VERSION=12.3.6 \
+  docker compose --profile playwright up --force-recreate --build \
+  --abort-on-container-exit --exit-code-from playwright
+```
+
+Capture output to a file to avoid re-running just to inspect results:
+
+```bash
+GRAFANA_IMAGE=grafana-enterprise GRAFANA_VERSION=12.3.6 \
+  docker compose --profile playwright up --force-recreate --build \
+  --abort-on-container-exit --exit-code-from playwright 2>&1 | tee /tmp/e2e-run.log
 ```
 
 ## Critical Rules

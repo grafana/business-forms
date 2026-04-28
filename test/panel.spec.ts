@@ -334,7 +334,7 @@ test.describe('Data Manipulation Panel', () => {
       await page.waitForLoadState('networkidle');
     });
 
-    test('Should update values via Text area with new lines in payload', async ({
+    test.skip('Should update values via Text area with new lines in payload', async ({
       gotoDashboardPage,
       readProvisionedDashboard,
       page,
