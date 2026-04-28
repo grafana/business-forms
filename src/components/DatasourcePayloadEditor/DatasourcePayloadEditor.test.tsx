@@ -1,6 +1,6 @@
 import { getDataSourceSrv, getTemplateSrv } from '@grafana/runtime';
 import { act, fireEvent, render, screen } from '@testing-library/react';
-import { getJestSelectors } from '@/utils';
+import { getJestSelectors } from '@volkovlabs/jest-selectors';
 import React from 'react';
 
 import { DatasourcePayloadEditor } from './DatasourcePayloadEditor';

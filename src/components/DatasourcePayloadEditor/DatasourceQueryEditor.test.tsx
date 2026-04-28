@@ -3,7 +3,7 @@ import { act, fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
 
 import { TEST_IDS } from '@/constants';
-import { getJestSelectors } from '@/utils';
+import { getJestSelectors } from '@volkovlabs/jest-selectors';
 
 import { DatasourceQueryEditor } from './DatasourceQueryEditor';
 

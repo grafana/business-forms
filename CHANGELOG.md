@@ -29,8 +29,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Removed `@volkovlabs/components`; inlined `AutosizeCodeEditor`, `NumberInput`, `DatasourceEditor`,
   and `DatasourceQueryEditor` as local components, `useDatasourceRequest` and `useDatasources` as
   local hooks, and `CodeParameterItem`/`CodeParametersBuilder` into `src/utils/code-parameters.ts`.
-- Removed `@volkovlabs/jest-selectors`; replaced with a local `getJestSelectors` utility in
-  `src/utils/jest-selectors.ts`.
+- Kept `@volkovlabs/jest-selectors` at v1.5.0 (restored after attempted removal introduced TypeScript inference regressions on function-valued selectors).
 - Added `cspell@10` and `markdownlint-cli2@0.22.1` as devDependencies.
 - Added `overrides` to pin patched transitive dependencies: `brace-expansion`, `flatted`, `lodash`,
   `postcss`, `protocol-buffers-schema`, `protobufjs` (critical CVE), and `serialize-javascript`.
