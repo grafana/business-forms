@@ -13,6 +13,7 @@ npm run stop           # Tear down docker compose
 npm run typecheck      # tsc --noEmit
 npm run lint           # ESLint (flat config, ESLint 9)
 npm run lint:fix       # ESLint autofix
+npm run spellcheck     # cspell across all source files (matches CI exactly)
 ```
 
 ## Test Commands
@@ -162,13 +163,14 @@ jest.mock('@grafana/runtime', () => ({
 
 ## ESLint
 
-Flat config (ESLint 9) extending `@grafana/eslint-config/flat.js`, `@volkovlabs/eslint-config`, and `eslint-config-prettier`. Custom rule: `@typescript-eslint/no-empty-object-type: off`. Test files, mocks, config files, and server dirs are excluded from linting.
+Flat config (ESLint 9) at `eslint.config.mjs`, extending `@grafana/eslint-config/flat.js` and
+`eslint-config-prettier`. Custom rule: `@typescript-eslint/no-empty-object-type: off`. Test files,
+mocks, config files, and server dirs are excluded from linting.
 
 ### Markdown Lint
 
-Always run `npx markdownlint-cli <file>` when updating
-`.md` files and fix any issues before committing. This
-includes `AGENTS.md`, `README.md`, and `CHANGELOG.md`.
+Always run `npm run markdownlint` after editing `AGENTS.md`, `CHANGELOG.md`, or `README.md`
+and fix any issues before committing.
 
 ### Additional Rules
 
@@ -186,6 +188,18 @@ modifies code, documentation, dependencies, or configuration must have a
 corresponding entry in the changelog under the current unreleased version
 section. Add entries as part of the same commit or as a follow-up commit
 before pushing.
+
+## Version Synchronization
+
+When upgrading `@playwright/test`, also update the base image in `test/Dockerfile` to match:
+
+```bash
+# Check for mismatch:
+node -e "console.log(require('./package.json').devDependencies['@playwright/test'])"
+grep 'FROM mcr.microsoft.com/playwright' test/Dockerfile
+```
+
+The image tag must match the installed version exactly (e.g., `v1.59.1-noble` for `^1.59.1`).
 
 ## Branching Policy
 

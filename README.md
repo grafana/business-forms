@@ -1,4 +1,5 @@
 # Business Forms for Grafana
+
 [![CI](https://github.com/grafana/business-forms/actions/workflows/push.yml/badge.svg)](https://github.com/grafana/business-forms/actions/workflows/push.yml)
 [![CD](https://github.com/grafana/business-forms/actions/workflows/publish.yml/badge.svg)](https://github.com/grafana/business-forms/actions/workflows/publish.yml)
 [![License](https://img.shields.io/github/license/grafana/business-forms)](https://github.com/grafana/business-forms/blob/main/LICENSE)

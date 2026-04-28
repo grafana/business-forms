@@ -222,7 +222,9 @@ export const useFormLayout = ({
    * Update local elements
    */
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional derived-state sync from props
     setElements(normalizeElementsForLocalState(value, replaceVariables));
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional derived-state sync from props
     setIsChanged(false);
   }, [replaceVariables, setElements, value]);
 
@@ -366,7 +368,9 @@ export const useFormLayout = ({
    */
   useEffect(() => {
     if (layoutSections) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional derived-state sync from props
       setSections(layoutSections);
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional derived-state sync from props
       setIsChanged(false);
     }
   }, [setSections, layoutSections]);
@@ -389,6 +393,7 @@ export const useFormLayout = ({
   /**
    * Return
    */
+  // eslint-disable-next-line react-hooks/refs -- callbacks capture refs but only read .current when invoked
   return {
     elements,
     isChanged,
@@ -396,7 +401,9 @@ export const useFormLayout = ({
     onChangeElements,
     onChangeElement,
     onChangeElementOption,
+    // eslint-disable-next-line react-hooks/refs -- onElementRemove reads elementsRef only when called, not during render
     onElementRemove,
+    // eslint-disable-next-line react-hooks/refs -- eventBus.current is a stable singleton initialized once
     eventBus: eventBus.current,
     elementsRef,
     sectionsExpandedState,

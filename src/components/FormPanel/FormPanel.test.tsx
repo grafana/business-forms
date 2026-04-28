@@ -2135,7 +2135,7 @@ describe('Panel', () => {
        */
       const eventBus = new EventBusSrv();
 
-      it('Should make initial request on dashboard refresh', async () => {
+      it('Should not re-fetch on dashboard refresh when sync is enabled', async () => {
         const data = {
           state: LoadingState.Done,
         };
@@ -2166,9 +2166,6 @@ describe('Panel', () => {
           eventBus.publish(new RefreshEvent());
         });
 
-        /**
-         * Check if fetch is called again
-         */
         expect(fetch).toHaveBeenCalledTimes(1);
       });
 
