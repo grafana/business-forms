@@ -239,7 +239,7 @@ test.describe('Data Manipulation Panel', () => {
       const editor = panel.getPanelEditor(page.locator('body'), editPage);
 
       await editor.addElement('string', 'Name', 'String input');
-      const initialSectionEditor = await editor.getOptionsSections('Initial Request');
+      const initialSectionEditor = editor.getOptionsSections('Initial Request');
       await initialSectionEditor.checkSectionPresence();
 
       const editorInitialCode = await initialSectionEditor.getCodeEditorElement(selectors);
