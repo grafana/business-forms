@@ -6,52 +6,52 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-### Changed
+### E2E Tests
 
-- Switched to `markdownlint-cli2` (v0.22.1) as a devDependency; added `npm run markdownlint` script scoped to `AGENTS.md`, `CHANGELOG.md`, and `README.md`. Fixed pre-existing MD022 violation in `README.md`.
-- Added `concurrency: cancel-in-progress` to `coverage.yml` and `pr-files.yml` workflows.
+- Re-enabled 10 previously skipped e2e tests (closes #9): removed `grepInvert` from
+  `playwright.config.ts` and replaced fixed-timeout waits with an event-driven
+  `waitForDatasourceRefresh(page, count)` helper — no fixed timeouts.
+- Fixed E2E tests for Grafana 13 / React 19: added `e2e-empty.json` provisioned dashboard for
+  `addPanel()` tests and `page.waitForLoadState('networkidle')` after navigation calls.
+- Added `server-postgres` to the playwright docker profile so update tests have a backend.
+- Mounted `playwright.config.ts` as a volume so config changes apply without rebuilding the Docker image.
 
-- Added `cspell@10` as a devDependency and `npm run spellcheck` script; runs the same glob as CI so local and CI spell checks are always identical.
-- Suppressed i18next marketing banner from test output in `jest-setup.js`.
-- Updated GitHub Actions: `actions/setup-node` to v6.4.0, `actions/github-script` to v9.0.0, `davelosert/vitest-coverage-report-action` to v2.11.2, `tj-actions/changed-files` to v47.0.6.
-- Removed `@volkovlabs/components` dependency; inlined `AutosizeCodeEditor`, `NumberInput`, `DatasourceEditor`, `DatasourceQueryEditor` as local components and `useDatasourceRequest`, `useDatasources` as local hooks. `CodeParameterItem` and `CodeParametersBuilder` inlined into `src/utils/code-parameters.ts`. Fixed import order, JSDoc alignment, and unused variable issues in the new files.
-- Removed `@volkovlabs/jest-selectors` dependency; replaced with a local `getJestSelectors` utility in `src/utils/jest-selectors.ts`.
-- Updated `@grafana/scenes` to 7.4.2.
-- Updated `@grafana/plugin-e2e` to 3.6.1.
-- Updated `@playwright/test` to 1.59.1.
-- Updated `@swc/core` to 1.15.32, `@swc/helpers` to 0.5.21.
-- Updated `@types/node` to 24.12.2.
-- Updated `eslint-plugin-react-hooks` to 7.1.1.
-- Replaced `@volkovlabs/eslint-config` with inline ESLint rules; allows `_`-prefixed unused parameters.
-- Updated `prettier` to 3.8.3.
-- Updated `sass` to 1.99.0.
-- Updated `webpack` to 5.106.2.
-- Updated `plugin-ci-workflows` from v7.0.0 to v7.3.1.
-- Updated CI workflow to `plugin-ci-workflows@v7.3.1`, removed `<=13.0` Grafana upper bound,
-  enabled Grafana dev and React 19 preview image testing, and added concurrency cancellation.
+### Dependencies
+
+- Removed `@volkovlabs/components`; inlined `AutosizeCodeEditor`, `NumberInput`, `DatasourceEditor`,
+  and `DatasourceQueryEditor` as local components, `useDatasourceRequest` and `useDatasources` as
+  local hooks, and `CodeParameterItem`/`CodeParametersBuilder` into `src/utils/code-parameters.ts`.
+- Removed `@volkovlabs/jest-selectors`; replaced with a local `getJestSelectors` utility in
+  `src/utils/jest-selectors.ts`.
+- Added `cspell@10` and `markdownlint-cli2@0.22.1` as devDependencies.
+- Added `overrides` to pin patched transitive dependencies: `brace-expansion`, `flatted`, `lodash`,
+  `postcss`, `protocol-buffers-schema`, `protobufjs` (critical CVE), and `serialize-javascript`.
+- Updated `@grafana/scenes` to 7.4.2, `@grafana/plugin-e2e` to 3.6.1,
+  `@playwright/test` to 1.59.1.
+- Updated `@swc/core` to 1.15.32, `@swc/helpers` to 0.5.21, `@types/node` to 24.12.2.
+- Updated `eslint-plugin-react-hooks` to 7.1.1, `prettier` to 3.8.3, `sass` to 1.99.0,
+  `webpack` to 5.106.2.
+
+### CI / Tooling
+
+- Updated CI workflow to `plugin-ci-workflows@v7.3.1`: removed `<=13.0` Grafana upper bound,
+  enabled Grafana dev and React 19 preview image testing, added concurrency cancellation.
 - Updated CD workflow to stamp `[Unreleased]` with version and date on publish.
-- Added `overrides` to pin patched transitive dependencies: `brace-expansion`,
-  `flatted`, `lodash`, `postcss`, `protocol-buffers-schema`, `protobufjs` (critical CVE),
-  and `serialize-javascript`.
+- Added `concurrency: cancel-in-progress` to `coverage.yml` and `pr-files.yml` workflows.
+- Updated GitHub Actions: `actions/setup-node` to v6.4.0, `actions/github-script` to v9.0.0,
+  `davelosert/vitest-coverage-report-action` to v2.11.2, `tj-actions/changed-files` to v47.0.6.
+- Added `npm run spellcheck` (cspell, same glob as CI) and `npm run markdownlint`
+  (markdownlint-cli2, scoped to `AGENTS.md`, `CHANGELOG.md`, `README.md`).
+- Replaced `@volkovlabs/eslint-config` with inline ESLint rules.
+- Suppressed i18next marketing banner from test output in `jest-setup.js`.
 
 ### Fixed
 
 - Fixed `HeaderParametersEditor` to use immutable array operations instead of mutating props in place.
-- Added `eslint-disable` annotations for intentional `react-hooks/refs` and `react-hooks/set-state-in-effect`
-  patterns flagged by `eslint-plugin-react-hooks@7.1.1`.
-- Fixed E2E tests for Grafana 13 / React 19: added `e2e-empty.json` provisioned dashboard for
-  `addPanel()` tests, added `page.waitForLoadState('networkidle')` after `addPanel()` and
-  `backToDashboard()`, and mounted `provisioning/` as a volume in the playwright docker service.
-- Fixed inaccurate unit test descriptions in `FormPanel`, `InitialFieldsEditor`, `migration`, and `form-element` tests.
-- Removed deprecated `--ext` flags from `lint` and `lint:fix` scripts; added `files` pattern
-  to `eslint.config.mjs` so ESLint 9 correctly scopes to `src/**/*.{ts,tsx}`.
-- Re-enabled 10 previously skipped e2e tests (closes #9): removed `grepInvert` from
-  `playwright.config.ts` and added event-driven `waitForDatasourceRefresh(page, count)` helper
-  that chains `page.waitForResponse` calls before the triggering action — fully event-driven,
-  no fixed timeouts.
-- Added `server-postgres` to the playwright docker profile so update tests have a backend.
-- Mounted `playwright.config.ts` as a volume so config changes apply without rebuilding
-  the Docker image.
+- Fixed inaccurate unit test descriptions in `FormPanel`, `InitialFieldsEditor`, `migration`, and
+  `form-element` tests.
+- Removed deprecated `--ext` flags from `lint` and `lint:fix` scripts; scoped ESLint to
+  `src/**/*.{ts,tsx}` via `eslint.config.mjs`.
 
 ## [6.3.2] - 2026-04-06
 
