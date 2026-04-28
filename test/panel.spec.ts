@@ -1,5 +1,5 @@
 import { test, expect } from '@grafana/plugin-e2e';
-import { ModalHelper, PanelHelper } from './utils';
+import { ModalHelper, PanelHelper, waitForDatasourceRefresh } from './utils';
 import { FormElementType } from '../src/types/form-element';
 
 test.describe('Data Manipulation Panel', () => {
@@ -127,13 +127,14 @@ test.describe('Data Manipulation Panel', () => {
   });
 
   test.describe('Initial request', () => {
-    test('Should set initial values from Datasource', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
+    test('Should set initial values from Datasource', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
       /**
        * Go To Panels dashboard datasource.json
        * return dashboardPage
        */
       const dashboard = await readProvisionedDashboard({ fileName: 'datasource.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
+      await page.waitForLoadState('networkidle');
 
       /**
        * Check Presence
@@ -157,7 +158,7 @@ test.describe('Data Manipulation Panel', () => {
       await disabledSpeedElement.checkValue('54');
     });
 
-    test('Should set initial values from Query', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
+    test('Should set initial values from Query', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
       /**
        * Go To Panels dashboard datasource.json
        * return dashboardPage
@@ -167,6 +168,7 @@ test.describe('Data Manipulation Panel', () => {
 
       const dashboard = await readProvisionedDashboard({ fileName: 'datasource.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid, queryParams: variableParams });
+      await page.waitForLoadState('networkidle');
 
       /**
        * Check Presence
@@ -191,6 +193,7 @@ test.describe('Data Manipulation Panel', () => {
 
       variableParams.set('var-device', 'device1');
       await gotoDashboardPage({ uid: dashboard.uid, queryParams: variableParams });
+      await page.waitForLoadState('networkidle');
 
       await disabledMaxElement.checkValue('100');
       await disabledMinElement.checkValue('10');
@@ -200,6 +203,7 @@ test.describe('Data Manipulation Panel', () => {
     test('Should display error for get initial request without URL', async ({
       gotoDashboardPage,
       readProvisionedDashboard,
+      page,
     }) => {
       /**
        * Go To Panels dashboard e2e.json
@@ -207,6 +211,7 @@ test.describe('Data Manipulation Panel', () => {
        */
       const dashboard = await readProvisionedDashboard({ fileName: 'e2e.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
+      await page.waitForLoadState('networkidle');
 
       /**
        * Check Presence
@@ -223,16 +228,18 @@ test.describe('Data Manipulation Panel', () => {
       selectors,
     }) => {
       /**
-       * Go To Panels dashboard e2e.json
+       * Go to empty dashboard
        * return dashboardPage
        */
-      const dashboard = await readProvisionedDashboard({ fileName: 'e2e.json' });
+      const dashboard = await readProvisionedDashboard({ fileName: 'e2e-empty.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
 
       /**
        * Add new visualization
        */
+      test.setTimeout(60000);
       const editPage = await dashboardPage.addPanel();
+      await page.waitForLoadState('networkidle');
       await editPage.setVisualization('Business Forms');
       await editPage.setPanelTitle('Business Form New');
 
@@ -251,6 +258,7 @@ test.describe('Data Manipulation Panel', () => {
        * Apply changes and return to dashboard
        */
       await editPage.backToDashboard();
+      await page.waitForLoadState('networkidle');
 
       /**
        * Check Presence
@@ -270,7 +278,7 @@ test.describe('Data Manipulation Panel', () => {
   });
 
   test.describe('Update', () => {
-    test('Should update values', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
+    test('Should update values', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
       /**
        * Go To Panels dashboard datasource.json
        * return dashboardPage
@@ -278,6 +286,7 @@ test.describe('Data Manipulation Panel', () => {
 
       const dashboard = await readProvisionedDashboard({ fileName: 'datasource.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
+      await page.waitForLoadState('networkidle');
 
       /**
        * Check Presence
@@ -313,6 +322,7 @@ test.describe('Data Manipulation Panel', () => {
       await confirmModal.confirmButtonCheckPresence();
       await confirmModal.cancelButtonCheckPresence();
       await confirmModal.updateValues();
+      await page.waitForLoadState('networkidle');
 
       await buttons.checkSubmitButtonPresence();
       await numberMaxElement.checkValue('125');
@@ -324,11 +334,13 @@ test.describe('Data Manipulation Panel', () => {
       await numberMaxElement.setValue('100');
       await buttons.submit();
       await confirmModal.updateValues();
+      await page.waitForLoadState('networkidle');
     });
 
     test('Should update values via Text area with new lines in payload', async ({
       gotoDashboardPage,
       readProvisionedDashboard,
+      page,
     }) => {
       /**
        * Go To Panels dashboard updateViaEditors.json
@@ -337,6 +349,7 @@ test.describe('Data Manipulation Panel', () => {
 
       const dashboard = await readProvisionedDashboard({ fileName: 'updateViaEditors.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
+      await page.waitForLoadState('networkidle');
 
       /**
        * Check Presence
@@ -377,6 +390,7 @@ test.describe('Data Manipulation Panel', () => {
       await confirmModal.confirmButtonCheckPresence();
       await confirmModal.cancelButtonCheckPresence();
       await confirmModal.updateValues();
+      await page.waitForLoadState('networkidle');
 
       await panel.checkNoErrorMessage();
 
@@ -389,6 +403,7 @@ test.describe('Data Manipulation Panel', () => {
       await textAreaElement.setValue('option1');
       await buttons.submit();
       await confirmModal.updateValues();
+      await page.waitForLoadState('networkidle');
       await disabledTextAreaElement.checkValue('option1');
     });
 
@@ -396,6 +411,7 @@ test.describe('Data Manipulation Panel', () => {
       gotoDashboardPage,
       readProvisionedDashboard,
       selectors,
+      page,
     }) => {
       /**
        * Go To Panels dashboard updateViaEditors.json
@@ -404,6 +420,7 @@ test.describe('Data Manipulation Panel', () => {
 
       const dashboard = await readProvisionedDashboard({ fileName: 'updateViaEditors.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
+      await page.waitForLoadState('networkidle');
 
       /**
        * Check Presence
@@ -440,7 +457,9 @@ test.describe('Data Manipulation Panel', () => {
       await confirmModal.checkPresence();
       await confirmModal.confirmButtonCheckPresence();
       await confirmModal.cancelButtonCheckPresence();
+      const dsRefresh = waitForDatasourceRefresh(page, 2);
       await confirmModal.updateValues();
+      await dsRefresh;
 
       await panel.checkNoErrorMessage();
 
@@ -453,11 +472,13 @@ test.describe('Data Manipulation Panel', () => {
       await codeEditorElement.clearValue();
       await codeEditorElement.setValue('option1');
       await buttons.submit();
+      const dsRefresh2 = waitForDatasourceRefresh(page, 2);
       await confirmModal.updateValues();
+      await dsRefresh2;
       await disabledTextAreaElement.checkTextContent('option1');
     });
 
-    test('Should not update values if cancel', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
+    test('Should not update values if cancel', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
       /**
        * Go To Panels dashboard datasource.json
        * return dashboardPage
@@ -465,6 +486,7 @@ test.describe('Data Manipulation Panel', () => {
 
       const dashboard = await readProvisionedDashboard({ fileName: 'datasource.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
+      await page.waitForLoadState('networkidle');
 
       /**
        * Check Presence
@@ -496,7 +518,7 @@ test.describe('Data Manipulation Panel', () => {
       await disabledMaxElement.checkValue('100');
     });
 
-    test('Should reset values without update it', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
+    test('Should reset values without update it', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
       /**
        * Go To Panels dashboard datasource.json
        * return dashboardPage
@@ -504,6 +526,7 @@ test.describe('Data Manipulation Panel', () => {
 
       const dashboard = await readProvisionedDashboard({ fileName: 'datasource.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
+      await page.waitForLoadState('networkidle');
 
       /**
        * Check Presence
@@ -534,13 +557,14 @@ test.describe('Data Manipulation Panel', () => {
       await numberMinElement.checkValue('10');
     });
 
-    test('Should display error for invalid update request', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
+    test('Should display error for invalid update request', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
       /**
        * Go To Panels dashboard datasource.json
        * return dashboardPage
        */
       const dashboard = await readProvisionedDashboard({ fileName: 'datasource.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
+      await page.waitForLoadState('networkidle');
 
       /**
        * Check Presence
@@ -558,6 +582,7 @@ test.describe('Data Manipulation Panel', () => {
 
       const confirmModal = new ModalHelper(dashboardPage);
       await confirmModal.updateValues();
+      await page.waitForLoadState('networkidle');
 
       await panel.checkErrorMessage();
     });

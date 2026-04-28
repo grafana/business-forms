@@ -62,6 +62,7 @@ services:
     profiles:
       - dev
       - prod
+      - playwright
 
   playwright:
     build:
@@ -73,6 +74,7 @@ services:
       - ./test:/app/test
       - ./playwright-report:/app/playwright-report
       - ./provisioning:/app/provisioning
+      - ./playwright.config.ts:/app/playwright.config.ts
     depends_on:
       grafana:
         condition: service_healthy

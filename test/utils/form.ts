@@ -1,4 +1,4 @@
-import { Locator, Page } from '@playwright/test';
+import { Locator, Page, Response } from '@playwright/test';
 import { DashboardPage, E2ESelectorGroups, expect, Panel, PanelEditPage } from '@grafana/plugin-e2e';
 import { getLocatorSelectors, LocatorSelectors } from './selectors';
 import { TEST_IDS } from '../../src/constants/tests';
@@ -6,6 +6,28 @@ import { TEST_IDS } from '../../src/constants/tests';
 import { FormElementType } from '../../src/types/form-element';
 
 const getElementsSelector = getLocatorSelectors(TEST_IDS.formElements);
+
+/**
+ * Returns a Promise that resolves after `count` sequential /api/ds/query responses.
+ *
+ * MUST be called before the action that triggers the responses so the listener chain
+ * is registered before the first response arrives. Pattern:
+ *
+ *   const dsRefresh = waitForDatasourceRefresh(page, 1); // or 2 for update + re-fetch
+ *   await someAction();  // triggers datasource request(s)
+ *   await dsRefresh;     // resolves only when all expected responses have arrived
+ *
+ * Each .then() registers the next waitForResponse immediately after the previous one
+  * resolves, ensuring no response is missed.
+  */
+export function waitForDatasourceRefresh(page: Page, count = 1): Promise<void> {
+  const pred = (resp: Response) => resp.url().includes('/api/ds/query');
+  let promise = page.waitForResponse(pred);
+  for (let i = 1; i < count; i++) {
+    promise = promise.then(() => page.waitForResponse(pred));
+  }
+  return promise.then(() => undefined);
+}
 
 /**
  * Disabled Element Helper

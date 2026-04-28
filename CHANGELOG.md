@@ -37,6 +37,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Fixed inaccurate unit test descriptions in `FormPanel`, `InitialFieldsEditor`, `migration`, and `form-element` tests.
 - Removed deprecated `--ext` flags from `lint` and `lint:fix` scripts; added `files` pattern
   to `eslint.config.mjs` so ESLint 9 correctly scopes to `src/**/*.{ts,tsx}`.
+- Re-enabled 10 previously skipped e2e tests (closes #9): removed `grepInvert` from
+  `playwright.config.ts` and added event-driven `waitForDatasourceRefresh(page, count)` helper
+  that chains `page.waitForResponse` calls before the triggering action — fully event-driven,
+  no fixed timeouts.
+- Added `server-postgres` to the playwright docker profile so update tests have a backend.
+- Mounted `playwright.config.ts` as a volume so config changes apply without rebuilding
+  the Docker image.
 
 ## [6.3.2] - 2026-04-06
 
