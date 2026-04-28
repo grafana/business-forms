@@ -2166,9 +2166,6 @@ describe('Panel', () => {
           eventBus.publish(new RefreshEvent());
         });
 
-        /**
-         * Verify fetch is not called again
-         */
         expect(fetch).toHaveBeenCalledTimes(1);
       });
 
