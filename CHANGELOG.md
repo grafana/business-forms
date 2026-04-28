@@ -17,6 +17,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Updated `prettier` to 3.8.3.
 - Updated `sass` to 1.99.0.
 - Updated `webpack` to 5.106.2.
+- Updated `plugin-ci-workflows` from v7.0.0 to v7.3.1.
+- Updated CD workflow to stamp `[Unreleased]` with version and date on publish.
 
 ## [6.3.2] - 2026-04-06
 
