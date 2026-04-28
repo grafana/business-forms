@@ -82,7 +82,7 @@
     "lodash": "^4.18.1",
     "postcss": "^8.5.12",
     "protocol-buffers-schema": "^3.6.1",
-    "protobufjs": "^7.5.6",
+    "protobufjs": "^8.0.0",
     "serialize-javascript": "^7.0.5"
   },
   "dependencies": {
