@@ -59,21 +59,24 @@ test.describe('Data Manipulation Panel', () => {
       await boxesElements.checkElementPresence('code', FormElementType.CODE);
     });
 
-    test('Should add empty Form panel', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
+    test('Should add empty Form panel', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
       /**
-       * Go To Panels dashboard e2e.json
+       * Go To Panels dashboard e2e-empty.json
        * return dashboardPage
        */
-      const dashboard = await readProvisionedDashboard({ fileName: 'e2e.json' });
+      const dashboard = await readProvisionedDashboard({ fileName: 'e2e-empty.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
 
       /**
        * Add new visualization
        */
+      test.setTimeout(60000);
       const editPage = await dashboardPage.addPanel();
+      await page.waitForLoadState('networkidle');
       await editPage.setVisualization('Business Forms');
       await editPage.setPanelTitle('Business Forms Empty');
       await editPage.backToDashboard();
+      await page.waitForLoadState('networkidle');
 
       /**
        * Should add empty visualization without errors
@@ -86,16 +89,18 @@ test.describe('Data Manipulation Panel', () => {
 
     test('Should add Form panel with base element', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
       /**
-       * Go To Panels dashboard e2e.json
+       * Go To Panels dashboard e2e-empty.json
        * return dashboardPage
        */
-      const dashboard = await readProvisionedDashboard({ fileName: 'e2e.json' });
+      const dashboard = await readProvisionedDashboard({ fileName: 'e2e-empty.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
 
       /**
        * Add new visualization
        */
+      test.setTimeout(60000);
       const editPage = await dashboardPage.addPanel();
+      await page.waitForLoadState('networkidle');
       await editPage.setVisualization('Business Forms');
       await editPage.setPanelTitle('Business Form New');
 
@@ -108,7 +113,7 @@ test.describe('Data Manipulation Panel', () => {
        * Apply changes and return to dashboard
        */
       await editPage.backToDashboard();
-
+      await page.waitForLoadState('networkidle');
       /**
        * Check Presence
        */
