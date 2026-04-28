@@ -19,7 +19,7 @@
     "typecheck": "tsc --noEmit",
     "upgrade": "npm upgrade --save",
     "spellcheck": "cspell -c cspell.config.json \"**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}\"",
-    "markdownlint": "markdownlint-cli2 AGENTS.md CHANGELOG.md"
+    "markdownlint": "markdownlint-cli2 AGENTS.md CHANGELOG.md README.md"
   },
   "author": "Grafana Labs",
   "license": "Apache-2.0",

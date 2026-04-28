@@ -169,7 +169,7 @@ mocks, config files, and server dirs are excluded from linting.
 
 ### Markdown Lint
 
-Always run `npm run markdownlint` after editing `AGENTS.md` or `CHANGELOG.md`
+Always run `npm run markdownlint` after editing `AGENTS.md`, `CHANGELOG.md`, or `README.md`
 and fix any issues before committing.
 
 ### Additional Rules
