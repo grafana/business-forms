@@ -35,6 +35,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   `addPanel()` tests, added `page.waitForLoadState('networkidle')` after `addPanel()` and
   `backToDashboard()`, and mounted `provisioning/` as a volume in the playwright docker service.
 - Fixed inaccurate unit test descriptions in `FormPanel`, `InitialFieldsEditor`, `migration`, and `form-element` tests.
+- Removed redundant assertion comment in `FormPanel` test.
 - Removed deprecated `--ext` flags from `lint` and `lint:fix` scripts; added `files` pattern
   to `eslint.config.mjs` so ESLint 9 correctly scopes to `src/**/*.{ts,tsx}`.
 
