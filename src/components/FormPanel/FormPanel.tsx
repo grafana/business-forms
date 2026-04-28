@@ -849,6 +849,7 @@ export const FormPanel: React.FC<Props> = ({
   }, [datasourceRequest, elements, executeCustomCode, initialRef, initialRequest, options.update, replaceVariables]);
 
   const debouncedRequest = useMemo(() => {
+    // eslint-disable-next-line react-hooks/refs -- debounce wraps the function, does not call it during render
     return debounce(initialRequest, 250);
   }, [initialRequest]);
 
@@ -863,6 +864,7 @@ export const FormPanel: React.FC<Props> = ({
       (data.state === LoadingState.Done || data.state === LoadingState.Streaming) &&
       (options.sync || !isInitialized)
     ) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- initialRequest triggers state updates asynchronously
       initialRequest();
 
       /**

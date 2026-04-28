@@ -13,7 +13,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Updated `@playwright/test` to 1.59.1.
 - Updated `@swc/core` to 1.15.32, `@swc/helpers` to 0.5.21.
 - Updated `@types/node` to 24.12.2.
-- Kept `eslint-plugin-react-hooks` at 7.0.1 (7.1.x introduces new rules that flag existing patterns).
+- Updated `eslint-plugin-react-hooks` to 7.1.1.
+- Replaced `@volkovlabs/eslint-config` with inline ESLint rules; allows `_`-prefixed unused parameters.
 - Updated `prettier` to 3.8.3.
 - Updated `sass` to 1.99.0.
 - Updated `webpack` to 5.106.2.
@@ -22,6 +23,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Added `overrides` to pin patched transitive dependencies: `brace-expansion`,
   `flatted`, `lodash`, `postcss`, `protocol-buffers-schema`, `protobufjs` (critical CVE),
   and `serialize-javascript`.
+
+### Fixed
+
+- Fixed `HeaderParametersEditor` to use immutable array operations instead of mutating props in place.
+- Added `eslint-disable` annotations for intentional `react-hooks/refs` and `react-hooks/set-state-in-effect`
+  patterns flagged by `eslint-plugin-react-hooks@7.1.1`.
 
 ## [6.3.2] - 2026-04-06
 
