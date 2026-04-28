@@ -61,8 +61,7 @@ test.describe('Data Manipulation Panel', () => {
 
     test('Should add empty Form panel', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
       /**
-       * Go To Panels dashboard e2e-empty.json
-       * return dashboardPage
+       * Go to empty dashboard
        */
       const dashboard = await readProvisionedDashboard({ fileName: 'e2e-empty.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
@@ -89,8 +88,7 @@ test.describe('Data Manipulation Panel', () => {
 
     test('Should add Form panel with base element', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
       /**
-       * Go To Panels dashboard e2e-empty.json
-       * return dashboardPage
+       * Go to empty dashboard
        */
       const dashboard = await readProvisionedDashboard({ fileName: 'e2e-empty.json' });
       const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
@@ -114,6 +112,7 @@ test.describe('Data Manipulation Panel', () => {
        */
       await editPage.backToDashboard();
       await page.waitForLoadState('networkidle');
+
       /**
        * Check Presence
        */
