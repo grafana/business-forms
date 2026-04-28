@@ -1,4 +1,4 @@
-import { test, expect } from '@grafana/plugin-e2e';
+import { test } from '@grafana/plugin-e2e';
 import { ModalHelper, PanelHelper, waitForDatasourceRefresh } from './utils';
 import { FormElementType } from '../src/types/form-element';
 
