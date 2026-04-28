@@ -948,7 +948,7 @@ describe('Migration', () => {
     /**
      * Normalize isEscaping
      */
-    it('Should return allowCustom property for select and multiselect elements if not specified', async () => {
+    it('Should normalize isEscaping for code and textarea elements', async () => {
       const options: Partial<PanelOptions> = {
         sync: true,
         initial: {} as any,

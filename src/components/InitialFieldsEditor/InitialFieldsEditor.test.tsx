@@ -7,9 +7,9 @@ import { getInitialFieldsEditorSelectors } from '../../utils';
 import { InitialFieldsEditor } from './InitialFieldsEditor';
 
 /**
- * Form Elements Editor
+ * Initial Fields Editor
  */
-describe('Form Elements Editor', () => {
+describe('Initial Fields Editor', () => {
   /**
    * OnChange function
    */

@@ -34,6 +34,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Fixed E2E tests for Grafana 13 / React 19: added `e2e-empty.json` provisioned dashboard for
   `addPanel()` tests, added `page.waitForLoadState('networkidle')` after `addPanel()` and
   `backToDashboard()`, and mounted `provisioning/` as a volume in the playwright docker service.
+- Fixed inaccurate unit test descriptions in `FormPanel`, `InitialFieldsEditor`, `migration`, and `form-element` tests.
 
 ## [6.3.2] - 2026-04-06
 

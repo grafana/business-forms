@@ -53,11 +53,11 @@ describe('Utils', () => {
   });
 
   describe('Reorder', () => {
-    it('Should move element up', () => {
+    it('Should move element down', () => {
       expect(reorder([1, 2, 3], 0, 1)).toEqual([2, 1, 3]);
     });
 
-    it('Should move element down', () => {
+    it('Should move element up', () => {
       expect(reorder([1, 2, 3], 2, 1)).toEqual([1, 3, 2]);
     });
 
@@ -1073,7 +1073,7 @@ describe('Utils', () => {
         }),
       },
       {
-        name: 'TIME',
+        name: 'SELECT',
         newType: FormElementType.SELECT,
         element: baseElement,
         expected: expect.objectContaining({
@@ -1083,7 +1083,7 @@ describe('Utils', () => {
         }),
       },
       {
-        name: 'DATE',
+        name: 'PASSWORD',
         newType: FormElementType.PASSWORD,
         element: baseElement,
         expected: expect.objectContaining({
