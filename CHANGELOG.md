@@ -8,6 +8,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- Updated `@grafana/scenes` to 7.4.2.
+- Updated `@grafana/plugin-e2e` to 3.6.1.
+- Updated `@playwright/test` to 1.59.1.
+- Updated `@swc/core` to 1.15.32, `@swc/helpers` to 0.5.21.
+- Updated `@types/node` to 24.12.2.
+- Updated `eslint-plugin-react-hooks` to 7.1.1.
+- Updated `prettier` to 3.8.3.
+- Updated `sass` to 1.99.0.
+- Updated `webpack` to 5.106.2.
+
+## [6.3.2] - 2026-04-06
+
+### Changed
+
 - Updated Node.js from 20 to 24.
 - Updated `@grafana/create-plugin` scaffolding.
 - Updated `plugin-ci-workflows` from v6.1.1 to v7.0.0.
@@ -27,6 +41,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Updated `@grafana/scenes` to 7.3.0,
   `@grafana/plugin-e2e` to 3.4.10,
   `@playwright/test` to 1.59.0.
+- Verified React 19 compatibility: no breaking API usage in source;
+  `react/jsx-runtime` already externalized; `grafanaDependency` already `>=12.3.0`;
+  CI pipeline already tests against React 19 preview image.
 
 ### Fixed
 
