@@ -6,41 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed header parameter editor losing changes when editing name or value fields.
+
+### Security
+
+- Patched transitive dependencies with known vulnerabilities, including a critical CVE in `protobufjs`.
+
 ### Changed
 
 - Updated `@grafana/scenes` to 7.4.2.
-- Updated `@grafana/plugin-e2e` to 3.6.1.
-- Updated `@playwright/test` to 1.59.1.
-- Updated `@swc/core` to 1.15.32, `@swc/helpers` to 0.5.21.
-- Updated `@types/node` to 24.12.2.
-- Updated `eslint-plugin-react-hooks` to 7.1.1.
-- Replaced `@volkovlabs/eslint-config` with inline ESLint rules; allows `_`-prefixed unused parameters.
-- Updated `prettier` to 3.8.3.
-- Updated `sass` to 1.99.0.
-- Updated `webpack` to 5.106.2.
-- Updated `plugin-ci-workflows` from v7.0.0 to v7.3.1.
-- Updated CI workflow to `plugin-ci-workflows@v7.3.1`, removed `<=13.0` Grafana upper bound,
-  enabled Grafana dev and React 19 preview image testing, and added concurrency cancellation.
-- Updated CD workflow to stamp `[Unreleased]` with version and date on publish.
-- Added `overrides` to pin patched transitive dependencies: `brace-expansion`,
-  `flatted`, `lodash`, `postcss`, `protocol-buffers-schema`, `protobufjs` (critical CVE),
-  and `serialize-javascript`.
-- Added `markdownlint-cli2@0.22.1` as devDependency; updated `.markdownlint.json` to disable
-  MD041 and MD060; added `npm run markdownlint` script.
-
-### Fixed
-
-- Fixed `HeaderParametersEditor` to use immutable array operations instead of mutating props in place.
-- Added `eslint-disable` annotations for intentional `react-hooks/refs` and `react-hooks/set-state-in-effect`
-  patterns flagged by `eslint-plugin-react-hooks@7.1.1`.
-- Fixed E2E tests for Grafana 13 / React 19: added `e2e-empty.json` provisioned dashboard for
-  `addPanel()` tests, added `page.waitForLoadState('networkidle')` after `addPanel()` and
-  `backToDashboard()`, and mounted `provisioning/` as a volume in the playwright docker service.
-- Aligned Playwright test Dockerfile base image to `v1.59.1-noble` to match `@playwright/test` version.
-- Fixed inaccurate unit test descriptions in `FormPanel`, `InitialFieldsEditor`, `migration`, and `form-element` tests.
-- Removed redundant assertion comment in `FormPanel` test.
-- Removed deprecated `--ext` flags from `lint` and `lint:fix` scripts; added `files` pattern
-  to `eslint.config.mjs` so ESLint 9 correctly scopes to `src/**/*.{ts,tsx}`.
 
 ## [6.3.2] - 2026-04-06
 
