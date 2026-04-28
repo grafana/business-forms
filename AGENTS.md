@@ -162,7 +162,9 @@ jest.mock('@grafana/runtime', () => ({
 
 ## ESLint
 
-Flat config (ESLint 9) extending `@grafana/eslint-config/flat.js`, `@volkovlabs/eslint-config`, and `eslint-config-prettier`. Custom rule: `@typescript-eslint/no-empty-object-type: off`. Test files, mocks, config files, and server dirs are excluded from linting.
+Flat config (ESLint 9) at `eslint.config.mjs`, extending `@grafana/eslint-config/flat.js` and
+`eslint-config-prettier`. Custom rule: `@typescript-eslint/no-empty-object-type: off`. Test files,
+mocks, config files, and server dirs are excluded from linting.
 
 ### Markdown Lint
 
@@ -186,6 +188,18 @@ modifies code, documentation, dependencies, or configuration must have a
 corresponding entry in the changelog under the current unreleased version
 section. Add entries as part of the same commit or as a follow-up commit
 before pushing.
+
+## Version Synchronization
+
+When upgrading `@playwright/test`, also update the base image in `test/Dockerfile` to match:
+
+```bash
+# Check for mismatch:
+node -e "console.log(require('./package.json').devDependencies['@playwright/test'])"
+grep 'FROM mcr.microsoft.com/playwright' test/Dockerfile
+```
+
+The image tag must match the installed version exactly (e.g., `v1.59.1-noble` for `^1.59.1`).
 
 ## Branching Policy
 
