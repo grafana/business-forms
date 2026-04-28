@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- Removed `@volkovlabs/jest-selectors` dependency; replaced with a local `getJestSelectors` utility in `src/utils/jest-selectors.ts`.
 - Updated `@grafana/scenes` to 7.4.2.
 - Updated `@grafana/plugin-e2e` to 3.6.1.
 - Updated `@playwright/test` to 1.59.1.

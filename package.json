@@ -36,7 +36,6 @@
     "@types/lodash": "^4.17.24",
     "@types/node": "^24.12.2",
     "@types/semver": "^7.7.1",
-    "@volkovlabs/jest-selectors": "^1.5.0",
     "copy-webpack-plugin": "^14.0.0",
     "css-loader": "^7.1.4",
     "eslint": "^9.39.4",

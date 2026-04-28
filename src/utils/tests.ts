@@ -1,5 +1,5 @@
 import { SelectableValue } from '@grafana/data';
-import { getJestSelectors } from '@volkovlabs/jest-selectors';
+import { getJestSelectors } from './jest-selectors';
 
 import { TEST_IDS } from '../constants';
 

@@ -1,3 +1,4 @@
+export * from './jest-selectors';
 export * from './code';
 export * from './code-parameters';
 export * from './form-element';
