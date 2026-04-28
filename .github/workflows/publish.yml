@@ -50,12 +50,20 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch }}
           token: ${{ steps.app-token.outputs.token }}
-      - name: Replace [Unreleased] with version and date
+      - name: Stamp changelog
         run: |
-          grep -q "## \[Unreleased\]" CHANGELOG.md || { echo "No [Unreleased] heading found — already stamped?"; exit 1; }
           VERSION=$(node -p "require('./package.json').version")
           DATE=$(date -u +%Y-%m-%d)
-          sed -i "s/## \[Unreleased\]/## [$VERSION] - $DATE/" CHANGELOG.md
+          if grep -q "## \[Unreleased\]" CHANGELOG.md; then
+            sed -i "s/## \[Unreleased\]/## [$VERSION] - $DATE/" CHANGELOG.md
+            echo "Stamped [Unreleased] as $VERSION - $DATE"
+          elif grep -q "## \[$VERSION\]" CHANGELOG.md; then
+            echo "Changelog already stamped for $VERSION — nothing to do"
+          else
+            echo "Error: no [Unreleased] heading and version $VERSION not found in CHANGELOG.md"
+            echo "Add a changelog entry for $VERSION before releasing."
+            exit 1
+          fi
       - name: Commit changelog stamp
         env:
           BRANCH: ${{ github.event.inputs.branch }}
