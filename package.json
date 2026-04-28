@@ -18,6 +18,7 @@
     "test:e2e:docker": "docker compose --profile playwright up --force-recreate --abort-on-container-exit --exit-code-from playwright",
     "typecheck": "tsc --noEmit",
     "upgrade": "npm upgrade --save",
+    "spellcheck": "cspell -c cspell.config.json \"**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}\"",
     "markdownlint": "markdownlint-cli2 AGENTS.md CHANGELOG.md README.md"
   },
   "author": "Grafana Labs",
@@ -39,6 +40,7 @@
     "@types/semver": "^7.7.1",
     "@volkovlabs/jest-selectors": "^1.5.0",
     "copy-webpack-plugin": "^14.0.0",
+    "cspell": "^10.0.0",
     "css-loader": "^7.1.4",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
