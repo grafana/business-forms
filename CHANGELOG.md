@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- Fixed `HeaderParametersEditor` to use immutable array operations instead of mutating props in place.
+- Fixed inaccurate unit test descriptions in `FormPanel`, `InitialFieldsEditor`, `migration`, and
+  `form-element` tests.
+- Removed deprecated `--ext` flags from `lint` and `lint:fix` scripts; scoped ESLint to
+  `src/**/*.{ts,tsx}` via `eslint.config.mjs`.
+
 ### E2E Tests
 
 - Re-enabled 10 previously skipped e2e tests (closes #9): removed `grepInvert` from
@@ -44,14 +52,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
   (markdownlint-cli2, scoped to `AGENTS.md`, `CHANGELOG.md`, `README.md`).
 - Replaced `@volkovlabs/eslint-config` with inline ESLint rules.
 - Suppressed i18next marketing banner from test output in `jest-setup.js`.
-
-### Fixed
-
-- Fixed `HeaderParametersEditor` to use immutable array operations instead of mutating props in place.
-- Fixed inaccurate unit test descriptions in `FormPanel`, `InitialFieldsEditor`, `migration`, and
-  `form-element` tests.
-- Removed deprecated `--ext` flags from `lint` and `lint:fix` scripts; scoped ESLint to
-  `src/**/*.{ts,tsx}` via `eslint.config.mjs`.
 
 ## [6.3.2] - 2026-04-06
 
