@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 
+- Added `cspell@10` as a devDependency and `npm run spellcheck` script; runs the same glob as CI so local and CI spell checks are always identical.
+- Suppressed i18next marketing banner from test output in `jest-setup.js`.
+- Updated GitHub Actions: `actions/setup-node` to v6.4.0, `actions/github-script` to v9.0.0, `davelosert/vitest-coverage-report-action` to v2.11.2, `tj-actions/changed-files` to v47.0.6.
 - Removed `@volkovlabs/components` dependency; inlined `AutosizeCodeEditor`, `NumberInput`, `DatasourceEditor`, `DatasourceQueryEditor` as local components and `useDatasourceRequest`, `useDatasources` as local hooks. `CodeParameterItem` and `CodeParametersBuilder` inlined into `src/utils/code-parameters.ts`.
 - Removed `@volkovlabs/jest-selectors` dependency; replaced with a local `getJestSelectors` utility in `src/utils/jest-selectors.ts`.
 - Updated `@grafana/scenes` to 7.4.2.
