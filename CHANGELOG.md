@@ -20,8 +20,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Project Updates
 
-- Updated CI/CD workflow with attestation permissions.
-- Renamed `.markdownlint.json` to `.markdownlint-cli2.yaml` for proper tool discovery.
+- Updated CI/CD workflows.
+- Updated development tooling configuration.
 
 ## [6.3.2] - 2026-04-06
 
