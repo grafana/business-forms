@@ -8,13 +8,13 @@ Frontend-only plugin (no Go backend). Node >= 24, TypeScript 5.8, React 18, Webp
 ```bash
 npm run build          # Production webpack build
 npm run dev            # Watch-mode dev build
-npm run start          # Docker compose dev environment (Grafana + servers)
-npm run stop           # Tear down docker compose
 npm run typecheck      # tsc --noEmit
 npm run lint           # ESLint (flat config, ESLint 9)
 npm run lint:fix       # ESLint autofix
 npm run spellcheck     # cspell across all source files (matches CI exactly)
 npm run markdownlint  # markdownlint-cli2 on AGENTS.md, CHANGELOG.md, README.md
+npm run start          # Docker compose dev environment (Grafana + servers)
+npm run stop           # Tear down docker compose
 ```
 
 ## Test Commands
