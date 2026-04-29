@@ -6,13 +6,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-### Project Updates
-
-- Updated CI/CD workflow with attestation permissions.
-- Renamed `.markdownlint.json` to `.markdownlint-cli2.yaml` for proper tool discovery.
-
-## [6.3.3] - 2026-04-28
-
 ### Fixed
 
 - Fixed header parameter editor losing changes when editing name or value fields.
@@ -21,6 +14,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Security
 
 - Patched transitive dependencies with known vulnerabilities, including a critical CVE in `protobufjs`.
+
+### Project Updates
+
+- Updated CI/CD workflow with attestation permissions.
+- Renamed `.markdownlint.json` to `.markdownlint-cli2.yaml` for proper tool discovery.
 
 ## [6.3.2] - 2026-04-06
 
