@@ -26,7 +26,7 @@ jobs:
         id: changed
         uses: tj-actions/changed-files@9426d40962ed5378910ee2e21d5f8c6fcbf2dd96 # v47.0.6
         with:
-          separator: '.gitignore', '.markdownlint-cli2.yaml', '.nvmrc', '.prettierrc.js',
+          separator: '|'
 
       - name: Post comment
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
@@ -48,7 +48,7 @@ jobs:
               { name: 'Config', test: (f) =>
                 f.startsWith('.config/') ||
                 f.startsWith('provisioning/') ||
-                ['.gitignore', '.markdownlint.yaml', '.nvmrc', '.prettierrc.js',
+                ['.gitignore', '.markdownlint-cli2.yaml', '.nvmrc', '.prettierrc.js',
                  'cspell.config.json', 'docker-compose.yaml', 'eslint.config.mjs',
                  'jest.config.js', 'jest-setup.js', 'mise.toml',
                  'package.json', 'package-lock.json',
