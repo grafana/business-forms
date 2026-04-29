@@ -9,11 +9,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Fixed
 
 - Fixed header parameter editor losing changes when editing name or value fields.
-- Verified compatibility with Grafana 13 and React 19 preview builds.
 
 ### Security
 
 - Patched transitive dependencies with known vulnerabilities, including a critical CVE in `protobufjs`.
+
+### Changed
+
+- Plugin now supports Grafana 13 and React 19 preview builds.
 
 ### Project Updates
 
