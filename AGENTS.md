@@ -14,6 +14,7 @@ npm run typecheck      # tsc --noEmit
 npm run lint           # ESLint (flat config, ESLint 9)
 npm run lint:fix       # ESLint autofix
 npm run spellcheck     # cspell across all source files (matches CI exactly)
+npm run markdownlint  # markdownlint-cli2 on AGENTS.md, CHANGELOG.md, README.md
 ```
 
 ## Test Commands
