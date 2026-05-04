@@ -2677,6 +2677,7 @@ describe('Panel', () => {
         render(
           getComponent({
             options: {
+              sync: false,
               elements: [
                 { ...FORM_ELEMENT_DEFAULT, id: 'test', value: '123' },
                 { type: FormElementType.NUMBER, id: 'number', value: 123 },
@@ -2696,6 +2697,7 @@ describe('Panel', () => {
         rerender(
           getComponent({
             options: {
+              sync: false,
               elements: [
                 { ...FORM_ELEMENT_DEFAULT, id: 'test', value: '123' },
                 { type: FormElementType.NUMBER, id: 'number', value: 111 },
