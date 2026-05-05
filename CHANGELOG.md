@@ -13,6 +13,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Security
 
 - Patched transitive dependencies with known vulnerabilities, including a critical CVE in `protobufjs`.
+- Added `.npmrc` with `ignore-scripts=true` to disable lifecycle scripts and mitigate supply-chain attack risk.
+
+### Changed
+
+- Plugin now supports Grafana 13 and React 19 preview builds.
+
+### Project Updates
+
+- Updated CI/CD workflows.
+- Updated development tooling configuration.
+
+## [6.3.3] - 2026-04-28
+
+### Fixed
+
+- Fixed header parameter editor losing changes when editing name or value fields.
+
+### Security
+
+- Patched transitive dependencies with known vulnerabilities, including a critical CVE in `protobufjs`.
 
 ### Changed
 
