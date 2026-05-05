@@ -90,6 +90,10 @@ export const CODE_LANGUAGE_OPTIONS: SelectableValue[] = [
     value: CodeLanguage.TYPESCRIPT,
     label: 'TypeScript',
   },
+  {
+    value: CodeLanguage.YAML,
+    label: 'YAML',
+  }
 ];
 
 /**
