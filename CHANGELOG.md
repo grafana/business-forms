@@ -23,6 +23,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Updated CI/CD workflows.
 - Updated development tooling configuration.
+- Migrated publish workflow from auto-stamping changelog to pre-flight changelog validation.
+- Bumped `plugin-ci-workflows` to v8.0.0.
+- Bumped `vitest-coverage-report-action` to v2.12.0.
 
 ## [6.3.3] - 2026-04-28
 
