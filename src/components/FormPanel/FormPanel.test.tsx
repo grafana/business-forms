@@ -2208,6 +2208,80 @@ describe('Panel', () => {
          */
         expect(fetch).toHaveBeenCalledTimes(1);
       });
+
+      it('Should use latest replaceVariables when debounced refresh fires after variable change', async () => {
+        jest.useFakeTimers();
+
+        const makeReplaceVariables = (url: string) =>
+          jest.fn((str: unknown) => (typeof str === 'string' ? str.replace('${myVar}', url) : str));
+
+        try {
+          jest.mocked(fetch).mockImplementation(() =>
+            Promise.resolve({
+              ok: true,
+              json: () => Promise.resolve({}),
+            } as any)
+          );
+
+          const { rerender } = await act(async () =>
+            render(
+              getComponent({
+                props: { replaceVariables: makeReplaceVariables('initial-url'), eventBus },
+                options: {
+                  initial: { url: '${myVar}', method: RequestMethod.GET },
+                  sync: true,
+                },
+              })
+            )
+          );
+
+          expect(fetch).toHaveBeenCalledWith('initial-url', expect.anything());
+
+          /**
+           * Publish RefreshEvent — starts the 250ms debounce timer, does not fire yet
+           */
+          await act(async () => {
+            eventBus.publish(new RefreshEvent());
+          });
+
+          /**
+           * Variable changes: new replaceVariables reference (as Grafana does on variable change)
+           */
+          await act(async () =>
+            rerender(
+              getComponent({
+                props: { replaceVariables: makeReplaceVariables('updated-url'), eventBus },
+                options: {
+                  initial: { url: '${myVar}', method: RequestMethod.GET },
+                  sync: true,
+                },
+              })
+            )
+          );
+
+          /**
+           * The rerender with sync:true triggers initialRequest() directly via the effect —
+           * clear the mock so subsequent assertions isolate only the debounce-fired call.
+           */
+          jest.mocked(fetch).mockClear();
+
+          /**
+           * Advance past the debounce delay — the pending timer fires, then async fetch resolves
+           */
+          act(() => {
+            jest.advanceTimersByTime(300);
+          });
+          await act(async () => {});
+
+          /**
+           * Debounce must have used the latest initialRequest (updated-url), not the stale one (initial-url)
+           */
+          expect(fetch).not.toHaveBeenCalledWith('initial-url', expect.anything());
+          expect(fetch).toHaveBeenCalledWith('updated-url', expect.anything());
+        } finally {
+          jest.useRealTimers();
+        }
+      });
     });
   });
 

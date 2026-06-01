@@ -849,32 +849,20 @@ export const FormPanel: React.FC<Props> = ({
   }, [datasourceRequest, elements, executeCustomCode, initialRef, initialRequest, options.update, replaceVariables]);
 
   /**
-   * Latest initialRequest, read by the stable debounced wrapper below so it
-   * always uses fresh `data.series` / `replaceVariables` instead of a stale
-   * closure from a previous render.
+   * Always holds the latest initialRequest so the stable debounced wrapper
+   * below never closes over a stale `replaceVariables` / `data.series`.
    */
   const initialRequestRef = useRef(initialRequest);
-  useEffect(() => {
-    initialRequestRef.current = initialRequest;
-  }, [initialRequest]);
+  initialRequestRef.current = initialRequest;
 
-  /**
-   * Debounced Refresh - stable wrapper, single pending timer, latest request.
-   */
-  const debouncedRequest = useMemo(
-    // eslint-disable-next-line react-hooks/refs -- debounce wraps the ref read, does not call it during render
-    () => debounce(() => initialRequestRef.current(), 250),
-    []
-  );
+  // eslint-disable-next-line react-hooks/refs -- debounce wraps the ref read, does not call it during render
+  const debouncedRequest = useMemo(() => debounce(() => initialRequestRef.current(), 250), []);
 
-  /**
-   * Cancel pending debounce on unmount
-   */
   useEffect(() => {
     return () => {
       debouncedRequest.cancel();
     };
-  }, [debouncedRequest]);
+  }, []);
 
   /**
    * Execute Initial Request on dashboard or data update
