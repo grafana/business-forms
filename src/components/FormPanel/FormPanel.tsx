@@ -848,10 +848,26 @@ export const FormPanel: React.FC<Props> = ({
     setLoading(LoadingMode.NONE);
   }, [datasourceRequest, elements, executeCustomCode, initialRef, initialRequest, options.update, replaceVariables]);
 
-  const debouncedRequest = useMemo(() => {
-    // eslint-disable-next-line react-hooks/refs -- debounce wraps the function, does not call it during render
-    return debounce(initialRequest, 250);
+  /**
+   * Always holds the latest initialRequest so the stable debounced wrapper
+   * below never closes over a stale `replaceVariables` / `data.series`.
+   */
+  const initialRequestRef = useRef(initialRequest);
+  useEffect(() => {
+    initialRequestRef.current = initialRequest;
   }, [initialRequest]);
+
+  const debouncedRequest = useMemo(
+    // eslint-disable-next-line react-hooks/refs -- debounce wraps the ref read, does not call it during render
+    () => debounce(() => initialRequestRef.current(), 250),
+    []
+  );
+
+  useEffect(() => {
+    return () => {
+      debouncedRequest.cancel();
+    };
+  }, [debouncedRequest]);
 
   /**
    * Execute Initial Request on dashboard or data update
