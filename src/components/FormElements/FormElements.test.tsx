@@ -9,6 +9,53 @@ import { getFormElementsSelectors, normalizeElementsForLocalState } from '@/util
 import { FormElements } from './FormElements';
 
 /**
+ * Mock NumberInput (was previously globally mocked via
+ * src/__mocks__/@volkovlabs/components.tsx). Renders an HTML
+ * <input type="number" /> so the number-field tests can assert
+ * numeric values (toHaveValue(N)) instead of strings.
+ */
+jest.mock('../NumberInput', () => {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { Input } = require('@grafana/ui');
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const ReactImpl = require('react');
+
+  const NumberInputMock = ({ value, onChange, min, max, step, ...restProps }: any) => {
+    const numberValue = Number(value);
+
+    const onSaveValue = ReactImpl.useCallback(
+      (event: any) => {
+        let v = Number(event.target.value);
+        if (Number.isNaN(v)) {
+          v = 0;
+        }
+        if (step !== undefined && (v * 1000) % (step * 1000) !== 0) {
+          v = 0;
+        }
+        if (max !== undefined && v > max) {
+          v = max;
+        } else if (min !== undefined && v < min) {
+          v = min;
+        }
+        if (onChange) {
+          onChange(v);
+        }
+      },
+      [max, min, onChange, step]
+    );
+
+    return ReactImpl.createElement(Input, {
+      ...restProps,
+      type: 'number',
+      value: numberValue,
+      onChange: onSaveValue,
+    });
+  };
+
+  return { NumberInput: NumberInputMock };
+});
+
+/**
  * Mock timers
  */
 jest.useFakeTimers();

@@ -13,9 +13,19 @@ import { ElementSections } from './ElementSections';
 type Props = React.ComponentProps<typeof ElementSections>;
 
 /**
- * Mock @volkovlabs/components
+ * Mock the locally inlined modules previously covered by the
+ * src/__mocks__/@volkovlabs/components.tsx manual mock so that
+ * rendering FormElements during these tests doesn't hit real
+ * downstream code (NumberInput / useDatasourceRequest / etc.).
  */
-jest.mock('@volkovlabs/components');
+jest.mock('../NumberInput', () => ({
+  ...jest.requireActual('../NumberInput'),
+  NumberInput: jest.fn().mockImplementation(() => null),
+}));
+jest.mock('../../hooks/useDatasourceRequest', () => ({
+  ...jest.requireActual('../../hooks/useDatasourceRequest'),
+  useDatasourceRequest: jest.fn(),
+}));
 
 /**
  * Form Elements

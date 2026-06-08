@@ -12,7 +12,6 @@ import {
   Select,
   useStyles2,
 } from '@grafana/ui';
-import { AutosizeCodeEditor } from '@volkovlabs/components';
 import React, { ChangeEvent, useMemo } from 'react';
 
 import {
@@ -41,6 +40,7 @@ import {
   toNumberValue,
 } from '@/utils';
 
+import { AutosizeCodeEditor } from '../AutosizeCodeEditor';
 import { ElementDateEditor } from '../ElementDateEditor';
 import { ElementOptionsEditor } from '../ElementOptionsEditor';
 import { ElementQueryOptionsEditor } from '../ElementQueryOptionsEditor';
