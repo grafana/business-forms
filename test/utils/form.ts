@@ -1,4 +1,4 @@
-import { Locator, Page } from '@playwright/test';
+import { Locator } from '@playwright/test';
 import { DashboardPage, E2ESelectorGroups, expect, Panel, PanelEditPage } from '@grafana/plugin-e2e';
 import { getLocatorSelectors, LocatorSelectors } from './selectors';
 import { TEST_IDS } from '../../src/constants/tests';
@@ -85,9 +85,9 @@ class SelectElementHelper extends BaseElementHelper {
     this.page = page;
   }
 
-  public async setValue(fieldKey) {
+  public async setValue(fieldKey: string | number) {
     await this.get().click();
-    return this.page.getByGrafanaSelector(this.page.ctx.selectors.components.Select.option).getByText(fieldKey).click();
+    return this.page.getByGrafanaSelector(this.page.ctx.selectors.components.Select.option).getByText(String(fieldKey)).click();
   }
 }
 
@@ -104,8 +104,6 @@ class SliderElementHelper extends BaseElementHelper {
  * Text Area Element Helper
  */
 class TextAreaElementHelper extends BaseElementHelper {
-  private readonly page: DashboardPage;
-
   constructor(parentLocator: Locator) {
     super(parentLocator.getByTestId(TEST_IDS.formElements.fieldTextarea));
   }
@@ -115,8 +113,6 @@ class TextAreaElementHelper extends BaseElementHelper {
  * Disabled Text Area Element Helper
  */
 class DisabledTextAreaElementHelper extends BaseElementHelper {
-  private readonly page: DashboardPage;
-
   constructor(parentLocator: Locator) {
     super(parentLocator.getByTestId(TEST_IDS.formElements.fieldDisabledTextarea));
   }
@@ -337,7 +333,6 @@ class PanelEditorOptionsSectionHelper {
  */
 class PanelEditorHelper {
   private readonly elementsEditorSelectors: LocatorSelectors<typeof TEST_IDS.formElementsEditor>;
-  private readonly page: PanelEditPage;
 
   constructor(
     private readonly locator: Locator,
