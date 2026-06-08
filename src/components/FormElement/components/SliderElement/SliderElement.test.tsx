@@ -63,7 +63,7 @@ describe('SliderElement', () => {
 
   it('calls onChange when slider handle changes', () => {
     const onChange = jest.fn();
-    render(<SliderElement element={makeElement({ value: 50, min: 0, max: 100 })} onChange={onChange} />);
+    render(<SliderElement element={makeElement()} onChange={onChange} />);
 
     fireEvent.change(screen.getByLabelText(TEST_IDS.formElements.fieldSlider), {
       target: { value: '75' },
@@ -74,7 +74,7 @@ describe('SliderElement', () => {
 
   it('calls onChange when number input changes', () => {
     const onChange = jest.fn();
-    render(<SliderElement element={makeElement({ value: 50, min: 0, max: 100 })} onChange={onChange} />);
+    render(<SliderElement element={makeElement()} onChange={onChange} />);
 
     fireEvent.change(screen.getByTestId(TEST_IDS.formElements.fieldSliderInput), {
       target: { value: '75' },
