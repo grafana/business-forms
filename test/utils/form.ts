@@ -92,6 +92,15 @@ class SelectElementHelper extends BaseElementHelper {
 }
 
 /**
+ * Slider Element Helper
+ */
+class SliderElementHelper extends BaseElementHelper {
+  constructor(parentLocator: Locator) {
+    super(parentLocator.getByTestId(TEST_IDS.formElements.fieldSliderInput));
+  }
+}
+
+/**
  * Text Area Element Helper
  */
 class TextAreaElementHelper extends BaseElementHelper {
@@ -186,6 +195,11 @@ class ElementsHelper {
   public async getNumberElement(elementId: string, elementType: string) {
     const element = await this.getElement(elementId, elementType);
     return new NumberElementHelper(element);
+  }
+
+  public async getSliderElement(elementId: string, elementType: string) {
+    const element = await this.getElement(elementId, elementType);
+    return new SliderElementHelper(element);
   }
 
   public async getSelectElement(elementId: string, elementType: string, dashboardPage: DashboardPage) {

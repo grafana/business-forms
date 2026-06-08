@@ -563,6 +563,37 @@ test.describe('Data Manipulation Panel', () => {
     });
   });
 
+  test.describe('Slider element', () => {
+    test('Should update slider value via number input', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
+      const dashboard = await readProvisionedDashboard({ fileName: 'e2e.json' });
+      const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
+
+      const panel = new PanelHelper(dashboardPage, 'Single Form');
+      await panel.checkIfNoErrors();
+      await panel.checkPresence();
+
+      const elements = panel.getElements();
+      const sliderElement = await elements.getSliderElement('step', FormElementType.SLIDER);
+      const buttons = panel.getButtons();
+
+      await test.step('verify initial value', async () => {
+        await sliderElement.checkValue('4');
+        await buttons.checkSubmitButtonIsDisabled();
+      });
+
+      await test.step('change value via number input', async () => {
+        await sliderElement.setValue('2');
+        await buttons.checkSubmitButtonIsNotDisabled();
+      });
+
+      await test.step('reset restores original value', async () => {
+        await buttons.reset();
+        await sliderElement.checkValue('4');
+        await buttons.checkSubmitButtonIsDisabled();
+      });
+    });
+  });
+
   test.describe('Element change', () => {
     test('Should call element change function', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
       /**
