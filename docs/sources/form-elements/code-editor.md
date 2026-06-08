@@ -14,7 +14,7 @@ labels:
 
 The **Code editor** highlights keywords and formats the entered text. This element has the following specific options:
 
-- **Language**: Select from a wide range of languages (C, C++, C#, Go, HTML, Java, JavaScript, JSON, Markdown, MySQL, PHP, PostgreSQL, Python, Ruby, SQL, TypeScript).
+- **Language**: Select from a wide range of languages (C, C++, C#, Go, HTML, Java, JavaScript, JSON, Markdown, MySQL, PHP, PostgreSQL, Python, Ruby, SQL, TypeScript, YAML).
 - **Height**: Specifies how high the entry window is.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-forms/code-editor.png" class="border" alt="Options specific to the Code Editor type." >}}
@@ -106,7 +106,7 @@ context.panel.onChangeElements(elementsForUI);
 - ### `language`
 
   _string_. Required.  
-  Supported language for code editor: 'c' | 'cpp' | 'sharp' | 'go' | 'java' | 'javascript' | 'json' | 'mysql' | 'php' | 'pgsql' | 'python' | 'ruby' | 'sql' | 'typescript' | 'html' | 'markdown'.
+  Supported language for code editor: 'c' | 'cpp' | 'sharp' | 'go' | 'java' | 'javascript' | 'json' | 'mysql' | 'php' | 'pgsql' | 'python' | 'ruby' | 'sql' | 'typescript' | 'html' | 'markdown' | 'yaml'.
 
 {{< docs/shared lookup="base-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
 
@@ -181,6 +181,6 @@ _string_. Required.
 
 _string_. Required.  
  Supported language for code editor.
-'c' | 'cpp' | 'sharp' | 'go' | 'java' | 'javascript' | 'json' | 'mysql' | 'php' | 'pgsql' | 'python' | 'ruby' | 'sql' | 'typescript' | 'html' | 'markdown'
+'c' | 'cpp' | 'sharp' | 'go' | 'java' | 'javascript' | 'json' | 'mysql' | 'php' | 'pgsql' | 'python' | 'ruby' | 'sql' | 'typescript' | 'html' | 'markdown' | 'yaml'
 
 {{< docs/shared lookup="base-options-parameters.md" source="plugins/volkovlabs-form-panel" version="<PLUGINS_VERSION>" >}}
