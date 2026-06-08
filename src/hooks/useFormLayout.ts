@@ -222,7 +222,7 @@ export const useFormLayout = ({
    * Update local elements
    */
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional derived-state sync from props
+     
     setElements(normalizeElementsForLocalState(value, replaceVariables));
     // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional derived-state sync from props
     setIsChanged(false);
@@ -368,7 +368,7 @@ export const useFormLayout = ({
    */
   useEffect(() => {
     if (layoutSections) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional derived-state sync from props
+       
       setSections(layoutSections);
       // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional derived-state sync from props
       setIsChanged(false);
@@ -401,7 +401,7 @@ export const useFormLayout = ({
     onChangeElements,
     onChangeElement,
     onChangeElementOption,
-    // eslint-disable-next-line react-hooks/refs -- onElementRemove reads elementsRef only when called, not during render
+     
     onElementRemove,
     // eslint-disable-next-line react-hooks/refs -- eventBus.current is a stable singleton initialized once
     eventBus: eventBus.current,

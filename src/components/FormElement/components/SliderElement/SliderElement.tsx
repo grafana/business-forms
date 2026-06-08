@@ -1,6 +1,5 @@
 import { cx } from '@emotion/css';
-import { InlineField, Input, useStyles2 } from '@grafana/ui';
-import Slider from 'rc-slider';
+import { InlineField, Input, Slider, useStyles2 } from '@grafana/ui';
 import React from 'react';
 
 import { TEST_IDS } from '@/constants';
@@ -46,19 +45,23 @@ export const SliderElement: React.FC<Props> = ({ element, onChange }) => {
         className={cx(styles.slider, applyLabelStyles(element.labelBackground, element.labelColor))}
         disabled={element.disabled}
       >
-        <Slider
-          value={element.value || 0}
-          onChange={(value) => {
-            onChange<typeof element>({
-              ...element,
-              value: Array.isArray(value) ? value[value.length - 1] : value,
-            });
-          }}
-          min={element.min || 0}
-          max={element.max || 0}
-          step={element.step || 0}
-          ariaLabelForHandle={TEST_IDS.formElements.fieldSlider}
-        />
+        <div style={element.disabled ? { pointerEvents: 'none' } : undefined}>
+          <Slider
+            value={element.value || 0}
+            onChange={(value: number) => {
+              onChange<typeof element>({
+                ...element,
+                value,
+              });
+            }}
+            min={element.min || 0}
+            max={element.max || 0}
+            step={element.step || 0}
+            ariaLabelForHandle={TEST_IDS.formElements.fieldSlider}
+            inputId={TEST_IDS.formElements.fieldSlider}
+            showInput={false}
+          />
+        </div>
       </InlineField>
       <InlineField className={cx(styles.sliderInput)} disabled={element.disabled}>
         <Input

@@ -1,10 +1,11 @@
 import { InlineField } from '@grafana/ui';
-import { AutosizeCodeEditor } from '@volkovlabs/components';
 import React, { useMemo } from 'react';
 
 import { TEST_IDS } from '@/constants';
 import { CodeLanguage, FormElementByType, FormElementType, LocalFormElement } from '@/types';
 import { applyLabelStyles, applyWidth } from '@/utils';
+
+import { AutosizeCodeEditor } from '../../../AutosizeCodeEditor';
 
 /**
  * Properties

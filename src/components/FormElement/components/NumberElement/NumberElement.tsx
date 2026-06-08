@@ -1,10 +1,11 @@
 import { InlineField } from '@grafana/ui';
-import { NumberInput } from '@volkovlabs/components';
 import React from 'react';
 
 import { TEST_IDS } from '@/constants';
 import { FormElementByType, FormElementType, LocalFormElement } from '@/types';
 import { applyLabelStyles, applyWidth, formatNumberValue } from '@/utils';
+
+import { NumberInput } from '../../../NumberInput';
 
 /**
  * Properties
