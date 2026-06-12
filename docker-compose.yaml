@@ -36,7 +36,7 @@ services:
       - playwright
 
   postgres:
-    image: postgres
+    image: postgres@sha256:29ee7bb30d804447dc9a91fd0d74322ae1dc3a4072cc6346f70a5ed6e783b565
     restart: always
     environment:
       POSTGRES_PASSWORD: postgres
