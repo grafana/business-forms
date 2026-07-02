@@ -43,11 +43,17 @@ export const Toolbar: React.FC<Props> = ({
   const [copyPasteText, setCopyPasteText] = useState('');
 
   useEffect(() => {
-    if (copyPasteText) {
-      setTimeout(() => {
-        setCopyPasteText('');
-      }, 1000);
+    if (!copyPasteText) {
+      return;
     }
+
+    const timeoutId = setTimeout(() => {
+      setCopyPasteText('');
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [copyPasteText]);
 
   return (
