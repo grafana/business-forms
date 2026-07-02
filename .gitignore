@@ -35,3 +35,6 @@ e2e-results/
 /playwright/.cache/
 /playwright/.auth/
 mise.toml
+
+# ESLint cache
+.eslintcache

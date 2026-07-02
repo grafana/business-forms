@@ -3,7 +3,7 @@ import { getAppEvents, RefreshEvent } from '@grafana/runtime';
 import { sceneGraph, SceneObject } from '@grafana/scenes';
 import { PanelContextProvider } from '@grafana/ui';
 import { act, fireEvent, render, screen, waitFor, within } from '@testing-library/react';
-import { useDatasourceRequest } from '@volkovlabs/components';
+import { useDatasourceRequest } from '../../hooks/useDatasourceRequest';
 import React, { ReactElement } from 'react';
 
 import {
@@ -46,11 +46,67 @@ jest.mock('../../hooks', () => ({
 }));
 
 /**
+ * Mock useDatasourceRequest (was previously globally mocked via
+ * src/__mocks__/@volkovlabs/components.tsx).
+ */
+jest.mock('../../hooks/useDatasourceRequest', () => ({
+  ...jest.requireActual('../../hooks/useDatasourceRequest'),
+  useDatasourceRequest: jest.fn(),
+}));
+
+/**
  * Mock Form Elements
  */
 jest.mock('../FormElements', () => ({
   FormElements: jest.fn(jest.requireActual('../FormElements').FormElements),
 }));
+
+/**
+ * Mock NumberInput (was previously globally mocked via
+ * src/__mocks__/@volkovlabs/components.tsx). Renders an HTML
+ * <input type="number" /> so `toHaveValue(N)` assertions receive a number
+ * instead of a string.
+ */
+jest.mock('../NumberInput', () => {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { Input } = require('@grafana/ui');
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const ReactImpl = require('react');
+
+  const NumberInputMock = ({ value, onChange, min, max, step, ...restProps }: any) => {
+    const numberValue = Number(value);
+
+    const onSaveValue = ReactImpl.useCallback(
+      (event: any) => {
+        let v = Number(event.target.value);
+        if (Number.isNaN(v)) {
+          v = 0;
+        }
+        if (step !== undefined && (v * 1000) % (step * 1000) !== 0) {
+          v = 0;
+        }
+        if (max !== undefined && v > max) {
+          v = max;
+        } else if (min !== undefined && v < min) {
+          v = min;
+        }
+        if (onChange) {
+          onChange(v);
+        }
+      },
+      [max, min, onChange, step]
+    );
+
+    return ReactImpl.createElement(Input, {
+      ...restProps,
+      type: 'number',
+      value: numberValue,
+      onChange: onSaveValue,
+    });
+  };
+
+  return { NumberInput: NumberInputMock };
+});
 
 /**
  * Mock @grafana/runtime

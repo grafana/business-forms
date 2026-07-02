@@ -563,6 +563,33 @@ test.describe('Data Manipulation Panel', () => {
     });
   });
 
+  test.describe('Slider element', () => {
+    test('Should update slider value via number input', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
+      const dashboard = await readProvisionedDashboard({ fileName: 'e2e.json' });
+      const dashboardPage = await gotoDashboardPage({ uid: dashboard.uid });
+
+      const panel = new PanelHelper(dashboardPage, 'Single Form');
+      await panel.checkIfNoErrors();
+      await panel.checkPresence();
+
+      const elements = panel.getElements();
+      const sliderElement = await elements.getSliderElement('step', FormElementType.SLIDER);
+      const buttons = panel.getButtons();
+
+      const initialValue = await sliderElement.get().inputValue();
+      const changedValue = initialValue === '6' ? '5' : String(Number(initialValue) + 1);
+
+      await test.step('verify slider input is present and has a numeric value', async () => {
+        expect(Number(initialValue)).not.toBeNaN();
+      });
+
+      await test.step('change value via number input enables submit', async () => {
+        await sliderElement.setValue(changedValue);
+        await buttons.checkSubmitButtonIsNotDisabled();
+      });
+    });
+  });
+
   test.describe('Element change', () => {
     test('Should call element change function', async ({ gotoDashboardPage, readProvisionedDashboard }) => {
       /**

@@ -1,10 +1,10 @@
 import { StandardEditorProps } from '@grafana/data';
 import { getTemplateSrv } from '@grafana/runtime';
-import { DatasourcePayloadEditor as PayloadEditor } from '@volkovlabs/components';
 import { get } from 'lodash';
 import React, { useMemo } from 'react';
 
 import { PanelOptions } from '../../types';
+import { DatasourcePayloadEditorImpl as PayloadEditor } from './DatasourcePayloadEditorImpl';
 
 /**
  * Properties

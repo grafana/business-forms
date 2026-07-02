@@ -1,6 +1,5 @@
 import { PanelPlugin, SelectableValue } from '@grafana/data';
 import { getAvailableIcons } from '@grafana/ui';
-import { DatasourceEditor } from '@volkovlabs/components';
 
 import {
   CustomCodeEditor,
@@ -11,6 +10,7 @@ import {
   InitialFieldsEditor,
   LayoutSectionsEditor,
 } from './components';
+import { DatasourceEditor } from './components/DatasourceEditor';
 import {
   BOOLEAN_OPTIONS,
   BUTTON_ORIENTATION_OPTIONS,

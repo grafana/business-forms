@@ -1,8 +1,8 @@
 import { getDataSourceSrv, getTemplateSrv } from '@grafana/runtime';
 import { act, fireEvent, render, screen } from '@testing-library/react';
-import { getJestSelectors } from '@volkovlabs/jest-selectors';
 import React from 'react';
 
+import { getJestSelectors } from '../../test-utils/jest-selectors';
 import { DatasourcePayloadEditor } from './DatasourcePayloadEditor';
 /**
  * Props
@@ -15,6 +15,35 @@ type Props = React.ComponentProps<typeof DatasourcePayloadEditor>;
 jest.mock('@grafana/runtime', () => ({
   getDataSourceSrv: jest.fn(),
   getTemplateSrv: jest.fn(),
+}));
+
+/**
+ * Mock DatasourcePayloadEditorImpl (was previously globally mocked via
+ * src/__mocks__/@volkovlabs/components.tsx). Renders a minimal stand-in
+ * that exposes the same data-testids the original mock did, so the
+ * existing assertions continue to work.
+ */
+/**
+ * Note: `resetMocks: true` in this repo's jest config wipes mock
+ * implementations between tests, so we cannot inline a `jest.fn(impl)` in
+ * the factory (the impl would be reset and the component would render
+ * nothing). Instead use a plain function component.
+ */
+jest.mock('./DatasourcePayloadEditorImpl', () => ({
+  DatasourcePayloadEditorImpl: ({ onChange, value, datasourceUid }: any) => (
+    <>
+      <input
+        data-testid="data-testid query-editor"
+        value={value}
+        onChange={(event) => {
+          if (onChange) {
+            onChange(event.target.value);
+          }
+        }}
+      />
+      <span data-testid="data-testid datasourceUID-key">{datasourceUid}</span>
+    </>
+  ),
 }));
 
 /**

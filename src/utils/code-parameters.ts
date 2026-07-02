@@ -1,10 +1,10 @@
 import { AlertPayload, DataQueryResponse, EventBus, PanelData } from '@grafana/data';
 import { BackendSrv, FetchResponse, LocationService, TemplateSrv, toDataQueryResponse } from '@grafana/runtime';
 import { CodeEditorSuggestionItemKind } from '@grafana/ui';
-import { CodeParameterItem, CodeParametersBuilder } from '@volkovlabs/components';
 
 import { FormElement, LayoutSection, LayoutSectionWithElements, LocalFormElement, PanelOptions } from '@/types';
 
+import { CodeParameterItem, CodeParametersBuilder } from './code-parameters-builder';
 import { fileToBase64 } from './request';
 
 /**

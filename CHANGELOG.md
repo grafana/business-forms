@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+### Project Updates
+
+- Removed dependencies on `@volkovlabs/components` and `@volkovlabs/jest-selectors`. The previously-used symbols (`AutosizeCodeEditor`, `DatasourceEditor`, `DatasourcePayloadEditor` impl, `NumberInput`, `useDatasourceRequest`, `CodeParameterItem`, `CodeParametersBuilder`) are now inlined under `src/components/`, `src/hooks/`, and `src/utils/`. Jest selector helpers are inlined under `src/test-utils/jest-selectors.ts`. The webpack `react-router-dom` replacement plugin that worked around `@volkovlabs/components`'s vendored scenes is no longer needed and has been removed. Pre-existing rule violations surfaced by lint are captured in `eslint-suppressions.json`. Added `monaco-editor` as an explicit devDependency for the inlined editor's `import type` statements.
+
 ## [6.3.5] - 2026-06-01
 
 ### Fixed
