@@ -37,7 +37,7 @@
     "@types/jest": "30.0.0",
     "@types/lodash": "4.17.24",
     "@types/node": "24.12.2",
-    "@types/semver": "7.7.1",
+    "@types/semver": "7.8.0",
     "@volkovlabs/jest-selectors": "1.5.0",
     "copy-webpack-plugin": "14.0.0",
     "cspell": "10.0.0",
@@ -95,7 +95,7 @@
     "@volkovlabs/components": "4.6.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "semver": "7.7.4",
+    "semver": "7.8.5",
     "tslib": "2.8.1",
     "uuid": "13.0.1"
   }
