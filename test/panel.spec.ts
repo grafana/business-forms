@@ -1,5 +1,5 @@
 import { test, expect } from '@grafana/plugin-e2e';
-import { ModalHelper, PanelHelper } from './utils';
+import { ModalHelper, PanelHelper, setVisualization } from './utils';
 import { FormElementType } from '../src/types/form-element';
 
 test.describe('Data Manipulation Panel', () => {
@@ -59,7 +59,7 @@ test.describe('Data Manipulation Panel', () => {
       await boxesElements.checkElementPresence('code', FormElementType.CODE);
     });
 
-    test('Should add empty Form panel', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
+    test('Should add empty Form panel', async ({ gotoDashboardPage, readProvisionedDashboard, page, selectors }) => {
       /**
        * Go to empty dashboard
        */
@@ -72,7 +72,7 @@ test.describe('Data Manipulation Panel', () => {
       test.setTimeout(60000);
       const editPage = await dashboardPage.addPanel();
       await page.waitForLoadState('networkidle');
-      await editPage.setVisualization('Business Forms');
+      await setVisualization(editPage, selectors, 'Business Forms');
       await editPage.setPanelTitle('Business Forms Empty');
       await editPage.backToDashboard();
       await page.waitForLoadState('networkidle');
@@ -86,7 +86,12 @@ test.describe('Data Manipulation Panel', () => {
       await panel.checkAlertMessage();
     });
 
-    test('Should add Form panel with base element', async ({ gotoDashboardPage, readProvisionedDashboard, page }) => {
+    test('Should add Form panel with base element', async ({
+      gotoDashboardPage,
+      readProvisionedDashboard,
+      page,
+      selectors,
+    }) => {
       /**
        * Go to empty dashboard
        */
@@ -99,7 +104,7 @@ test.describe('Data Manipulation Panel', () => {
       test.setTimeout(60000);
       const editPage = await dashboardPage.addPanel();
       await page.waitForLoadState('networkidle');
-      await editPage.setVisualization('Business Forms');
+      await setVisualization(editPage, selectors, 'Business Forms');
       await editPage.setPanelTitle('Business Form New');
 
       const panel = new PanelHelper(dashboardPage, 'Business Form New');
@@ -233,7 +238,7 @@ test.describe('Data Manipulation Panel', () => {
        * Add new visualization
        */
       const editPage = await dashboardPage.addPanel();
-      await editPage.setVisualization('Business Forms');
+      await setVisualization(editPage, selectors, 'Business Forms');
       await editPage.setPanelTitle('Business Form New');
 
       const panel = new PanelHelper(dashboardPage, 'Business Form New');
