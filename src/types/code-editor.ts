@@ -18,6 +18,7 @@ export const enum CodeLanguage {
   TYPESCRIPT = 'typescript',
   HTML = 'html',
   MARKDOWN = 'markdown',
+  YAML = 'yaml',
 }
 
 /**
