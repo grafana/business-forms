@@ -1,5 +1,5 @@
 # Get the latest version of Playwright
-FROM mcr.microsoft.com/playwright:v1.59.1-noble
+FROM mcr.microsoft.com/playwright:v1.64.1-noble
 
 # Set the work directory for the application
 WORKDIR app
