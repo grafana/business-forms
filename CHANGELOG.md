@@ -6,21 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [6.3.6] - 2026-11-03
 
-### Security
-
-- Updated `glob` to v14 to fix a known vulnerability.
-
-### Changed
-
-- Changed "global variables" to "built-in variables" in the documentation.
-
 ### Project Updates
 
-- Updated CI/CD workflows to `ci-cd-workflows/v12.0.1`. The old `v8.0.1` pin caused a `startup_failure` on every CI and CD run.
-- Removed the `run-playwright-with-skip-grafana-react-19-preview-image` input. `v12` does not have it.
-- Updated the Playwright Docker image to `v1.64.1-noble` to match `@playwright/test`.
-- Fixed E2E tests that time out on Grafana 12.4+ because the visualization picker opens on a new panel.
-- Updated dependencies: `@grafana/plugin-e2e`, `@playwright/test`, `uuid`, `sass-loader`, swc, `@types/node`, and pinned versions.
+- Updated dependencies and documentation.
 
 ## [6.3.5] - 2026-06-01
 
